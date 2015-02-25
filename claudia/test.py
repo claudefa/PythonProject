@@ -6,14 +6,42 @@ import sys
 import re
 
 def doBlast (fastafile):
+	
 	handle = open(fastafile)
+	# count = 0
 	
 	for record in SeqIO.parse(handle, "fasta") :
-		result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
-		blastfile = open("blast.xml", "w")
+		print ("Doing blast %s" %record.id)
+		try:
+			result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
+		except:
+			print ("Impossible to do blast")
+		print("Blast %s done..." %record.id)
+		
+		blastfile = open("%s.xml" %(record.id[:4]), "w")
 		blastfile.write(result.read())
-		blastfile.close()	
+		blastfile.close()
+		# count += 1
+	
+	# if count ==2:
+	# 	print("correct file")
+	# else:
+	# 	print ("please introduce a fasta with two sequences")
+	# 	sys.exit()
+
+	# blastfile.close()	
+	# blastfile2.close()	
+
 	handle.close()
+
+# def doBlast (fastafile):
+# 	handle = open(fastafile)
+# 	for record in SeqIO.parse(handle, "fasta") :
+# 		result = NCBIWWW.qblast("blastp", "nr", record.seq)
+# 		blastfile = open("blast.xml", "w")
+# 		blastfile.write(result.read())
+# 		blastfile.close()	
+# 	handle.close()
 
 
 def selectProt(blastxml):
@@ -29,15 +57,16 @@ def selectProt(blastxml):
 					out.write("Hit id: %s \n" %alignment.hit_id)
 					m = p.findall(alignment.hit_def)
 					out.write ("Hit specie: %s \n" %m)
-					out.write("Sequence: "+str(alignment.title[0:50])+"\n")
-					out.write("Length: "+str(alignment.length)+"\n")
-					out.write("E-value: "+str(hsp.expect)+"\n")
-					out.write("Score: "+str(hsp.score)+"\n")
+					out.write("Def: %s \n" %(alignment.title[0:50]))
+					out.write("Length: %s \n" %(alignment.length) )
+					out.write("E-value: %s \n" %(hsp.expect))
+					out.write("Score: %s \n" %(hsp.score))
 # 					out.write(str(hsp.query)+"\n")
 # 					out.write(str(hsp.match) + "...\n")
-					out.write(str(hsp.sbjct) + "...\n")
+					out.write("Hit Sequence: %s \n" %(hsp.sbjct) )
+	
 	result.close()
-#doBlast ("thrombin.fa")
+doBlast ("thrombin.fa")
 selectProt("blast.xml")
 
 
