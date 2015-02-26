@@ -6,68 +6,66 @@ import sys
 import re
 
 def doBlast (fastafile):
-	
+	"""
+	Function to perform blast online. Internet connection needed. Returns a xml file for each protein with blast output.
+	"""
 	handle = open(fastafile)
-	# count = 0
+
+	#Do blast for each fasta sequence in file. Not handeling right now two input files, only one!
 	
-	for record in SeqIO.parse(handle, "fasta") :
-		print ("Doing blast %s" %record.id)
+	for record in SeqIO.parse(handle, "fasta"):
+		sys.stderr.write("Doing blast %s ..." %(record.id[:4]))
 		try:
 			result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
+			# result = record.seq
 		except:
-			print ("Impossible to do blast")
-		print("Blast %s done..." %record.id)
+			sys.stderr.write("Impossible to do blast, check your internet connection") # check error type
+			sys.exit()
+		sys.stderr.write("Blast %s done!" %(record.id[:4]))
 		
 		blastfile = open("%s.xml" %(record.id[:4]), "w")
 		blastfile.write(result.read())
+		# blastfile.write(str(result))
 		blastfile.close()
-		# count += 1
-	
-	# if count ==2:
-	# 	print("correct file")
-	# else:
-	# 	print ("please introduce a fasta with two sequences")
-	# 	sys.exit()
-
-	# blastfile.close()	
-	# blastfile2.close()	
 
 	handle.close()
 
-# def doBlast (fastafile):
-# 	handle = open(fastafile)
-# 	for record in SeqIO.parse(handle, "fasta") :
-# 		result = NCBIWWW.qblast("blastp", "nr", record.seq)
-# 		blastfile = open("blast.xml", "w")
-# 		blastfile.write(result.read())
-# 		blastfile.close()	
-# 	handle.close()
 
 
 def selectProt(blastxml):
+	"""
+	Function to extract sequencies with selected e-value form xml blast output. 
+	"""
 	result = open(blastxml, "r")
-	out = open("candidates.blast", "w")
+	out = open("%s.out.blast" %(blastxml[:4]), "w")
 	evalue = 0.00001
-	p = re.compile( "Precursor[^\[]*\[([^\]]*)\]")
+	coverage=0.0
+	sys.stderr.write("Extracting sequencies with e-value: %s " %(evalue))
+	p = re.compile( "Precursor[^\[]*\[([^\]]*)\]") #this is the pattern to 
 	for n in NCBIXML.parse(result):
 		for alignment in n.alignments:
 			for hsp in alignment.hsps:
 				if hsp.expect < evalue:
-					out.write("****Alignment****\n")
-					out.write("Hit id: %s \n" %alignment.hit_id)
+					out.write("*********Alignment**********\n")
+					out.write("Hit id: \t %s \n" %alignment.hit_id)
 					m = p.findall(alignment.hit_def)
-					out.write ("Hit specie: %s \n" %m)
-					out.write("Def: %s \n" %(alignment.title[0:50]))
-					out.write("Length: %s \n" %(alignment.length) )
-					out.write("E-value: %s \n" %(hsp.expect))
-					out.write("Score: %s \n" %(hsp.score))
-# 					out.write(str(hsp.query)+"\n")
-# 					out.write(str(hsp.match) + "...\n")
-					out.write("Hit Sequence: %s \n" %(hsp.sbjct) )
+					out.write ("Hit specie: \t %s \n" %m)
+					# out.write("Def: %s \n" %(alignment.title[0:50]))
+					out.write("Length: \t %s \n" %(alignment.length) )
+					out.write("E-value: \t %s \n" %(hsp.expect))
+					out.write("Score: \t %s \n" %(hsp.score))
+					# coverage=(int(hsp.align_length)/int(hsp.query_length)*100)
+					# out.write("Coverage: \t %s \n" %(coverage)) #elbaaaa help no trobo el coverage
+					out.write("Identity: \t %s \n" %hsp.identities)
+ 					# out.write(str(hsp.query)+"\n")
+ 					# out.write(str(hsp.match) + "...\n")
+					out.write("Hit Sequence: \t %s \n" %(hsp.sbjct) )
 	
 	result.close()
-doBlast ("thrombin.fa")
-selectProt("blast.xml")
+
+#doBlast ("fasta.fa")
+selectProt("1COW.xml")
+selectsequencies("3D49.xml")
 
 
 #BLAST running locally --> output 
