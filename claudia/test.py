@@ -65,52 +65,103 @@ def selectProt(blastxml):
 
 
 
+class Protein(object):
+    def __init__(self, seq_id, seq, sp, e_val, score, identity):
+        self.seq_id=seq_id
+        self.seq=seq
+        self.sp=sp
+        self.e_val=e_val
+        self.score=score
+        self.identity=identity
+    
+    def __str__(self):
+        return ("%s\n%s\n%s\n%s\n%s\n%s\n" %(self.seq_id, self.seq, self.sp, self.e_val, self.score, self.identity))
+    def get_specie (self):
+    	return str(self.sp)
+
+    def get_id (self):
+    	return self.seq_id
+    
+    def get_seq (self):
+    	return self.seq
+
+def Protein_creator(fin):
+    fd=open(fin, "r")
+    i=0
+    for line in fd:
+        if i==0:
+            i+=1
+        elif i==1:
+            sp=line[14:-4]
+            i+=1
+        elif i==2:
+            seq_id=line.strip()[8:]
+            i+=1
+        elif i==3:
+            i+=1
+        elif i==4:
+            e_val=line.strip()[9:]
+            i+=1
+        elif i==5:
+            score=line.strip()[7:]
+            i+=1
+        elif i==6:
+            identity=line.strip()[10:]
+            i+=1
+        elif i==7:
+            i+=1
+        elif i==8:
+            seq=line.strip()
+            yield Protein(seq_id, seq, sp, e_val, score, identity)
+            i=0
+    fd.close()
+
+
 def comparefiles (file1, file2):
 	"""
-	Function to compare both blast out and select homologous protein in the same species for both proteins. 
+	Function to compare both blast out and select homologous protein in the same species for both proteins. Return set.
 	"""
-	blast1 = open(file1, "r")
-	blast2 = open(file1, "r")
-	out1 = open("out1.txt", "w")
-	out2 = open("out2.txt", "w")
 	set1 = set()
 	set2 = set()
-
-	for line in blast1:
-		line = line.strip()
-		if line.startswith("Hit specie"):
-			set1.add(line[11:])
-
-	for line in blast2:
-		line = line.strip()
-		if line.startswith("Hit specie"):
-			set2.add(line[11:])
+	prot1 = []
+	prot2 = []
+	for protein in Protein_creator(file1):
+		prot1.append(protein)
 	
+	for protein in Protein_creator(file2):
+		prot2.append(protein)
+
+	for protein in prot1:
+		set1.add(protein.get_specie())
+
+	for protein in prot2:
+		set2.add(protein.get_specie())
+
 	intersect = set()
-	# print (set1, "\n")
-	# print (set2, "\n")
-
-	intersect = set1.intersection(set2)
-	# print (intersect)
-
-	blast1.close()
-
-	blast1 = open(file1, "r")
-
-	##########ELBAAAAAAAAA###########
-	#como puedo, una vez encontrada la especie (esta en el intersect set) cojer las filas de hit id y sequence????
+	intersect = set1.intersection(set2) #not handleing finding two proteins of the same species. but when traversing 
 	
+	  									#in file, since the better hits are at the beginning you must keep them. 
+	out1 = open("fasta1.fa","w")
+	out2 = open ("fasta2.fa", "w")
 
-	for line in blast1:
-		line = line.strip()
+	for protein in Protein_creator(file1):
 		for element in intersect:
-			if element in line:
-				pass
+			if protein.sp == element:
+				out1.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq())+"\n")
+	
+	for protein in Protein_creator(file2):
+		for element in intersect:
+			if protein.sp == element:
+				out2.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq())+"\n")
+		
 
-	blast1.close()
-	blast2.close()
-	out1.close()
-	out2.close()
+
+#Un cop tenim el fasta: 1) quedar-nos amb la sequencia que tingui el e-value millor/millor identitat
+ 						# 2) treure els gaps 
+
+
+#EXECUTE FUNCTIONS
+
 
 #doBlast ("fasta.fa")
 # selectProt("1COW.xml")
