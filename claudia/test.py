@@ -7,29 +7,35 @@ import re
 # from Bio.Align.Applications import ClustalwCommandline
 from Bio import Phylo
 
+
 def doBlast (fastafile):
 	"""
 	Function to perform blast online. Internet connection needed. Returns a xml file for each protein with blast output.
 	"""
-	handle = open(fastafile)
-
-	#Do blast for each fasta sequence in file. Not handeling right now two input files, only one!
+	try:
+		handle = open(fastafile)
+	except IOError:
+		sys.stderr.write("Impossible to open this file. It does not exist!\n")
+		sys.exit()
+	
+	#Do blast for each fasta sequence in file. Not handeling two input files, only one!
 	
 	for record in SeqIO.parse(handle, "fasta"):
-		sys.stderr.write("Doing blast %s ..." %(record.id[:4]))
+		sys.stderr.write("Doing blast %s ...\n" %(record.id[:4]))
 		try:
 			result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
-			# result = record.seq
+			# result = record.seq # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 		except:
-			sys.stderr.write("Impossible to do blast, check your internet connection") # check error type
+			sys.stderr.write("Impossible to do blast, check your internet connection\n") # check error type
 			sys.exit()
-		sys.stderr.write("Blast %s done!" %(record.id[:4]))
+		sys.stderr.write("Blast %s done!\n" %(record.id[:4]))
 		
 		blastfile = open("%s.xml" %(record.id[:4]), "w")
-		blastfile.write(result.read())
-		# blastfile.write(str(result))
+		# blastfile.write(result.read()) # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
+		blastfile.write(str(result))
 		blastfile.close()
 
+		sys.stderr.write("Blast output with extension '%s.xml'\n\n" %(record.id[:4]))
 	handle.close()
 
 
@@ -165,7 +171,7 @@ def comparefiles (file1, file2):
 					out2.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq()).replace("-","")+"\n")
 					sp_list.append(protein.sp)
 		
-comparefiles("1COW.out.blast","3D49.out.blast")
+# comparefiles("1COW.out.blast","3D49.out.blast")
 
 
 # cline1 = ClustalwCommandline("clustalw", infile="fasta1.fa")
