@@ -4,6 +4,8 @@ from Bio import SeqIO
 from Bio import Seq
 import sys
 import re
+# from Bio.Align.Applications import ClustalwCommandline
+from Bio import Phylo
 
 def doBlast (fastafile):
 	"""
@@ -144,16 +146,37 @@ def comparefiles (file1, file2):
 	out1 = open("fasta1.fa","w")
 	out2 = open ("fasta2.fa", "w")
 
+	sp_list=[]
+      
+
 	for protein in Protein_creator(file1):
 		for element in intersect:
 			if protein.sp == element:
-				out1.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq())+"\n")
+				if protein.sp not in sp_list:
+					out1.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq()).replace("-","")+"\n")
+					sp_list.append(protein.sp)
+
+	sp_list=[]
 	
 	for protein in Protein_creator(file2):
 		for element in intersect:
 			if protein.sp == element:
-				out2.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq())+"\n")
+				if protein.sp not in sp_list:
+					out2.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq()).replace("-","")+"\n")
+					sp_list.append(protein.sp)
 		
+comparefiles("1COW.out.blast","3D49.out.blast")
+
+
+# cline1 = ClustalwCommandline("clustalw", infile="fasta1.fa")
+# cline2 = ClustalwCommandline("clustalw", infile="fasta2.fa")
+# cline1()
+# cline2()
+# tree1 = Phylo.read("fasta1.dnd", "newick")
+# tree2 = Phylo.read("fasta2.dnd", "newick")
+# Phylo.draw_ascii(tree1)
+# Phylo.draw_ascii(tree2)
+
 
 
 #Un cop tenim el fasta: 1) quedar-nos amb la sequencia que tingui el e-value millor/millor identitat
@@ -166,7 +189,7 @@ def comparefiles (file1, file2):
 #doBlast ("fasta.fa")
 # selectProt("1COW.xml")
 # selectProt("3D49.xml")
-comparefiles("1COW.out.blast","3D49.out.blast")
+
 
 
 #BLAST running locally --> output 

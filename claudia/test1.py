@@ -4,7 +4,7 @@ from Bio import SeqIO
 from Bio import Seq
 import sys
 import re
-from Bio.Align.Applications import ClustalwCommandline
+# from Bio.Align.Applications import ClustalwCommandline
 from Bio import Phylo
 
 def doBlast (fastafile):
@@ -168,14 +168,16 @@ def comparefiles (file1, file2):
 comparefiles("1COW.out.blast","3D49.out.blast")
 
 
-cline1 = ClustalwCommandline("clustalw", infile="fasta1.fa")
-cline2 = ClustalwCommandline("clustalw", infile="fasta2.fa")
-cline1()
-cline2()
-tree1 = Phylo.read("fasta1.dnd", "newick")
-tree2 = Phylo.read("fasta2.dnd", "newick")
-Phylo.draw_ascii(tree1)
-Phylo.draw_ascii(tree2)
+# cline1 = ClustalwCommandline("clustalw", infile="fasta1.fa")
+# cline2 = ClustalwCommandline("clustalw", infile="fasta2.fa")
+# cline1()
+# cline2()
+# tree1 = Phylo.read("fasta1.dnd", "newick")
+# tree2 = Phylo.read("fasta2.dnd", "newick")
+# Phylo.draw_ascii(tree1)
+# Phylo.draw_ascii(tree2)
+
+
 
 #Un cop tenim el fasta: 1) quedar-nos amb la sequencia que tingui el e-value millor/millor identitat
  						# 2) treure els gaps 
