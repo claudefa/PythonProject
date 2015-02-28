@@ -3,13 +3,18 @@ import sys
 import os
 import os.path
 import argparse
+from Bio.Align.Applications import ClustalwCommandline
+from Bio import Phylo
+
 ###################################################################################
 ###################################################################################
 #						 HOW TO RUN THIS SCRIPT 								  #
 #		put in the command line: python3 mirrortree.py -i fastafile.fa -v         #
 # 																				  #
 #       for the moment only starting at the beginning with one fasta infput file  #
-#																			      #
+#		To run this script you need:  										      #
+#			- internet connection   											  #
+#			- clustalw intalled												      #
 ###################################################################################
 ###################################################################################
 
@@ -67,83 +72,53 @@ except:
 if verbose:
 	sys.stderr.write("Connecting to BLAST... \n\n")
 
-xmlblast = doBlast(input_file)
+blastlist = doBlast(input_file)
 
 if verbose:
-	sys.stderr.write ("BLAST has finished.\n\n")
+	sys.stderr.write("BLAST has finished.\n\n")
 
 
-# READING THE SEQUENCE FILES AND STORE THEM IN A LIST
+#EXTRACT BEST HITS FROM BLAST XML FILE 
+evalue = options.evalue
 
-# protein_sequence_objects_list = []
+if verbose:
+	sys.stderr.write("Extracting sequencies with e-value: '%s' from %s file after BLAST...\n" %(evalue, blastlist[0]))
 
-# for filename in list_files:
-# 	protein_sequence_objects_list.extend( (d.translate()for d in FASTA_iterator(filename) ) )
-# 	if verbose:
-# 		sys.stderr.write("%s finished.\n" %filename)
+protfile1 = selectProt(blastlist[0], evalue)
 
-# if verbose:
-# 	sys.stderr.write("%s sequences found.\n" %len(protein_sequence_objects_list))
+if verbose:
+	sys.stderr.write("Done!\n")
+	sys.stderr.write("Extracting sequencies with e-value: '%s' from %s file after BLAST...\n" %(evalue, blastlist[1]))
 
+protfile2 = selectProt (blastlist[1], evalue)
 
-# # SELECT OUTPUT
-# outputfile = options.output
+if verbose:
+	sys.stderr.write("Done!\n\n")
+	sys.stderr.write("Comparing both BLAST output files to extract hit sequences (BEWARE! They are the same species for both proteins)\n")
 
-# if outputfile == False :	
-# 	out_fd = sys.stdout
+#COMPARE BOTH FILES TO ONLY SELECT HITS PRESENT IN BOTH FILES (IN PRESENTS OF PARALOGS IGNORE THEM)
 
-# else:	
-# 	if outputfile.endswith (".gz"):
-# 		out_fd = gzip.open(outputfile, "wt") 
-# 	else:		
-# 		out_fd = open(outputfile, "w")
-
-# #SELECT PROTEINS WITH A PATTERN
-# pattern = options.pattern
-# m=[]
-# if pattern == False:
-# 	if verbose:
-# 			sys.stderr.write("No pattern selected\n")
-# 	m = protein_sequence_objects_list
-# else:
-# 	p = re.compile(pattern, re.IGNORECASE) 
-# 	for protein in protein_sequence_objects_list:
-# 		if p.search(protein.get_sequence()) != None:
-# 			m.append(protein) 
-	
-
-# #SELECT NUMBER OF SEQUENCES TO BE PRINTED
-# randomnum = options.random 
-# if randomnum:
-# 	try:
-# 		if verbose:
-# 			sys.stderr.write("Selecting a sample with size %s.\n" %randomnum)
-# 		num = random.sample(m, randomnum)
-# 	except ValueError:
-# 		sys.stderr.write ("%s is greater than the number of sequences! Try again (less than %s)\n" %(randomnum, len(m)))
-# 		sys.exit()
-
-# else:
-# 	if verbose:
-# 		sys.stderr.write("No sampling done. \n")
-# 	num = m
-
-# # SORT THE SEQUENCES BY THE LENGTH
-# if verbose:
-# 	sys.stderr.write("Sorting the sequences...\n")
-
-# num.sort(reverse=True)
-
-# if verbose:
-# 	sys.stderr.write("Sort process finished.\n")
-
-# # WRITE OUTPUT
-# for protein in num:
-# 	out_fd.write("%s\t%s\t%s\n" %(	protein.get_identifier(), len(protein), protein.get_mw()))
+multifastafiles = comparefiles(protfile1, protfile2)
 
 
-# out_fd.close()
+#DO CLUSTAL ALINGMENT
+if verbose:
+	sys.stderr.write("Done!\n\n")
+	sys.stderr.write("Doing ClustalW alignment from multifasta for both proteins \n") #We should start program from here also
 
-# if verbose:
-# 	sys.stderr.write("Program finished correctly.\n")
+path_clustal = "~/Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2" 
+
+cline1 = ClustalwCommandline(path_clustal, infile=multifastafiles[0])
+cline2 = ClustalwCommandline(path_clustal, infile=multifastafiles[1])
+cline1()
+cline2()
+
+#DO FILOGENETIC TREE
+
+tree1 = Phylo.read("%s.dnd"%(multifastafiles[0]), "newick")
+tree2 = Phylo.read("%s.dnd"%(multifastafiles[1]), "newick")
+
+Phylo.draw_ascii(tree1)
+Phylo.draw_ascii(tree2)
+
 

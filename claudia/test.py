@@ -5,7 +5,7 @@ from Bio import Seq
 import sys
 import re
 # from Bio.Align.Applications import ClustalwCommandline
-from Bio import Phylo
+# from Bio import Phylo
 
 
 def doBlast (fastafile):
@@ -18,38 +18,44 @@ def doBlast (fastafile):
 		sys.stderr.write("Impossible to open this file. It does not exist!\n")
 		sys.exit()
 	
+	blastlist = []
 	#Do blast for each fasta sequence in file. Not handeling two input files, only one!
 	
 	for record in SeqIO.parse(handle, "fasta"):
-		sys.stderr.write("Doing blast %s ...\n" %(record.id[:4]))
+		sys.stderr.write("Doing blast %s ...\n" %(record.id[:4])) #the name of each fasta must be revised (now we suposo that it is a pdb but what if not??)
 		try:
 			result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
-			# result = record.seq # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
+			# pass # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 		except:
 			sys.stderr.write("Impossible to do blast, check your internet connection\n") # check error type
 			sys.exit()
-		sys.stderr.write("Blast %s done!\n" %(record.id[:4]))
 		
+		sys.stderr.write("Blast %s done!\n" %(record.id[:4]))
+
 		blastfile = open("%s.xml" %(record.id[:4]), "w")
-		# blastfile.write(result.read()) # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
-		blastfile.write(str(result))
+		blastfile.write(result.read()) 
+		# blastfile.write(str(result))# ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 		blastfile.close()
 
+		blastlist.append(str(record.id[:4])+".xml")
 		sys.stderr.write("Blast output with extension '%s.xml'\n\n" %(record.id[:4]))
+
+	return blastlist 
+	# return ["1COW.xml","3D49.xml"] # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 	handle.close()
 
 
 
-def selectProt(blastxml):
+def selectProt(blastxml, evalue):
 	"""
 	Function to extract sequencies with selected e-value form xml blast output. 
 	"""
 	result = open(blastxml, "r")
 	out = open("%s.out.blast" %(blastxml[:4]), "w")
-	evalue = 0.00001
-	coverage=0.0
-	sys.stderr.write("Extracting sequencies with e-value: %s \n" %(evalue))
-	p = re.compile( "[^\[]*\[([^\]]*)\]") #this is the pattern to 
+	# coverage=0.0 IS IT IMPORTANT THE COVERAGE
+
+
+	p = re.compile( "[^\[]*\[([^\]]*)\]") #this is the pattern to select the specie, unbelievable 
 	for n in NCBIXML.parse(result):
 		for alignment in n.alignments:
 			for hsp in alignment.hsps:
@@ -68,6 +74,9 @@ def selectProt(blastxml):
  					# out.write(str(hsp.query)+"\n")
  					# out.write(str(hsp.match) + "...\n")
 					out.write("Hit Sequence:\n%s \n" %(hsp.sbjct) )
+	
+	name = str(blastxml[:4]) + ".out.blast"
+	return name
 	
 	result.close()
 
@@ -146,11 +155,10 @@ def comparefiles (file1, file2):
 		set2.add(protein.get_specie())
 
 	intersect = set()
-	intersect = set1.intersection(set2) #not handleing finding two proteins of the same species. but when traversing 
-	
-	  									#in file, since the better hits are at the beginning you must keep them. 
-	out1 = open("fasta1.fa","w")
-	out2 = open ("fasta2.fa", "w")
+	intersect = set1.intersection(set2) 
+
+	out1 = open("multifasta1.fa","w")
+	out2 = open ("multifasta2.fa", "w")
 
 	sp_list=[]
       
@@ -171,7 +179,9 @@ def comparefiles (file1, file2):
 					out2.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq()).replace("-","")+"\n")
 					sp_list.append(protein.sp)
 		
-# comparefiles("1COW.out.blast","3D49.out.blast")
+	return ["multifasta1.fa", "multifasta2.fa"]
+
+
 
 
 # cline1 = ClustalwCommandline("clustalw", infile="fasta1.fa")
@@ -193,9 +203,9 @@ def comparefiles (file1, file2):
 
 
 #doBlast ("fasta.fa")
-# selectProt("1COW.xml")
-# selectProt("3D49.xml")
-
+# selectProt("1COW.xml", 0.00001)
+# selectProt("3D49.xml", 0.00001)
+# print (comparefiles("1COW.out.blast","3D49.out.blast"))
 
 
 #BLAST running locally --> output 
