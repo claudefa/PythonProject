@@ -2,6 +2,8 @@ from Bio.Blast import NCBIWWW
 from Bio.Blast import NCBIXML
 from Bio import SeqIO
 from Bio import Seq
+import sys
+
 
 def doBlast (fastafile):
 	handle = open(fastafile)
@@ -13,24 +15,30 @@ def doBlast (fastafile):
 		blastfile.close()	
 	handle.close()
 
-result = open("blast.xml", "r")
-for n in NCBIXML.parse(result):
-	for alignment in n.alignments:
-		for hsp in alignment.hsps:
-		#			if hsp.expect < 0.1:
-						print ("****Alignment****")
-						print ("sequence:", alignment.title)
-						print ("length:", alignment.length)
-						print ("E-value:", hsp.expect)
-						print (hsp.query[:50] + "...")
-						print (hsp.match[:50] + "...")
-						print (hsp.sbjct[:50] + "...")
-result.close()	
+
+def selectProt (blastfile):
+	result = open(blastfile, "r")
+	out = open ("candidates.blast", "w")
+	evalue = 0.00001
+	for n in NCBIXML.parse(result):
+		for alignment in n.alignments:
+			for hsp in alignment.hsps:
+				if hsp.expect < evalue:
+					out.write("****Alignment****")
+					out.write("sequence: %s" %alignment.title[:50])
+					out.write("length: %s" %alignment.length)
+					out.write("E-value: %s" %hsp.expect)
+					out.write(hsp.query[:50] )
+					out.write(hsp.match[:50] )
+					out.write(hsp.sbjct[:50] )
+  	
+	result.close()	
+	out.close()
 
 	
 
 
-doBlast ("thrombin.fa")
+selectProt("blast.xml")
 
 
 

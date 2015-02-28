@@ -6,7 +6,6 @@ import sys
 
 def doBlast (fastafile):
 	handle = open(fastafile)
-	
 	for record in SeqIO.parse(handle, "fasta") :
 		result = NCBIWWW.qblast("blastp", "nr", record.seq)
 		blastfile = open("blast.xml", "w")
@@ -29,8 +28,8 @@ def selectProt(blastxml):
 					out.write(str(hsp.match[:50]) + "...\n")
 					out.write(str(hsp.sbjct[:50]) + "...\n")
 	result.close()
-#doBlast ("thrombin.fa")
-selectProt("blast.xml")
+doBlast ("thrombin.fa")
+# selectProt("blast.xml")
 
 
 #BLAST running locally --> output 
