@@ -6,7 +6,10 @@ import argparse
 from Bio.Align.Applications import ClustalwCommandline
 from Bio import Phylo
 from Bio.Phylo.TreeConstruction import DistanceCalculator
+# from TreeConstruction import DistanceTreeConstructor
 from Bio import AlignIO
+import numpy
+
 ###################################################################################
 ###################################################################################
 #						 HOW TO RUN THIS SCRIPT 								  #
@@ -15,7 +18,8 @@ from Bio import AlignIO
 #       for the moment only starting at the beginning with one fasta infput file  #
 #		To run this script you need:  										      #
 #			- internet connection   											  #
-#			- clustalw intalled												      #
+#			- clustalw intalled		
+#			- need NumPy 													      #
 ###################################################################################
 ###################################################################################
 
@@ -138,12 +142,40 @@ Phylo.draw_ascii(tree2)
 # Phylo.draw(tree1) # NEED TO OBTAIN A CORRECT FORMAT TO OUTPUT
 # Phylo.draw(tree2)
 
-aln1 = AlignIO.read("%s.aln"%(multifastafiles[0][:-3]), "phylip")
-# aln2 = AlignIO.read("%s.aln"%(multifastafiles[1][:-3]), "phylip")
+#we must construct a tree NJ
+ 
+#DISTANCE MATRIX
+aln1 = AlignIO.read("msa.phy", "phylip") #no se m'obra be
+calculator = DistanceCalculator("identity") #using identity, you can use also blosum62
+
+print (aln1)
+dm = calculator.get_distance(aln)
+print (dm)
 
 
-print(aln1)
 
+
+
+# constructor = DistanceTreeConstructor(calculator, 'nj')
+
+# tree = constructor.build_tree(aln)
+
+
+
+
+# #MATRIX DISTANCES - NOT PROPERLY DONE (TRYING THE ONE ABOVE)
+# # if verbose:
+# # 	sys.stderr ("Computing distances between clades...\n")
+
+# matrix1 = to_distance_matrix(tree1)
+
+# matrix2 = to_distance_matrix(tree2)
+
+# for element in matrix1:
+# 	print (element)
+
+# for element in matrix2:
+# 	print (element)
 
 
 
