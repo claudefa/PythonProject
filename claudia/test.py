@@ -185,28 +185,8 @@ def comparefiles (file1, file2):
 	return ["multifasta1.fa", "multifasta2.fa"]
 
 
-def to_distance_matrix(tree):
-    """Create a distance matrix (NumPy array) from clades/branches in tree.
- 
-    A cell (i,j) in the array is the length of the branch between allclades[i]
-    and allclades[j], if a branch exists, otherwise infinity.
- 
-    Returns a tuple of (allclades, distance_matrix) where allclades is a list of
-    clades and distance_matrix is a NumPy 2D array.
-    """
-    allclades = list(tree.find_clades(order='level'))
-    lookup = {}
-    for i, elem in enumerate(allclades):
-        lookup[elem] = i
-    distmat = numpy.repeat(numpy.inf, len(allclades)**2)
-    distmat.shape = (len(allclades), len(allclades))
-    for parent in tree.find_clades(terminal=False, order='level'):
-        for child in parent.clades:
-            if child.branch_length:
-                distmat[lookup[parent], lookup[child]] = child.branch_length
-    # if not tree.rooted:
-    #     distmat += distmat.transpose
-    return (allclades, numpy.matrix(distmat))
+
+
 
 # cline1 = ClustalwCommandline("clustalw", infile="fasta1.fa")
 # cline2 = ClustalwCommandline("clustalw", infile="fasta2.fa")
