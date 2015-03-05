@@ -10,7 +10,11 @@ from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
 from Bio import AlignIO
 from Bio.Phylo.Consensus import *
 import numpy
+from numpy import corrcoef, arange
 import math
+from pylab import pcolor, show, colorbar, xticks, yticks
+import scipy.signal
+import matplotlib.pyplot as plt
 
 ###################################################################################
 ###################################################################################
@@ -220,20 +224,23 @@ def compute_r(matrix1,matrix2):
 print(compute_r(dm1,dm2))
 
 
+def listmatrix (matrix): #change, it is the same as readmatrix but without average
+	values = []
+	for element in matrix:
+		for i in element:
+			values.append(i)
+	return values
 
-# #MATRIX DISTANCES - NOT PROPERLY DONE (TRYING THE ONE ABOVE)
-# # if verbose:
-# # 	sys.stderr ("Computing distances between clades...\n")
+def plotData(matrix1,matrix2):
 
-# matrix1 = to_distance_matrix(tree1)
+ 	llista = list(zip(listmatrix(matrix1),listmatrix(matrix2)))
+ 	print (llista[0])
+ 	plt.scatter(*zip(*llista))
+ 	plt.show()
 
-# matrix2 = to_distance_matrix(tree2)
+plotData(dm1, dm2)
 
-# for element in matrix1:
-# 	print (element)
 
-# for element in matrix2:
-# 	print (element)
 
 
 
