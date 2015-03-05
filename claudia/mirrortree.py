@@ -6,9 +6,15 @@ import argparse
 from Bio.Align.Applications import ClustalwCommandline
 from Bio import Phylo
 from Bio.Phylo.TreeConstruction import DistanceCalculator
-# from TreeConstruction import DistanceTreeConstructor
+from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
 from Bio import AlignIO
+from Bio.Phylo.Consensus import *
 import numpy
+from numpy import corrcoef, arange
+import math
+from pylab import pcolor, show, colorbar, xticks, yticks
+import scipy.signal
+import matplotlib.pyplot as plt
 
 ###################################################################################
 ###################################################################################
@@ -19,7 +25,8 @@ import numpy
 #		To run this script you need:  										      #
 #			- internet connection   											  #
 #			- clustalw intalled		
-#			- need NumPy 													      #
+#			- need NumPy 	
+#			- need Treeconstruction module									      #
 ###################################################################################
 ###################################################################################
 
@@ -145,37 +152,95 @@ Phylo.draw_ascii(tree2)
 #we must construct a tree NJ
  
 #DISTANCE MATRIX
-aln1 = AlignIO.read("msa.phy", "phylip") #no se m'obra be
-calculator = DistanceCalculator("identity") #using identity, you can use also blosum62
+aln1 = AlignIO.read("%s.aln" %(multifastafiles[0][:-3]), 'clustal')
+calculator = DistanceCalculator("blosum62") #using identity, you can use also blosum62/identity
 
 print (aln1)
-dm = calculator.get_distance(aln)
-print (dm)
+dm1 = calculator.get_distance(aln1)
+print (dm1)
+
+aln2 = AlignIO.read("%s.aln" %(multifastafiles[1][:-3]), 'clustal')
+
+print (aln2)
+dm2 = calculator.get_distance(aln2)
+print (dm2)
 
 
+constructor = DistanceTreeConstructor(calculator, 'nj')
+tree3 = constructor.build_tree(aln1)
+# print(tree3)
+
+tree4 = constructor.build_tree(aln2)
+# print(tree4)
 
 
+#BOOSTRAP
 
-# constructor = DistanceTreeConstructor(calculator, 'nj')
+msa1 = AlignIO.read("%s.aln" %(multifastafiles[0][:-3]), 'clustal')
+# msas1 = bootstrap(msa1, 100)
 
-# tree = constructor.build_tree(aln)
+# msa2 = AlignIO.read("%s.aln" %(multifastafiles[1][:-3]), 'clustal')
+# msas2 = bootstrap(msa2, 100)
+
+# constructor_boot = DistanceTreeConstructor(calculator, 'nj')
+# # trees = bootstrap_trees(msa1, 100, constructor_boot)
+
+# consensus_tree = bootstrap_consensus(msa1, 100, constructor_boot, majority_consensus)
+# print(tree3)
+# Phylo.draw_ascii(tree3)
+# print(consensus_tree)
+
+# Phylo.draw_ascii(consensus_tree)
 
 
+print()
+def read_matrix(matrix):
+	values = []
+	for element in matrix:
+		for i in element:
+			values.append(i)
+	average = sum(values)/len(values)
+	return (values,average)
+
+#print(read_matrix(dm1))
+# def formula(value1,average1,value2,average2):
 
 
-# #MATRIX DISTANCES - NOT PROPERLY DONE (TRYING THE ONE ABOVE)
-# # if verbose:
-# # 	sys.stderr ("Computing distances between clades...\n")
+def diff(matrix):
+	diff = []
+	average = read_matrix(matrix)[1]
+	for element in read_matrix(matrix)[0]:
+		diff.append(element-average)
+	return diff
 
-# matrix1 = to_distance_matrix(tree1)
+def compute_r(matrix1,matrix2):
+	(numerator,r_square,s_square) = (0,0,0)
+	difference = list(zip(diff(matrix1),diff(matrix2)))
+	for element in difference:
+ 		numerator += element[0]*element[1]
+ 		r_square += element[0]**2
+ 		s_square += element[1]**2
+	return numerator/(math.sqrt(r_square*s_square))
+print(compute_r(dm1,dm2))
 
-# matrix2 = to_distance_matrix(tree2)
 
-# for element in matrix1:
-# 	print (element)
+def listmatrix (matrix): #change, it is the same as readmatrix but without average
+	values = []
+	for element in matrix:
+		for i in element:
+			values.append(i)
+	return values
 
-# for element in matrix2:
-# 	print (element)
+def plotData(matrix1,matrix2):
+
+ 	llista = list(zip(listmatrix(matrix1),listmatrix(matrix2)))
+ 	print (llista[0])
+ 	plt.scatter(*zip(*llista))
+ 	plt.show()
+
+plotData(dm1, dm2)
+
+
 
 
 
