@@ -27,8 +27,8 @@ def doBlast (fastafile):
 	for record in SeqIO.parse(handle, "fasta"):
 		sys.stderr.write("Doing blast %s ...\n" %(record.id[:4])) #the name of each fasta must be revised (now we suposo that it is a pdb but what if not??)
 		try:
-			result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
-			# pass # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
+			# result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
+			pass # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 		except:
 			sys.stderr.write("Impossible to do blast, check your internet connection\n") # check error type
 			sys.exit()
@@ -36,15 +36,15 @@ def doBlast (fastafile):
 		sys.stderr.write("Blast %s done!\n" %(record.id[:4]))
 
 		blastfile = open("%s.xml" %(record.id[:4]), "w")
-		blastfile.write(result.read()) 
-		# blastfile.write(str(result))# ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
+		# blastfile.write(result.read()) 
+		blastfile.write(str(result))# ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 		blastfile.close()
 
 		blastlist.append(str(record.id[:4])+".xml")
 		sys.stderr.write("Blast output with extension '%s.xml'\n\n" %(record.id[:4]))
 
-	return blastlist 
-	# return ["1COW.xml","3D49.xml"] # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
+	# return blastlist 
+	return ["1COW.xml","3D49.xml"] # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 	handle.close()
 
 
