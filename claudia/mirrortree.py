@@ -140,7 +140,7 @@ tree1.ladderize()
 tree2.ladderize()
 
 Phylo.draw_ascii(tree1) #IT WOULD BE INTERESTING TO HAVE GOOD NAMES IN EACH BRANCH.
-Phylo.draw_ascii(tree2)
+Phylo.draw_ascii(tree2) #Estos no los queremos. Queremos los de despues de tener matrix
 
 # if verbose:
 # 	sys.stderr.write("Phylogenetic tree done!\n")
@@ -194,6 +194,7 @@ msa1 = AlignIO.read("%s.aln" %(multifastafiles[0][:-3]), 'clustal')
 
 
 print()
+
 def read_matrix(matrix):
 	values = []
 	for element in matrix:
@@ -235,8 +236,8 @@ def plotData(matrix1,matrix2):
 
  	llista = list(zip(listmatrix(matrix1),listmatrix(matrix2)))
  	print (llista[0])
- 	plt.scatter(*zip(*llista))
- 	plt.show()
+ 	plt.scatter(*zip(*llista)) #plot diagonal. 
+ 	plt.show() #no .show sino .save para guardarlo
 
 plotData(dm1, dm2)
 
