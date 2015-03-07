@@ -1,5 +1,4 @@
 from modules import *
-
 def doBlast (fastafile):
 	"""
 	This function performs a BLAST search using the QBLAST server at NCBI.
@@ -145,45 +144,66 @@ def comparefiles (file1, file2):
 
 	intersect = set1.intersection(set2) #Get species shared in both files
 
-	species_selector(intersect, file1, "multifasta1.fa")
+	species_selector(intersect, file1, "multifasta1.fa") #CANVIAR NOM PER TAL Q SIGUI VARIABLE
 	species_selector(intersect, file2, "multifasta2.fa")
 		
 	return()
 
 
+def doClustalW (multifastafile):
+	"""
+	Given a multifasta file peform an alignment using ClustalW. Return two files: .aln and .dnd
+	"""
+	path_clustal = "/Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2" 
+	cline1 = ClustalwCommandline(path_clustal, infile=multifastafile)
+	cline1()
 
 
+def read_matrix(matrix):
+	"""
+	Traversing throught matrix and return values and average
+	"""
+	values = []
+	for element in matrix:
+		for i in element:
+			values.append(i)
+	average = sum(values)/len(values)
+	return (values,average)
 
-# cline1 = ClustalwCommandline("clustalw", infile="fasta1.fa")
-# cline2 = ClustalwCommandline("clustalw", infile="fasta2.fa")
-# cline1()
-# cline2()
-# tree1 = Phylo.read("fasta1.dnd", "newick")
-# tree2 = Phylo.read("fasta2.dnd", "newick")
-# Phylo.draw_ascii(tree1)
-# Phylo.draw_ascii(tree2)
+def diff(matrix):
+	diff = []
+	average = read_matrix(matrix)[1]
+	for element in read_matrix(matrix)[0]:
+		diff.append(element-average)
+	return diff
+
+def listmatrix (matrix): #change, it is the same as readmatrix but without average
+	values = []
+	for element in matrix:
+		for i in element:
+			values.append(i)
+	return values
+
+def compute_r(matrix1,matrix2):
+	# (numerator,r_square,s_square) = (0,0,0)
+	# difference = list(zip(diff(matrix1),diff(matrix2)))
+	# for element in difference:
+ # 		numerator += element[0]*element[1]
+ # 		r_square += element[0]**2
+ # 		s_square += element[1]**2
+	# return numerator/(math.sqrt(r_square*s_square))
+
+	return numpy.corrcoef(listmatrix(matrix1), listmatrix(matrix2))[0, 1]
 
 
-
-#Un cop tenim el fasta: 1) quedar-nos amb la sequencia que tingui el e-value millor/millor identitat
- 						# 2) treure els gaps 
-
-
-#EXECUTE FUNCTIONS
-
-
-#doBlast ("fasta.fa")
-#selectProt("1COW.xml", 0.00001)
-#selectProt("3D49.xml", 0.00001)
-#comparefiles("1COW.out.blast","3D49.out.blast")
-
-
-#BLAST running locally --> output 
-#from output blast: selectsequencies with less than 1e-5 e-value. Extract outputfile: id/seq/evalue/homology/coverage/
-#filter outputfile: maxium 15 sequences present in both outputfiles and save each hit  in two files for each protein
-#do clustalW for both files
-#construct phylogenetic tree: tree representation  
-#construct matrix
-#r pearson correlation 
-
-
+def plotData(matrix1,matrix2):
+	x = listmatrix(matrix1)
+	y = listmatrix(matrix2)
+	plt.scatter(x,y)
+	fit =numpy.polyfit(x,y,1)
+	p = numpy.poly1d(fit)
+	plt.plot(x, p(x), '--g')
+	title('Linear regression')
+	plt.xlabel('Matrix1') #canviar noms per ser variables
+	plt.ylabel('Matrix2')
+	savefig("plot.png") 
