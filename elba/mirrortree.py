@@ -83,6 +83,13 @@ except:
 	sys.stderr.write("Input files missing! Please, try again.\nAborting...\n")
 	sys.exit() 
 
+#############################################
+#############################################
+##########MODIFICAR A PARTIR DE AQUI#########
+#############################################
+#############################################
+
+
 #EXECUTE BLAST WITH INPUT FILE
 if input_file:
 	if verbose:
