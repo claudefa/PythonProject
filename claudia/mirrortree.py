@@ -1,20 +1,4 @@
 from test import * 
-import sys
-import os
-import os.path
-import argparse
-from Bio.Align.Applications import ClustalwCommandline
-from Bio import Phylo
-from Bio.Phylo.TreeConstruction import DistanceCalculator
-from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
-from Bio import AlignIO
-from Bio.Phylo.Consensus import *
-import numpy
-from numpy import corrcoef, arange
-import math
-from pylab import pcolor, show, colorbar, xticks, yticks
-import scipy.signal
-import matplotlib.pyplot as plt
 
 ###################################################################################
 ###################################################################################
@@ -92,7 +76,7 @@ try:
 			sys.stderr.write("Not a correct file to run this file. You may want to see documentation.\n")
 		sys.exit()
 except:
-	sys.stderr.write("Sorry.\n")
+	sys.stderr.write("Input something, please. Otherwise we don't know. Sorry.\n")
 	sys.exit() 
 
 #EXECUTE BLAST WITH INPUT FILE
@@ -124,6 +108,7 @@ if input_file:
 		sys.stderr.write("Done!\n\n")
 		sys.stderr.write("Comparing both BLAST output files to extract hit sequences (BEWARE! They are the same species for both proteins)\n")
 
+	
 	#COMPARE BOTH FILES TO ONLY SELECT HITS PRESENT IN BOTH FILES (IN PRESENTS OF PARALOGS IGNORE THEM)
 
 	multifastafiles = comparefiles(protfile1, protfile2)
@@ -132,44 +117,19 @@ if input_file:
 
 
 	#DO CLUSTAL ALIGNMENT
+	if verbose:
+		sys.stderr.write("Done!\n\n")
+		sys.stderr.write("Doing ClustalW alignment from multifasta for both proteins \n") 
 
-	# if verbose:
-	# 	sys.stderr.write("Done!\n\n")
-	# 	sys.stderr.write("Doing ClustalW alignment from multifasta for both proteins \n") #We should start program from here also
+	doClustalW(multifastafiles[0])
+	doClustalW(multifastafiles[1])
 
-	path_clustal = "/Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2" 
-
-	cline1 = ClustalwCommandline(path_clustal, infile=multifastafiles[0])
-	cline2 = ClustalwCommandline(path_clustal, infile=multifastafiles[1])
-	cline1()
-	cline2()
-
-
-#DO FILOGENETIC TREE
-
-# # if verbose:
-# # 	sys.stderr.write("ClustalW done!\n")
-# # 	sys.stderr.write("Drawing phylogenetic trees...\n")
-# tree1 = Phylo.read("%s.dnd"%(multifastafiles[0][:-3]), "newick")
-# tree2 = Phylo.read("%s.dnd"%(multifastafiles[1][:-3]), "newick")
-
-# tree1.ladderize()
-# tree2.ladderize()
-
-# Phylo.draw_ascii(tree1) #IT WOULD BE INTERESTING TO HAVE GOOD NAMES IN EACH BRANCH.
-# Phylo.draw_ascii(tree2) #Estos no los queremos. Queremos los de despues de tener matrix
-
-# # if verbose:
-# # 	sys.stderr.write("Phylogenetic tree done!\n")
-# # 	sys.stderr.write("Saving the tree in pdf format")
-
-# # Phylo.draw(tree1) # NEED TO OBTAIN A CORRECT FORMAT TO OUTPUT
-# # Phylo.draw(tree2)
-
-# #we must construct a tree NJ
+	if verbose:
+		sys.stderr.write("ClustalW done!\n")
+		sys.stderr.write("Obtaining distance matrix from the alignments...\n")
 					 
 #DISTANCE MATRIX
-if input_file:
+
 	aln1 = AlignIO.read("%s.aln" %(multifastafiles[0][:-3]), 'clustal')
 	aln2 = AlignIO.read("%s.aln" %(multifastafiles[1][:-3]), 'clustal')
 
@@ -177,99 +137,55 @@ elif input_aln1 and input_aln2:
 	aln1 = AlignIO.read(input_aln1, 'clustal')
 	aln2 = AlignIO.read(input_aln2, 'clustal')
 
+#DO FILOGENETIC TREE
+
 calculator = DistanceCalculator("blosum62") #using identity, you can use also blosum62/identity
 
-print (aln1)
 dm1 = calculator.get_distance(aln1)
-print (dm1)
-
-
-print (aln2)
 dm2 = calculator.get_distance(aln2)
-print (dm2)
-
 
 constructor = DistanceTreeConstructor(calculator, 'nj')
 tree3 = constructor.build_tree(aln1)
-# print(tree3)
-
 tree4 = constructor.build_tree(aln2)
-# print(tree4)
 
+if verbose:
+	sys.stderr.write("Phylogenetic tree done!\n")
 
-#BOOSTRAP
-
-# msa1 = AlignIO.read("%s.aln" %(multifastafiles[0][:-3]), 'clustal')
-# msas1 = bootstrap(msa1, 100)
-
-# msa2 = AlignIO.read("%s.aln" %(multifastafiles[1][:-3]), 'clustal')
-# msas2 = bootstrap(msa2, 100)
-
-# constructor_boot = DistanceTreeConstructor(calculator, 'nj')
-# # trees = bootstrap_trees(msa1, 100, constructor_boot)
-
-# consensus_tree = bootstrap_consensus(msa1, 100, constructor_boot, majority_consensus)
-# print(tree3)
-# Phylo.draw_ascii(tree3)
-# print(consensus_tree)
-
-# Phylo.draw_ascii(consensus_tree)
-
-
+Phylo.draw_ascii(tree3)
 print()
 
-def read_matrix(matrix):
-	values = []
-	for element in matrix:
-		for i in element:
-			values.append(i)
-	average = sum(values)/len(values)
-	return (values,average)
+Phylo.draw_ascii(tree4)
+print()
 
-#print(read_matrix(dm1))
-# def formula(value1,average1,value2,average2):
+				#BOOSTRAP
 
+				# msa1 = AlignIO.read("%s.aln" %(multifastafiles[0][:-3]), 'clustal')
+				# msas1 = bootstrap(msa1, 100)
 
-def diff(matrix):
-	diff = []
-	average = read_matrix(matrix)[1]
-	for element in read_matrix(matrix)[0]:
-		diff.append(element-average)
-	return diff
-def listmatrix (matrix): #change, it is the same as readmatrix but without average
-	values = []
-	for element in matrix:
-		for i in element:
-			values.append(i)
-	return values
+				# msa2 = AlignIO.read("%s.aln" %(multifastafiles[1][:-3]), 'clustal')
+				# msas2 = bootstrap(msa2, 100)
 
-def compute_r(matrix1,matrix2):
-	(numerator,r_square,s_square) = (0,0,0)
-	difference = list(zip(diff(matrix1),diff(matrix2)))
-	for element in difference:
- 		numerator += element[0]*element[1]
- 		r_square += element[0]**2
- 		s_square += element[1]**2
-	# return numerator/(math.sqrt(r_square*s_square))
+				# constructor_boot = DistanceTreeConstructor(calculator, 'nj')
+				# # trees = bootstrap_trees(msa1, 100, constructor_boot)
 
-	return numpy.corrcoef(listmatrix(matrix1), listmatrix(matrix2))[0, 1]
+				# consensus_tree = bootstrap_consensus(msa1, 100, constructor_boot, majority_consensus)
+				# print(tree3)
+				# Phylo.draw_ascii(tree3)
+				# print(consensus_tree)
 
-print(compute_r(dm1,dm2))
+				# Phylo.draw_ascii(consensus_tree)
 
+#COMPUTE R CORREATION 
+if verbose:
+	sys.stderr.write("Phylogenetic tree done!\n")
 
+sys.stdout.write("This is the correlation for both proteins: %.3f \n"%(compute_r(dm1,dm2)))
 
-
-def plotData(matrix1,matrix2):
-	llista = list(zip(listmatrix(matrix1),listmatrix(matrix2)))
-	plt.scatter(listmatrix(matrix1), listmatrix(matrix2))
-	fit =numpy.polyfit(listmatrix(matrix1), listmatrix(matrix2),1)
-	p = numpy.poly1d(fit)
-	plt.plot(listmatrix(matrix1), p(listmatrix(matrix1)), '--g')
-	plt.show() #no .show sino .save para guardarlo
-
-
+if verbose:
+	sys.stderr.write("Plotting linear regression. Saved as 'plot.png'\n")
 
 plotData(dm1, dm2)
+
 
 
 
