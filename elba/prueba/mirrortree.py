@@ -1,14 +1,41 @@
-from test import *
+from test import * 
+
+###################################################################################
+###################################################################################
+#						 HOW TO RUN THIS SCRIPT 								  #
+#		put in the command line: python3 mirrortree.py -i fastafile.fa -v         #
+# 																				  #
+#       for the moment only starting at the beginning with one fasta infput file  #
+#		To run this script you need:  										      #
+#			- internet connection   											  #
+#			- clustalw intalled		
+#			- need NumPy 	
+#			- need Treeconstruction module									      #
+###################################################################################
+###################################################################################
 
 parser = argparse.ArgumentParser(description="This program manages user arguments")
 
 parser.add_argument('-i', '--input',
 	dest = "infile",
 	action = "store", 
-	default = None,
-#	type = argparse.FileType('r'), # Open each argument as a file for reading
-	nargs = '+', # One or more files as input
-	help = "Input: Choose one FASTA file (.fa/.fasta) or two CLUSTALW alignment files (.aln)")
+	default = False,
+	type = argparse.FileType('r'), # Open each argument as a file for reading
+	nargs = '+' # One or more files as input
+	help = "Input file: one FASTA file (.fa/.fasta) or two CLUSTALW alignment files (.aln)")
+
+#parser.add_argument('-a1', '--align1',
+#	dest = "alignment1",
+#	action = "store", 
+#	default = False,
+#	help = "Input first CLUSTALW alignment (.aln)") 
+
+#parser.add_argument('-a2', '--align2',
+#	dest = "alignment2",
+#	action = "store", 
+#	default = False,
+#	help = "Input second CLUSTALW alignment (.aln)") 
+
 
 # parser.add_argument('-o', '--output',
 #                 dest = "output",
@@ -31,67 +58,62 @@ parser.add_argument('-e', '--evalue',
 
 options = parser.parse_args()
 
-input_list = options.infile
+input_file = options.infile
+#input_aln1 = options.alignment1
+#input_aln2 = options.alignment2
+
 verbose = options.verbose
-evalue = options.evalue
 
-#CAPTURING THE INPUT FILE(S)
+#CAPTURING THE INPUT FILE 
+try:
+	if os.path.isfile(input_file) and input_file.endswith(".fa" or ".fasta"):
+		if verbose:
+			sys.stderr.write("You have selected '%s' file to execute this awesome MirrorTree script.\n" %(input_file))
 
-if len(input_list) < 3:
-	for input_file in input_list:
+	elif os.path.isfile(input_aln1) and os.path.isfile(input_aln2) and input_aln1.endswith (".aln") and input_aln2.endswith(".aln"):
+		sys.stderr.write ("You have selected '%s' and '%s' file. Starting from alignment directly. \n" %(input_aln1, input_aln2))
 
-		if os.path.isdir(input_file):
-			sys.stderr.write("This program cannot handle directories as input.\nPlease, use files.\nAborting...\n")
-			sys.exit()
+	elif os.path.isdir(input_file):
+		sys.exit()
+	else:
+		if verbose:
+			sys.stderr.write("Not a correct file to run this file. Please, check the documentation.\nAborting...\n")
+		sys.exit()
+except:
+	sys.stderr.write("Input files missing! Please, try again.\nAborting...\n")
+	sys.exit() 
 
-		if os.path.isfile(input_file) and (".fa" or ".fasta") in input_file:
-			if len(input_list) is 1:
-				if verbose:
-					sys.stderr.write("You have selected '%s' file to execute this awesome MirrorTree script.\n" %(input_file))
-			else:
-				sys.stderr.write("Impossible to handle this input request. Please, check the documentation.\nAborting...\n")
-				sys.exit()
+#############################################
+#############################################
+##########MODIFICAR A PARTIR DE AQUI#########
+#############################################
+#############################################
 
-		elif len(input_list) is 2:
-			if os.path.isfile(input_list[0]) and (".aln") in input_list[0] and os.path.isfile(input_list[1]) and (".aln") in input_list[1]:
-				if verbose:
-					sys.stderr.write ("You have selected '%s' and '%s' file. Starting from alignment directly. \n"
-					%(input_list[0], input_list[1],))
-				break
-			else:
-				sys.stderr.write("Impossible to handle this input request. Please, check the documentation.\nAborting...\n")
-				sys.exit()
-		else:
-			sys.stderr.write("Impossible to handle this input request. Please, check the documentation.\nAborting...\n")
-			sys.exit()
-else:
-	sys.stderr.write("Only able to handle one or two files!\nAborting...\n")
-	sys.exit()
 
 #EXECUTE BLAST WITH INPUT FILE
-
-if len(input_list) == 1:
+if input_file:
 	if verbose:
 		sys.stderr.write("Connecting to BLAST... \n\n")
 
-		#blastlist = doBlast(input_list[0])
+		blastlist = doBlast(input_file)
 
 	if verbose:
 		sys.stderr.write("BLAST has finished.\n\n")
 
 
 	#EXTRACT BEST HITS FROM BLAST XML FILE 
+	evalue = options.evalue
 
 	if verbose:
 		sys.stderr.write("Extracting sequencies with e-value: '%s' from %s file after BLAST...\n" %(evalue, blastlist[0]))
 
-	#protfile1 = selectProt(blastlist[0], evalue)
+	protfile1 = selectProt(blastlist[0], evalue)
 
 	if verbose:
 		sys.stderr.write("Done!\n")
 		sys.stderr.write("Extracting sequencies with e-value: '%s' from %s file after BLAST...\n" %(evalue, blastlist[1]))
 
-	#protfile2 = selectProt (blastlist[1], evalue)
+	protfile2 = selectProt (blastlist[1], evalue)
 
 	if verbose:
 		sys.stderr.write("Done!\n\n")
@@ -100,9 +122,9 @@ if len(input_list) == 1:
 	
 	#COMPARE BOTH FILES TO ONLY SELECT HITS PRESENT IN BOTH FILES (IN PRESENTS OF PARALOGS IGNORE THEM)
 
-	#multifastafiles = comparefiles(protfile1, protfile2)
+	multifastafiles = comparefiles(protfile1, protfile2)
 
-	multifastafiles = comparefiles("1AIE.out.blast","2J0I.out.blast")
+	# multifastafiles = comparefiles("1COW.out.blast","3D49.out.blast")
 
 
 	#DO CLUSTAL ALIGNMENT
@@ -110,9 +132,8 @@ if len(input_list) == 1:
 		sys.stderr.write("Done!\n\n")
 		sys.stderr.write("Doing ClustalW alignment from multifasta for both proteins \n") 
 
-	for element in multifastafiles:
-		doClustalW(element)
-#	doClustalW(multifastafiles[1])
+	doClustalW(multifastafiles[0])
+	doClustalW(multifastafiles[1])
 
 	if verbose:
 		sys.stderr.write("ClustalW done!\n")
@@ -123,13 +144,13 @@ if len(input_list) == 1:
 	aln1 = AlignIO.read("%s.aln" %(multifastafiles[0][:-3]), 'clustal')
 	aln2 = AlignIO.read("%s.aln" %(multifastafiles[1][:-3]), 'clustal')
 
-else:
-	aln1 = AlignIO.read(input_list[0], 'clustal')
-	aln2 = AlignIO.read(input_list[1], 'clustal')
+elif input_aln1 and input_aln2:
+	aln1 = AlignIO.read(input_aln1, 'clustal')
+	aln2 = AlignIO.read(input_aln2, 'clustal')
 
 #DO FILOGENETIC TREE
 
-calculator = DistanceCalculator("blosum62") # You can use blosum62/identity
+calculator = DistanceCalculator("blosum62") #using identity, you can use also blosum62/identity
 
 dm1 = calculator.get_distance(aln1)
 dm2 = calculator.get_distance(aln2)
@@ -165,7 +186,7 @@ print()
 
 				# Phylo.draw_ascii(consensus_tree)
 
-#COMPUTE R CORRELATION 
+#COMPUTE R CORREATION 
 if verbose:
 	sys.stderr.write("Phylogenetic tree done!\n")
 
@@ -174,5 +195,10 @@ sys.stdout.write("This is the correlation for both proteins: %.3f \n"%(compute_r
 if verbose:
 	sys.stderr.write("Plotting linear regression. Saved as 'plot.png'\n")
 
-#plotData(dm1, dm2)
+plotData(dm1, dm2)
+
+
+
+
+
 

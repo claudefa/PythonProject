@@ -1,3 +1,4 @@
+
 from modules import *
 
 def doBlast (fastafile):
@@ -8,7 +9,7 @@ def doBlast (fastafile):
 	try:
 		handle = open(fastafile, "r")
 	except IOError:
-		sys.stderr.write("Impossible to open this file. It does not exist!\nAborting program.\n")
+		sys.stderr.write("Impossible to open this file. It does not exist!\nAborting...\n")
 		sys.exit()
 	
 	blastlist = []
@@ -20,7 +21,7 @@ def doBlast (fastafile):
 			result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
 			# pass # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 		except:
-			sys.stderr.write("Impossible to do blast, check your internet connection\n") # check error type
+			sys.stderr.write("Impossible to perform BLAST!\nAborting...\n") # check error type
 			sys.exit()
 		
 		sys.stderr.write("Blast %s done!\n" %(record.id[:4]))
@@ -34,7 +35,7 @@ def doBlast (fastafile):
 		sys.stderr.write("Blast output with extension '%s.xml'\n\n" %(record.id[:4]))
 
 	return blastlist 
-	# return ["1COW.xml","3D49.xml"] # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
+	#return ["1AIE.xml","2J0I.xml"] # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 	handle.close()
 
 
@@ -97,7 +98,7 @@ class Protein(object):
 def Protein_creator(filename):
 	fd = open(filename, "r")
 	info = []
-	p = re.compile("\[(.*)\]")
+	p = re.compile("\[(.*)\]") # Pattern for extract the specie
 	for field in fd:
 		if "#" in field:
 			if not info == []:
@@ -119,7 +120,7 @@ def species_selector(intersect, filename, outfile):
 	Write a fasta file with selected proteins.
 	"""
 	sp_set = set()	
-	out = open (outfile, "w")
+	out = open(outfile, "w")
 
 	for protein in Protein_creator(filename):
 		for specie in intersect:
@@ -131,63 +132,80 @@ def species_selector(intersect, filename, outfile):
 	return()
 
 
-def comparefiles (file1, file2):
+def comparefiles (file_list):
 	"""
 	Function to compare both blast out and select homologous protein in the same species for both proteins. Return set.
 	"""
 	(set1,set2) = (set(),set())
 
-	for protein in Protein_creator(file1):
+	for protein in Protein_creator(file_list[0]):
 		set1.add(protein.get_specie())
 
-	for protein in Protein_creator(file2):
+	for protein in Protein_creator(file_list[1]):
 		set2.add(protein.get_specie())
 
 	intersect = set1.intersection(set2) #Get species shared in both files
 
-	species_selector(intersect, file1, "multifasta1.fa")
-	species_selector(intersect, file2, "multifasta2.fa")
+	species_selector(intersect, file_list[0], "multifasta1.fa") #CANVIAR NOM PER TAL Q SIGUI VARIABLE
+	species_selector(intersect, file_list[1], "multifasta2.fa")
 		
-	return()
+	return ["multifasta1.fa","multifasta2.fa"]
 
 
+def doClustalW (multifastafile):
+	"""
+	Given a multifasta file peform an alignment using ClustalW. Return two files: .aln and .dnd
+	"""
+	path_clustal = "/usr/bin/clustalw" 
+	cline1 = ClustalwCommandline(path_clustal, infile=multifastafile)
+	cline1()
 
 
+def read_matrix(matrix):
+	"""
+	Traversing throught matrix and return values and average
+	"""
+	values = []
+	for element in matrix:
+		for i in element:
+			values.append(i)
+	average = sum(values)/len(values)
+	return (values,average)
 
-# cline1 = ClustalwCommandline("clustalw", infile="fasta1.fa")
-# cline2 = ClustalwCommandline("clustalw", infile="fasta2.fa")
-# cline1()
-# cline2()
-# tree1 = Phylo.read("fasta1.dnd", "newick")
-# tree2 = Phylo.read("fasta2.dnd", "newick")
-# Phylo.draw_ascii(tree1)
-# Phylo.draw_ascii(tree2)
+def diff(matrix):
+	diff = []
+	average = read_matrix(matrix)[1]
+	for element in read_matrix(matrix)[0]:
+		diff.append(element-average)
+	return diff
+
+def listmatrix (matrix): #change, it is the same as readmatrix but without average
+	values = []
+	for element in matrix:
+		for i in element:
+			values.append(i)
+	return values
+
+def compute_r(matrix_list):
+	# (numerator,r_square,s_square) = (0,0,0)
+	# difference = list(zip(diff(matrix1),diff(matrix2)))
+	# for element in difference:
+ # 		numerator += element[0]*element[1]
+ # 		r_square += element[0]**2
+ # 		s_square += element[1]**2
+	# return numerator/(math.sqrt(r_square*s_square))
+
+	return numpy.corrcoef(listmatrix(matrix_list[0]), listmatrix(matrix_list[1]))[0, 1]
 
 
-
-#Un cop tenim el fasta: 1) quedar-nos amb la sequencia que tingui el e-value millor/millor identitat
- 						# 2) treure els gaps 
-
-
-#EXECUTE FUNCTIONS
-
-
-#doBlast ("fasta.fa")
-#selectProt("1COW.xml", 0.00001)
-#selectProt("3D49.xml", 0.00001)
-#comparefiles("1COW.out.blast","3D49.out.blast")
-
-
-#BLAST running locally --> output 
-#from output blast: selectsequencies with less than 1e-5 e-value. Extract outputfile: id/seq/evalue/homology/coverage/
-#filter outputfile: maxium 15 sequences present in both outputfiles and save each hit  in two files for each protein
-#do clustalW for both files
-#construct phylogenetic tree: tree representation  
-#construct matrix
-#r pearson correlation 
-
-
-
-
-
-
+def plotData(matrix1,matrix2):
+	x = listmatrix(matrix1)
+	y = listmatrix(matrix2)
+	plt.scatter(x,y)
+	fit =numpy.polyfit(x,y,1)
+	p = numpy.poly1d(fit)
+	plt.plot(x, p(x), '--g')
+	title('Linear regression')
+	plt.xlabel('Matrix1') #canviar noms per ser variables
+	plt.ylabel('Matrix2')
+	savefig("plot.png") 

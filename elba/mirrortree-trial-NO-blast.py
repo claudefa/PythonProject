@@ -1,3 +1,4 @@
+
 from test import *
 
 parser = argparse.ArgumentParser(description="This program manages user arguments")
@@ -70,11 +71,14 @@ else:
 
 #EXECUTE BLAST WITH INPUT FILE
 
+#IF INPUT IS ONE FASTA FILE
+
 if len(input_list) == 1:
 	if verbose:
 		sys.stderr.write("Connecting to BLAST... \n\n")
 
-		#blastlist = doBlast(input_list[0])
+	#blastlist = doBlast(input_list[0])
+	blastlist = ["1AIE.xml","2J0I.xml"]
 
 	if verbose:
 		sys.stderr.write("BLAST has finished.\n\n")
@@ -82,70 +86,58 @@ if len(input_list) == 1:
 
 	#EXTRACT BEST HITS FROM BLAST XML FILE 
 
+	(protfile_list, aln) = ([],[])
+
+	for xml in blastlist:
+		if verbose:
+			sys.stderr.write("Extracting sequencies with e-value: '%s' from %s file after BLAST...\n" %(evalue, xml))
+
+		protfile_list.append(selectProt(xml, evalue))
+
+		if verbose:
+			sys.stderr.write("Done!\n")
 	if verbose:
-		sys.stderr.write("Extracting sequencies with e-value: '%s' from %s file after BLAST...\n" %(evalue, blastlist[0]))
+		sys.stderr.write("Comparing both BLAST output files to extract hit sequences (BEWARE! They are the same species for both proteins)...\nPerforming ClustalW alignment...\n")
 
-	#protfile1 = selectProt(blastlist[0], evalue)
-
-	if verbose:
-		sys.stderr.write("Done!\n")
-		sys.stderr.write("Extracting sequencies with e-value: '%s' from %s file after BLAST...\n" %(evalue, blastlist[1]))
-
-	#protfile2 = selectProt (blastlist[1], evalue)
-
-	if verbose:
-		sys.stderr.write("Done!\n\n")
-		sys.stderr.write("Comparing both BLAST output files to extract hit sequences (BEWARE! They are the same species for both proteins)\n")
-
-	
-	#COMPARE BOTH FILES TO ONLY SELECT HITS PRESENT IN BOTH FILES (IN PRESENTS OF PARALOGS IGNORE THEM)
-
-	#multifastafiles = comparefiles(protfile1, protfile2)
-
-	multifastafiles = comparefiles("1AIE.out.blast","2J0I.out.blast")
-
-
-	#DO CLUSTAL ALIGNMENT
-	if verbose:
-		sys.stderr.write("Done!\n\n")
-		sys.stderr.write("Doing ClustalW alignment from multifasta for both proteins \n") 
-
-	for element in multifastafiles:
-		doClustalW(element)
-#	doClustalW(multifastafiles[1])
+	for element in comparefiles(protfile_list):
+		doClustalW(element) #PERFORMING CLUSTALW ALIGNMENT
+		aln.append(AlignIO.read("%s.aln" %(element[:-3]), 'clustal')) #BUILDING DISTANCE MATRIX
 
 	if verbose:
-		sys.stderr.write("ClustalW done!\n")
-		sys.stderr.write("Obtaining distance matrix from the alignments...\n")
-					 
-#DISTANCE MATRIX
+		sys.stderr.write("Comparison and ClustalW for both files done!\n")
+		sys.stderr.write("Obtaining distance matrices from the alignments...\n")
 
-	aln1 = AlignIO.read("%s.aln" %(multifastafiles[0][:-3]), 'clustal')
-	aln2 = AlignIO.read("%s.aln" %(multifastafiles[1][:-3]), 'clustal')
+
+# IF INPUT ARE TWO .aln FILES
 
 else:
-	aln1 = AlignIO.read(input_list[0], 'clustal')
-	aln2 = AlignIO.read(input_list[1], 'clustal')
+	aln = []
+	for element in input_list:
+		aln.append(AlignIO.read(element, 'clustal')) #BUILDING DISTANCE MATRIX
+	if verbose:
+		sys.stderr.write("Obtaining distance matrices from the alignments...\n")
 
-#DO FILOGENETIC TREE
+#BUILDING FILOGENETIC TREE
 
 calculator = DistanceCalculator("blosum62") # You can use blosum62/identity
+constructor = DistanceTreeConstructor(calculator, 'nj') #Neighbour Joining = 'nj'
 
-dm1 = calculator.get_distance(aln1)
-dm2 = calculator.get_distance(aln2)
-
-constructor = DistanceTreeConstructor(calculator, 'nj')
-tree3 = constructor.build_tree(aln1)
-tree4 = constructor.build_tree(aln2)
+(dm,tree) = ([],[])
+for element in aln:
+	dm.append(calculator.get_distance(element))
+#dm2 = calculator.get_distance(aln2)
+	tree.append(constructor.build_tree(element))
+#tree4 = constructor.build_tree(aln2)
 
 if verbose:
 	sys.stderr.write("Phylogenetic tree done!\n")
 
-Phylo.draw_ascii(tree3)
-print()
+for element in tree:
+	Phylo.draw_ascii(element)
+	print()
 
-Phylo.draw_ascii(tree4)
-print()
+#Phylo.draw_ascii(tree4)
+#print()
 
 				#BOOSTRAP
 
@@ -169,10 +161,11 @@ print()
 if verbose:
 	sys.stderr.write("Phylogenetic tree done!\n")
 
-sys.stdout.write("This is the correlation for both proteins: %.3f \n"%(compute_r(dm1,dm2)))
+sys.stdout.write("This is the correlation for both proteins: %.3f \n"%(compute_r(dm)))
 
 if verbose:
 	sys.stderr.write("Plotting linear regression. Saved as 'plot.png'\n")
 
 #plotData(dm1, dm2)
+
 

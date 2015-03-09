@@ -1,4 +1,6 @@
+
 from modules import *
+
 def doBlast (fastafile):
 	"""
 	This function performs a BLAST search using the QBLAST server at NCBI.
@@ -7,7 +9,7 @@ def doBlast (fastafile):
 	try:
 		handle = open(fastafile, "r")
 	except IOError:
-		sys.stderr.write("Impossible to open this file. It does not exist!\nAborting program.\n")
+		sys.stderr.write("Impossible to open this file. It does not exist!\nAborting...\n")
 		sys.exit()
 	
 	blastlist = []
@@ -19,7 +21,7 @@ def doBlast (fastafile):
 			result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
 			# pass # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 		except:
-			sys.stderr.write("Impossible to do blast, check your internet connection\n") # check error type
+			sys.stderr.write("Impossible to perform BLAST!\nAborting...\n") # check error type
 			sys.exit()
 		
 		sys.stderr.write("Blast %s done!\n" %(record.id[:4]))
@@ -33,7 +35,7 @@ def doBlast (fastafile):
 		sys.stderr.write("Blast output with extension '%s.xml'\n\n" %(record.id[:4]))
 
 	return blastlist 
-	# return ["1COW.xml","3D49.xml"] # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
+	#return ["1AIE.xml","2J0I.xml"] # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 	handle.close()
 
 
@@ -96,7 +98,7 @@ class Protein(object):
 def Protein_creator(filename):
 	fd = open(filename, "r")
 	info = []
-	p = re.compile("\[(.*)\]")
+	p = re.compile("\[(.*)\]") # Pattern for extract the specie
 	for field in fd:
 		if "#" in field:
 			if not info == []:
@@ -118,7 +120,7 @@ def species_selector(intersect, filename, outfile):
 	Write a fasta file with selected proteins.
 	"""
 	sp_set = set()	
-	out = open (outfile, "w")
+	out = open(outfile, "w")
 
 	for protein in Protein_creator(filename):
 		for specie in intersect:
@@ -130,31 +132,31 @@ def species_selector(intersect, filename, outfile):
 	return()
 
 
-def comparefiles (file1, file2):
+def comparefiles (file_list):
 	"""
 	Function to compare both blast out and select homologous protein in the same species for both proteins. Return set.
 	"""
 	(set1,set2) = (set(),set())
 
-	for protein in Protein_creator(file1):
+	for protein in Protein_creator(file_list[0]):
 		set1.add(protein.get_specie())
 
-	for protein in Protein_creator(file2):
+	for protein in Protein_creator(file_list[1]):
 		set2.add(protein.get_specie())
 
 	intersect = set1.intersection(set2) #Get species shared in both files
 
-	species_selector(intersect, file1, "multifasta1.fa") #CANVIAR NOM PER TAL Q SIGUI VARIABLE
-	species_selector(intersect, file2, "multifasta2.fa")
+	species_selector(intersect, file_list[0], "multifasta1.fa") #CANVIAR NOM PER TAL Q SIGUI VARIABLE
+	species_selector(intersect, file_list[1], "multifasta2.fa")
 		
-	return()
+	return ["multifasta1.fa","multifasta2.fa"]
 
 
 def doClustalW (multifastafile):
 	"""
 	Given a multifasta file peform an alignment using ClustalW. Return two files: .aln and .dnd
 	"""
-	path_clustal = "/Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2" 
+	path_clustal = "/usr/bin/clustalw" 
 	cline1 = ClustalwCommandline(path_clustal, infile=multifastafile)
 	cline1()
 
@@ -184,7 +186,7 @@ def listmatrix (matrix): #change, it is the same as readmatrix but without avera
 			values.append(i)
 	return values
 
-def compute_r(matrix1,matrix2):
+def compute_r(matrix_list):
 	# (numerator,r_square,s_square) = (0,0,0)
 	# difference = list(zip(diff(matrix1),diff(matrix2)))
 	# for element in difference:
@@ -193,7 +195,7 @@ def compute_r(matrix1,matrix2):
  # 		s_square += element[1]**2
 	# return numerator/(math.sqrt(r_square*s_square))
 
-	return numpy.corrcoef(listmatrix(matrix1), listmatrix(matrix2))[0, 1]
+	return numpy.corrcoef(listmatrix(matrix_list[0]), listmatrix(matrix_list[1]))[0, 1]
 
 
 def plotData(matrix1,matrix2):
