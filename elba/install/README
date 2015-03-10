@@ -1,0 +1,12 @@
+#################################################
+INSTRUCTIONS FOR INSTALLING MIRRORTREE SCRIPT:
+'sudo python3 setup.py build'
+'sudo python3 setup.py install'
+#################################################
+FOR RUNNING FROM THE COMMAND LINE:
+'mirrorTree -h' --> This will show you how to execute the script
+#################################################
+IMPORTING TO PYTHON TERMINAL:
+'MirrorTree.modules' --> Import all the modules needed
+'MirrorTree.functions' --> Import all functions developed
+#################################################
