@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 
+from modules import *
 from test import *
 
 parser = argparse.ArgumentParser(description="This program manages user arguments")

@@ -1,5 +1,4 @@
-
-from modules import *
+#!/usr/bin/python3
 
 def doBlast (fastafile):
 	"""
