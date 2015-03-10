@@ -3,6 +3,10 @@ INSTRUCTIONS FOR INSTALLING MIRRORTREE SCRIPT:
 'sudo python3 setup.py build'
 'sudo python3 setup.py install'
 #################################################
+ATTENTION - BEFORE INSTALLING!
+You have to modify in 'modules.py' the path
+which ClustalW is located in your PC (path_clustal)
+#################################################
 FOR RUNNING FROM THE COMMAND LINE:
 'mirrorTree -h' --> This will show you how to execute the script
 #################################################

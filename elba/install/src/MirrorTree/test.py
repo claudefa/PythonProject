@@ -153,11 +153,10 @@ def comparefiles (file_list):
 	return ["multifasta1.fa","multifasta2.fa"]
 
 
-def doClustalW (multifastafile):
+def doClustalW (multifastafile, path_clustal):
 	"""
 	Given a multifasta file peform an alignment using ClustalW. Return two files: .aln and .dnd
 	"""
-	path_clustal = "/usr/bin/clustalw" 
 	cline1 = ClustalwCommandline(path_clustal, infile=multifastafile)
 	cline1()
 

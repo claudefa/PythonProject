@@ -4,6 +4,8 @@
 ##################### MODULES NEEDED FOR EXECUTING 'mirrortree.py' ##########################
 #############################################################################################
 
+path_clustal = "/usr/bin/clustalw"
+
 import sys, re, numpy, os, argparse, math, os.path
 
 from Bio.Blast import NCBIWWW

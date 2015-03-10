@@ -100,7 +100,7 @@ if len(input_list) == 1:
 		sys.stderr.write("Comparing both BLAST output files to extract hit sequences (BEWARE! They are the same species for both proteins)...\nPerforming ClustalW alignment...\n")
 
 	for element in comparefiles(protfile_list):
-		doClustalW(element) #PERFORMING CLUSTALW ALIGNMENT
+		doClustalW(element, path_clustal) #PERFORMING CLUSTALW ALIGNMENT
 		aln.append(AlignIO.read("%s.aln" %(element[:-3]), 'clustal')) #BUILDING DISTANCE MATRIX
 
 	if verbose:
