@@ -41,7 +41,7 @@ def selectProt(blastxml, evalue, identity):
 	"""
 	#Open blast file and open output file
 	result = open(blastxml, "r")
-	out = open("%s.out.blast" %(blastxml[:4]), "w")
+	out = open("%s.out.blast" %(blastxml[:-4]), "w")
 
 	p = re.compile( "[^\[]*\[([^\]]*)\]") #this is the pattern to select the specie, unbelievable 
 	
