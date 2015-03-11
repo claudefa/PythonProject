@@ -1,0 +1,15 @@
+#################################################
+ATTENTION - BEFORE INSTALLING!
+You have to modify in 'modules.py' the path
+which ClustalW is located in your PC (path_clustal)
+#################################################
+INSTRUCTIONS FOR INSTALLING MIRRORTREE SCRIPT:
+'sudo ./install.sh' --> root privileges are needed
+#################################################
+FOR RUNNING FROM THE COMMAND LINE:
+'mirrorTree -h' --> This will show you how to execute the script
+#################################################
+IMPORTING TO PYTHON TERMINAL:
+'MirrorTree.modules' --> Import all the modules needed
+'MirrorTree.functions' --> Import all functions developed
+#################################################
