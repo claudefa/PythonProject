@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 
-from modules import *
-
 def doBlast (fastafile):
 	"""
 	This function performs a BLAST search using the QBLAST server at NCBI.
