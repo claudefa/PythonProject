@@ -14,33 +14,27 @@ def doBlast (fastafile):
 	blastlist = []
 	
 	#Do blast for each fasta sequence in file.
-	
+	n = 1
 	for record in SeqIO.parse(handle, "fasta"):
-		sys.stderr.write("Doing blast %s ...\n" %(record.id[:4])) #the name of each fasta must be revised (now we suposo that it is a pdb but what if not??)
+	
 		try:
 			result = NCBIWWW.qblast("blastp", "swissprot", record.seq)
-			# pass # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 		except:
-			sys.stderr.write("Impossible to perform BLAST!\nAborting...\n") # check error type
+			sys.stderr.write("Impossible to perform BLAST!\nAborting...\n") 
 			sys.exit()
-		
-		sys.stderr.write("Blast %s done!\n" %(record.id[:4]))
-
-		blastfile = open("%s.xml" %(record.id[:4]), "w")
+	
+		blastfile = open("blast%s.xml" %(n), "w")
 		blastfile.write(result.read()) 
-		# blastfile.write(str(result))# ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
 		blastfile.close()
-
-		blastlist.append(str(record.id[:4])+".xml")
-		sys.stderr.write("Blast output with extension '%s.xml'\n\n" %(record.id[:4]))
-
-	return blastlist 
-	#return ["1AIE.xml","2J0I.xml"] # ONLY TO UNCOMMEND WHEN YOU DON'T WANT TO RUN BLAST BUT CHECK THE SCRIPT FLOW. OTHERWISE BLAST KICKS YOU OUT 
+		blastlist.append("blast"+str(n)+".xml")
+		n += 1
 	handle.close()
+	return blastlist 
+	
 
 
 
-def selectProt(blastxml, evalue):
+def selectProt(blastxml, evalue, identity):
 	"""
 	Function to extract sequencies with selected e-value form xml blast output. 
 	"""
@@ -54,7 +48,7 @@ def selectProt(blastxml, evalue):
 	for n in NCBIXML.parse(result):
 		for alignment in n.alignments:
 			for hsp in alignment.hsps:
-				if hsp.expect < evalue:
+				if hsp.expect < evalue and hsp.identities >= identity:
 					out.write("#"*10 + "Alignment" + "#"*10 +"\n")
 					m = p.findall(alignment.hit_def)
 					out.write ("Hit_specie: %s \n" %m)
@@ -65,7 +59,7 @@ def selectProt(blastxml, evalue):
 					out.write("Identity: %s \n" %hsp.identities)
 					out.write("Hit_Sequence: %s \n" %(hsp.sbjct) )
 	
-	name = str(blastxml[:4]) + ".out.blast"
+	name = str(blastxml[:-4]) + ".out.blast"
 
 	result.close()
 	out.close()
@@ -97,6 +91,16 @@ class Protein(object):
 		"""Get sequence."""
 		return self.seq
 
+class NEHomologous(ValueError):
+	"""
+	Raises error when Not Enough Homologous found in both files to perform an accurate mirror tree. 
+	"""
+	def __init__ (self, number):
+		self.number = number
+	
+	def __str__(self):
+		return "Not enough homologs after blast results filtering. Sorry! :(\n"
+
 def Protein_creator(filename):
 	"""
 	Function to create Protein Objectes from the selected proteins after blast. 
@@ -119,7 +123,15 @@ def Protein_creator(filename):
 	yield Protein(info[1], info[6], info[0], info[3], info[4], info[5])
 	fd.close()
 
-def species_selector(intersect, filename, outfile):
+def querySequence(galiza):
+	percebe = []
+	percebeiro = open(galiza,"r")
+	for mejillon in SeqIO.parse(percebeiro, "fasta"):
+		percebe.append((mejillon.id,mejillon.seq))
+	return percebe
+
+
+def species_selector(intersect, filename, outfile, query):
 	"""
 	This function selects only the higher scoring protein of each specie.
 	Write a fasta file with selected proteins.
@@ -133,11 +145,12 @@ def species_selector(intersect, filename, outfile):
 				if protein.get_specie() not in sp_set:
 					out.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq()).replace("-","")+"\n")
 					sp_set.add(protein.get_specie())
+	out.write(query[0]+"\n"+query[1]+"\n")
 	out.close()
 	return()
 
 
-def comparefiles (file_list):
+def comparefiles (file_list, filename):
 	"""
 	Function to compare both blast out and select homologous protein in the same species for both proteins. Return set.
 	"""
@@ -150,11 +163,17 @@ def comparefiles (file_list):
 		set2.add(protein.get_specie())
 
 	intersect = set1.intersection(set2) #Get species shared in both files
-	print (intsersect)
-	species_selector(intersect, file_list[0], "multifasta1.fa") #TEMP FILES NEED TO ERASE THEM 
-	species_selector(intersect, file_list[1], "multifasta2.fa")
-		
-	return ["multifasta1.fa","multifasta2.fa"]
+	try:
+		if len(intersect) >= 11:
+			query = querySequence(filename)
+			species_selector(intersect, file_list[0], "multifasta1.fa",query[0])  
+			species_selector(intersect, file_list[1], "multifasta2.fa",query[1])
+			return ["multifasta1.fa","multifasta2.fa"]
+
+	except NEHomologous as e:
+		sys.stderr.write(str(e))
+		return()
+		sys.exit()
 
 
 def doClustalW (multifastafile, path_clustal):
@@ -200,7 +219,7 @@ def plotData(matrix_list):
 	fit =numpy.polyfit(x,y,1)
 	p = numpy.poly1d(fit)
 	plt.plot(x, p(x), '--g')
-	title('Linear regression')
-	plt.xlabel('Matrix1') #canviar noms per ser variables
-	plt.ylabel('Matrix2')
+	title('Linear regression for distance matrices')
+	plt.xlabel('Distance Family 1') 
+	plt.ylabel('Distance Family 2')
 	savefig("plot.png") 
