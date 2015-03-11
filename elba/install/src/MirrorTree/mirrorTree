@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-from modules import *
-from test import *
+from MirrorTree.modules import *
+from MirrorTree.functions import *
 
 parser = argparse.ArgumentParser(description="This program manages user arguments")
 
