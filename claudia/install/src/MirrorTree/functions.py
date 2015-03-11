@@ -222,4 +222,20 @@ def plotData(matrix_list):
 	title('Linear regression for distance matrices')
 	plt.xlabel('Distance Family 1') 
 	plt.ylabel('Distance Family 2')
-	savefig("plot.png") 
+	savefig("plot.png")
+	return "plot.png" 
+
+
+def cleaningWorkspace(folder, files, input_list):
+	p = re.compile("(.*)\..*")
+	m = ""
+	for element in input_list:
+		m += p.search(element).group(1)+"_"
+	if not os.path.isdir(m[:-1]):
+		os.system("mkdir MirrorTree_%s" %(m[:-1]))
+	os.system("mkdir MirrorTree_%s/%s" %(m[:-1],folder))
+	for element in files:
+		os.system("mv %s ./MirrorTree_%s/%s" %(element, m[:-1], folder))
+	return()
+
+
