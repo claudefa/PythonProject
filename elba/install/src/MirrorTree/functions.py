@@ -130,6 +130,7 @@ def querySequence(galiza):
 	percebeiro = open(galiza,"r")
 	for mejillon in SeqIO.parse(percebeiro, "fasta"):
 		percebe.append((mejillon.id,mejillon.seq))
+	percebeiro.close()
 	return percebe
 
 
