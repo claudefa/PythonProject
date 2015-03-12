@@ -2,7 +2,7 @@
 Hit_specie: ['Chlorocebus aethiops'] 
 Hit_id: gi|129367|sp|P13481.1|P53_CHLAE 
 Length: 393 
-E-value: 6.80008e-15 
+E-value: 6.7939e-15 
 Score: 169.0 
 Identity: 31 
 Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQAG 
@@ -10,7 +10,7 @@ Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQAG
 Hit_specie: ['Macaca mulatta', 'Macaca fuscata fuscata', 'Macaca fascicularis'] 
 Hit_id: gi|3024332|sp|P56424.1|P53_MACMU 
 Length: 393 
-E-value: 6.80008e-15 
+E-value: 6.7939e-15 
 Score: 169.0 
 Identity: 31 
 Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQAG 
@@ -18,7 +18,7 @@ Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQAG
 Hit_specie: ['Homo sapiens'] 
 Hit_id: gi|269849759|sp|P04637.4|P53_HUMAN 
 Length: 393 
-E-value: 6.80008e-15 
+E-value: 6.7939e-15 
 Score: 169.0 
 Identity: 31 
 Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQAG 
@@ -26,7 +26,7 @@ Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQAG
 Hit_specie: ['Delphinapterus leucas'] 
 Hit_id: gi|75065695|sp|Q8SPZ3.1|P53_DELLE 
 Length: 387 
-E-value: 8.195e-15 
+E-value: 8.18755e-15 
 Score: 168.0 
 Identity: 31 
 Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQAG 
@@ -34,7 +34,7 @@ Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQAG
 Hit_specie: ['Felis catus'] 
 Hit_id: gi|1171969|sp|P41685.1|P53_FELCA 
 Length: 386 
-E-value: 1.74505e-14 
+E-value: 1.74346e-14 
 Score: 166.0 
 Identity: 30 
 Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQSG 
@@ -42,7 +42,7 @@ Hit_Sequence: EYFTLQIRGRERFEMFRELNEALELKDAQSG
 Hit_specie: ['Canis lupus familiaris'] 
 Hit_id: gi|6093639|sp|Q29537.2|P53_CANFA 
 Length: 381 
-E-value: 3.01694e-13 
+E-value: 3.0142e-13 
 Score: 157.0 
 Identity: 28 
 Hit_Sequence: EYFTLQIRGRERYEMFRNLNEALELKDAQSG 
@@ -50,7 +50,7 @@ Hit_Sequence: EYFTLQIRGRERYEMFRNLNEALELKDAQSG
 Hit_specie: ['Ovis aries'] 
 Hit_id: gi|1709531|sp|P51664.1|P53_SHEEP 
 Length: 382 
-E-value: 9.60943e-13 
+E-value: 9.6007e-13 
 Score: 153.0 
 Identity: 29 
 Hit_Sequence: EYFTLQIRGRKRFEMFRELNEALELMDAQAG 
@@ -58,7 +58,7 @@ Hit_Sequence: EYFTLQIRGRKRFEMFRELNEALELMDAQAG
 Hit_specie: ['Tupaia belangeri'] 
 Hit_id: gi|10720194|sp|Q9TTA1.1|P53_TUPBE 
 Length: 393 
-E-value: 1.19126e-12 
+E-value: 1.19017e-12 
 Score: 153.0 
 Identity: 28 
 Hit_Sequence: EYFTLQIRGRERFEMLREINEALELKDAMAG 
@@ -66,7 +66,7 @@ Hit_Sequence: EYFTLQIRGRERFEMLREINEALELKDAMAG
 Hit_specie: ['Sus scrofa'] 
 Hit_id: gi|10720186|sp|Q9TUB2.1|P53_PIG 
 Length: 386 
-E-value: 1.26557e-12 
+E-value: 1.26442e-12 
 Score: 152.0 
 Identity: 28 
 Hit_Sequence: EYFTLQIRGRERFEMFRELNDALELKDAQTA 
@@ -74,7 +74,7 @@ Hit_Sequence: EYFTLQIRGRERFEMFRELNDALELKDAQTA
 Hit_specie: ['Rattus norvegicus'] 
 Hit_id: gi|129372|sp|P10361.1|P53_RAT 
 Length: 391 
-E-value: 2.41137e-12 
+E-value: 2.40917e-12 
 Score: 150.0 
 Identity: 28 
 Hit_Sequence: EYFTLKIRGRERFEMFRELNEALELKDARAA 
@@ -82,7 +82,7 @@ Hit_Sequence: EYFTLKIRGRERFEMFRELNEALELKDARAA
 Hit_specie: ['Oryctolagus cuniculus'] 
 Hit_id: gi|2842741|sp|Q95330.1|P53_RABIT 
 Length: 391 
-E-value: 2.68881e-12 
+E-value: 2.68636e-12 
 Score: 150.0 
 Identity: 28 
 Hit_Sequence: EYFILKIRGRERFEMFRELNEALELKDAQA 
@@ -90,7 +90,7 @@ Hit_Sequence: EYFILKIRGRERFEMFRELNEALELKDAQA
 Hit_specie: ['Mus musculus'] 
 Hit_id: gi|172047304|sp|P02340.3|P53_MOUSE 
 Length: 387 
-E-value: 5.50689e-12 
+E-value: 5.50188e-12 
 Score: 148.0 
 Identity: 27 
 Hit_Sequence: EYFTLKIRGRKRFEMFRELNEALELKDAHA 
@@ -98,7 +98,7 @@ Hit_Sequence: EYFTLKIRGRKRFEMFRELNEALELKDAHA
 Hit_specie: ['Marmota monax'] 
 Hit_id: gi|10720190|sp|O36006.1|P53_MARMO 
 Length: 391 
-E-value: 6.81469e-12 
+E-value: 6.8085e-12 
 Score: 147.0 
 Identity: 27 
 Hit_Sequence: EYFTLKIRGRARFEMFQELNEALELKDAQA 
@@ -106,7 +106,7 @@ Hit_Sequence: EYFTLKIRGRARFEMFQELNEALELKDAQA
 Hit_specie: ['Mesocricetus auratus'] 
 Hit_id: gi|129370|sp|Q00366.1|P53_MESAU 
 Length: 396 
-E-value: 2.24744e-11 
+E-value: 2.2454e-11 
 Score: 143.0 
 Identity: 26 
 Hit_Sequence: EYFTLKIRGQERFKMFQELNEALELKDAQA 
@@ -114,7 +114,7 @@ Hit_Sequence: EYFTLKIRGQERFKMFQELNEALELKDAQA
 Hit_specie: ['Cricetulus griseus'] 
 Hit_id: gi|2499428|sp|O09185.1|P53_CRIGR 
 Length: 393 
-E-value: 2.73621e-11 
+E-value: 2.73372e-11 
 Score: 143.0 
 Identity: 26 
 Hit_Sequence: EYFTLKIRGHERFKMFQELNEALELKDAQA 
@@ -122,7 +122,7 @@ Hit_Sequence: EYFTLKIRGHERFKMFQELNEALELKDAQA
 Hit_specie: ['Bos indicus', 'Bos taurus'] 
 Hit_id: gi|54038798|sp|P67938.1|P53_BOSIN 
 Length: 386 
-E-value: 5.56125e-10 
+E-value: 5.5562e-10 
 Score: 133.0 
 Identity: 25 
 Hit_Sequence: EYFTLQIRGFKRYEMFRELNDALELKDALDG 
@@ -130,7 +130,7 @@ Hit_Sequence: EYFTLQIRGFKRYEMFRELNDALELKDALDG
 Hit_specie: ['Cavia porcellus'] 
 Hit_id: gi|10720197|sp|Q9WUR6.1|P53_CAVPO 
 Length: 391 
-E-value: 5.14968e-09 
+E-value: 5.145e-09 
 Score: 126.0 
 Identity: 22 
 Hit_Sequence: EYFTLKIRGRKNFEILREINEALEFKDAQ 

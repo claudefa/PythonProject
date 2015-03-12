@@ -1,0 +1,1452 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.2.31+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>swissprot</BlastOutput_db>
+  <BlastOutput_query-ID>Query_228165</BlastOutput_query-ID>
+  <BlastOutput_query-def>unnamed protein product</BlastOutput_query-def>
+  <BlastOutput_query-len>267</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_228165</Iteration_query-ID>
+  <Iteration_query-def>unnamed protein product</Iteration_query-def>
+  <Iteration_query-len>267</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|544604685|sp|D3DJG5.1|SOXA2_HYDTT</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A2; AltName: Full=Cytochrome c551 subunit diheme; AltName: Full=Protein SoxA2; AltName: Full=Sulfur oxidizing protein A2; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA2; Short=TOMES protein SoxA2; Flags: Precursor [Hydrogenobacter thermophilus TK-6]</Hit_def>
+  <Hit_accession>D3DJG5</Hit_accession>
+  <Hit_len>259</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>260.766</Hsp_bit-score>
+      <Hsp_score>665</Hsp_score>
+      <Hsp_evalue>9.85261e-85</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>267</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>259</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>138</Hsp_identity>
+      <Hsp_positive>169</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>277</Hsp_align-len>
+      <Hsp_qseq>MRKIVFASLLSGA-----LFFSVKAEAPTPEQLK----ILKEMGVSPADVIVEEGRDYYHNLKGKTGKTCASCHGQDGANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGV-DAKGKKGRKYIVPLAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKPPFYIEEVVALELYMKKAANGAKIEVPGLIR</Hsp_qseq>
+      <Hsp_hseq>MRKLWFLPILLGAVGGVSLYAIAQQENPAEEVKKQKELLLKEMGILPGDVYAEQGRDMFNKPMGNAGKSCSSCHGQDGRYLRGAYAHMPRYYKDMDAVADLDTRIKYCMEKYMGVGNVKHDLNFKSI---ATYVATLSNGMKMDVKLTHPKEREMYEKGRELWYARVGKMDFSCAICHDTFGGQRIRLQTLAKVKEDKVATHWPAYRFSNDQLWTMEDRIRGCYNQIR---------------VTPPPHFSWPQIALSLYMAYESKGGTIETPGFVR</Hsp_hseq>
+      <Hsp_midline>MRK+ F  +L GA     L+   + E P  E  K    +LKEMG+ P DV  E+GRD ++   G  GK+C+SCHGQDG  L GAYA MPRYY D+  VAD+D RIK C+EKY+GV + K     K I   A YVATLSNGM ++V+L HP+E+ +YE G+ELWY RVG  DFSCAICH+   G+RIRLQ L     DK+  HWPAYR S D+LWTMEDRIRGCY                   V  PP +    +AL LYM   + G  IE PG +R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>gi|544604683|sp|D3DJG4.1|SOXA1_HYDTT</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A1; AltName: Full=Cytochrome c551 subunit diheme; AltName: Full=Protein SoxA1; AltName: Full=Sulfur oxidizing protein A1; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA1; Short=TOMES protein SoxA1; Flags: Precursor [Hydrogenobacter thermophilus TK-6]</Hit_def>
+  <Hit_accession>D3DJG4</Hit_accession>
+  <Hit_len>253</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>243.432</Hsp_bit-score>
+      <Hsp_score>620</Hsp_score>
+      <Hsp_evalue>3.90449e-78</Hsp_evalue>
+      <Hsp_query-from>4</Hsp_query-from>
+      <Hsp_query-to>266</Hsp_query-to>
+      <Hsp_hit-from>7</Hsp_hit-from>
+      <Hsp_hit-to>252</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>130</Hsp_identity>
+      <Hsp_positive>162</Hsp_positive>
+      <Hsp_gaps>19</Hsp_gaps>
+      <Hsp_align-len>264</Hsp_align-len>
+      <Hsp_qseq>IVFASLLSGALFFSVKAEAPTPEQLKILKEMGVSPADVIVEEGRDYYHNLKGKTGKTCASCHGQDGANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGV-DAKGKKGRKYIVPLAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKPPFYIEEVVALELYMKKAANGAKIEVPGLI</Hsp_qseq>
+      <Hsp_hseq>IIFVLFLYAIAQQENPAEEVKKQKELLLKEMGILPGDVYAEQGRDMFNKPMGNAGKSCSSCHGQDGRYLRGAYAHMPRYYKDMDAVADLDTRIKYCMEKYMGVGNVKHDLNFKSI---ATYVATLSNGMKMDVKLTHPKEREMYEKGRELWYARVGKMDFSCAICHDSEAGKRVFLQTVVAVKEDKVATHWPAYRFSNDQLWTMEDRIRGCFGDMRVAPPEHF------HWA---------VVALNLYLSYKAKGGVVRVPGFI</Hsp_hseq>
+      <Hsp_midline>I+F   L         AE    ++  +LKEMG+ P DV  E+GRD ++   G  GK+C+SCHGQDG  L GAYA MPRYY D+  VAD+D RIK C+EKY+GV + K     K I   A YVATLSNGM ++V+L HP+E+ +YE G+ELWY RVG  DFSCAICH+   GKR+ LQ + A   DK+  HWPAYR S D+LWTMEDRIRGC+    +  PE        +W          VVAL LY+   A G  + VPG I</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gi|122301307|sp|Q08IS0.1|SOXA_HYDTE</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A; AltName: Full=Cytochrome c551 subunit monoheme; AltName: Full=Protein SoxA; AltName: Full=Sulfur oxidizing protein A; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA; Short=TOMES protein SoxA; Flags: Precursor [Hydrogenophilus thermoluteolus]</Hit_def>
+  <Hit_accession>Q08IS0</Hit_accession>
+  <Hit_len>273</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>146.747</Hsp_bit-score>
+      <Hsp_score>369</Hsp_score>
+      <Hsp_evalue>1.65176e-40</Hsp_evalue>
+      <Hsp_query-from>1</Hsp_query-from>
+      <Hsp_query-to>267</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>273</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>96</Hsp_identity>
+      <Hsp_positive>148</Hsp_positive>
+      <Hsp_gaps>42</Hsp_gaps>
+      <Hsp_align-len>291</Hsp_align-len>
+      <Hsp_qseq>MRKIVFASLLSGALFFSVKAEAPT-------PEQLKILKE-----MGVSPADVIVEEGRDYYHNLKGKTGKTCASCHGQDGANLV-GAYAKMPRYYTDIKRVADIDVRIKACLEKYVGV------DAKGKKGRKY-IVPLAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDK----LYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKPPFYIEEVVALELYMKKAANGAKIEVPGLIR</Hsp_qseq>
+      <Hsp_hseq>MKKTVTAVALLCAL--SSTAIAPTFAADDDEAARLKAIEEYRKQIADGNPSDLLAMEGEELWRTPYGPKNQSLEQCDLGLGPGVVKGAAAKLPRYFPDTGKVEDLESRLMTCMERLQGVERQKVIDSPWRKGEKLRMDKIVAYIVTESNGEKIDVDMSHPKMKEMYELGKRMFFYRTGPFDFSCATCHGK-DGQRIRLQELPNLTKHEGAAAGWGSWPAYRVSNSQFWTMQMRLNDC---------------FRQQRTAEPIYGSDATIALSVYMAANGNGGVMLTPGIKR</Hsp_hseq>
+      <Hsp_midline>M+K V A  L  AL  S  A APT         +LK ++E        +P+D++  EG + +    G   ++   C    G  +V GA AK+PRY+ D  +V D++ R+  C+E+  GV      D+  +KG K  +  +  Y+ T SNG  I+V++ HP+ K +YELGK +++ R G  DFSCA CH   DG+RIRLQ+L    + +     +  WPAYR+S  + WTM+ R+  C               F++    +P +  +  +AL +YM    NG  +  PG+ R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gi|544605354|sp|D7A6E5.2|SOXA_STAND</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A; AltName: Full=Cytochrome c551 subunit monoheme; AltName: Full=Protein SoxA; AltName: Full=Sulfur oxidizing protein A; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA; Short=TOMES protein SoxA; Flags: Precursor [Starkeya novella DSM 506]</Hit_def>
+  <Hit_accession>D7A6E5</Hit_accession>
+  <Hit_len>275</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>134.035</Hsp_bit-score>
+      <Hsp_score>336</Hsp_score>
+      <Hsp_evalue>1.15597e-35</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>267</Hsp_query-to>
+      <Hsp_hit-from>19</Hsp_hit-from>
+      <Hsp_hit-to>275</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>136</Hsp_positive>
+      <Hsp_gaps>30</Hsp_gaps>
+      <Hsp_align-len>273</Hsp_align-len>
+      <Hsp_qseq>LLSGALFFSVKAEAPTPEQLKILKEMGVSPADVIVEEGRDYYHNLKGKTGKTCASCH-GQDGANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIVP--------LAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQ---KLGAPVRDK--LYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKPPFYIEEVVALELYMKKAANGAKIEVPGLIR</Hsp_qseq>
+      <Hsp_hseq>VLTGARAAEDESEKEIERYRQMIEDPMANPGFLNVDRGEVLWSEPRGTRNVSLETCDLGEGPGKLEGAYAHLPRYFADTGKVMDLEQRLLWCMETIQGRDTKPLVAKPFSGPGRTSDMEDLVAFIANKSDGVKIKVALATPQEKEMYAIGEALFFRRSSINDFSCSTCHGAA-GKRIRLQALPQLDVPGKDAQLTMATWPTYRVSQSALRTMQHRMWDCYRQMRMPAPD---------------YASEAVTALTLYLTKQAEGGELKVPSIKR</Hsp_hseq>
+      <Hsp_midline>+L+GA     ++E       +++++   +P  + V+ G   +   +G    +  +C  G+    L GAYA +PRY+ D  +V D++ R+  C+E   G D K    + +  P        L  ++A  S+G+ I V L  P+EK +Y +G+ L+++R    DFSC+ CH    GKRIRLQ   +L  P +D     A WP YR+S+  L TM+ R+  CY+   +  P+               +  E V AL LY+ K A G +++VP + R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gi|75467259|sp|Q9K4M4.2|SOXA_PSESE</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A; AltName: Full=Cytochrome c551 subunit diheme; AltName: Full=Protein SoxA; AltName: Full=Sulfur oxidizing protein A; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA; Short=TOMES protein SoxA; Flags: Precursor [Pseudaminobacter salicylatoxidans]</Hit_def>
+  <Hit_accession>Q9K4M4</Hit_accession>
+  <Hit_len>286</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>115.931</Hsp_bit-score>
+      <Hsp_score>289</Hsp_score>
+      <Hsp_evalue>5.66197e-29</Hsp_evalue>
+      <Hsp_query-from>6</Hsp_query-from>
+      <Hsp_query-to>265</Hsp_query-to>
+      <Hsp_hit-from>52</Hsp_hit-from>
+      <Hsp_hit-to>284</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>74</Hsp_identity>
+      <Hsp_positive>121</Hsp_positive>
+      <Hsp_gaps>37</Hsp_gaps>
+      <Hsp_align-len>265</Hsp_align-len>
+      <Hsp_qseq>FASLLSGALFFSVKAEAPTPEQLKILKEMGVSPADVIVEEGRDYYHNLKGKTGKTCASCHGQDGANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGV-----DAKGKKGRKYIVPLAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKPPFYIEEVVALELYMKKAANGAKIEVPGL</Hsp_qseq>
+      <Hsp_hseq>FDEGLSGWLFREAETRETEADSF-------ANPGMLAVERGADIWNTVEGSAGKSCASCHDDAATSMKNVGAQYPKWDADAKRPINIELQIDKCRVENMGAEPYKFDAEGQ------VALTSYIKHQSLGTPVKMDLSDGELQDWWEKGKELYYTRTGQLNFACASCHEDSMGKYIRADHLSQGQANGF----PTYRFNTGGMVSLHNRFRGC---------------IRDTRAEMPKAFSDELMALEVYVTWRGTGLSVETPAV</Hsp_hseq>
+      <Hsp_midline>F   LSG LF   +      +          +P  + VE G D ++ ++G  GK+CASCH     ++    A+ P++  D KR  +I+++I  C  + +G      DA+G+      V L  Y+   S G P+ ++L   E +  +E GKEL+Y R G  +F+CA CHE   GK IR   L     +      P YR +   + ++ +R RGC                +    + P  + +E++ALE+Y+     G  +E P +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gi|75530002|sp|Q939U1.1|SOXA_RHOSU</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A; AltName: Full=Cytochrome c551 subunit diheme; AltName: Full=Protein SoxA; AltName: Full=Sulfur oxidizing protein A; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA; Short=TOMES protein SoxA; Flags: Precursor [Rhodovulum sulfidophilum]</Hit_def>
+  <Hit_accession>Q939U1</Hit_accession>
+  <Hit_len>287</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>103.605</Hsp_bit-score>
+      <Hsp_score>257</Hsp_score>
+      <Hsp_evalue>1.80453e-24</Hsp_evalue>
+      <Hsp_query-from>41</Hsp_query-from>
+      <Hsp_query-to>265</Hsp_query-to>
+      <Hsp_hit-from>82</Hsp_hit-from>
+      <Hsp_hit-to>285</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>68</Hsp_identity>
+      <Hsp_positive>100</Hsp_positive>
+      <Hsp_gaps>25</Hsp_gaps>
+      <Hsp_align-len>227</Hsp_align-len>
+      <Hsp_qseq>VIVEEGRDYYHNLKGKTGKTCASCHGQDGANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIVPLAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKPPFYI--EEVVALELYMKKAANGAKIEVPGL</Hsp_qseq>
+      <Hsp_hseq>VFVEEARAVWDRPEGTEGKACADCHGAVDDGMYGLRAVYPKYVESAGKVRTVEQMINACRTSRMGAPEWDYIGPD-MTAMVALIASVSRGMPVSVAIDGPAQS-TWEKGREIYYTRYGQLDLSCASCHEQYFDHYIRADHLS----QGQINGFPSYRLKNARLNAVHDRFRGCIRD-----------------TRGVPFAVGSPEFVALELYVASRGNGLSVEGPSV</Hsp_hseq>
+      <Hsp_midline>V VEE R  +   +G  GK CA CHG     + G  A  P+Y     +V  ++  I AC    +G       G   +  +   +A++S GMP++V +  P +   +E G+E++Y R G  D SCA CHE      IR   L           +P+YR+   +L  + DR RGC +                   +  PF +   E VALELY+    NG  +E P +</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>38.5058</Hsp_bit-score>
+      <Hsp_score>88</Hsp_score>
+      <Hsp_evalue>0.0330599</Hsp_evalue>
+      <Hsp_query-from>38</Hsp_query-from>
+      <Hsp_query-to>133</Hsp_query-to>
+      <Hsp_hit-from>180</Hsp_hit-from>
+      <Hsp_hit-to>280</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>103</Hsp_align-len>
+      <Hsp_qseq>PADVIVEEGRDYYHNLKGKTGKTCASCHGQDGANLV-------GAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIVPLAGYVATLSNGMPI</Hsp_qseq>
+      <Hsp_hseq>PAQSTWEKGREIYYTRYGQLDLSCASCHEQYFDHYIRADHLSQGQINGFPSYRLKNARLNAVHDRFRGCIRDTRGV--PFAVGSPEFVALELYVASRGNGLSV</Hsp_hseq>
+      <Hsp_midline>PA    E+GR+ Y+   G+   +CASCH Q   + +       G     P Y     R+  +  R + C+    GV      G    V L  YVA+  NG+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>gi|75426267|sp|O33434.2|SOXA_PARPN</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A; AltName: Full=Cytochrome c551 subunit diheme; AltName: Full=Protein SoxA; AltName: Full=Sulfur oxidizing protein A; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA; Short=TOMES protein SoxA; Flags: Precursor [Paracoccus pantotrophus]</Hit_def>
+  <Hit_accession>O33434</Hit_accession>
+  <Hit_len>290</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>91.6633</Hsp_bit-score>
+      <Hsp_score>226</Hsp_score>
+      <Hsp_evalue>2.28971e-20</Hsp_evalue>
+      <Hsp_query-from>37</Hsp_query-from>
+      <Hsp_query-to>261</Hsp_query-to>
+      <Hsp_hit-from>82</Hsp_hit-from>
+      <Hsp_hit-to>284</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>65</Hsp_identity>
+      <Hsp_positive>103</Hsp_positive>
+      <Hsp_gaps>22</Hsp_gaps>
+      <Hsp_align-len>225</Hsp_align-len>
+      <Hsp_qseq>SPADVIVEEGRDYYHNLKGKTGKTCASCHGQDGANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIVPLAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKPPFYIEEVVALELYMKKAANGAKIE</Hsp_qseq>
+      <Hsp_hseq>NPAMVFVDRGLDKWNAAMGVNGESCASCH-QGPESMAGLRAVMPRVDEHTGKLMIMEDYVNACVTERMGLEKWGVTSDN-MKDMLSLISLQSRGMAVNVKIDGPAAP-YWEHGKEIYYTRYGQLEMSCANCHEDNAGNMIRADHLSQGQING----FPTYRLKDSGMVTAQHRFVGCVRDTRAETFKAGSDDFK---------------ALELYVASRGNGLSVE</Hsp_hseq>
+      <Hsp_midline>+PA V V+ G D ++   G  G++CASCH Q   ++ G  A MPR      ++  ++  + AC+ + +G++  G      +  +   ++  S GM +NV++  P     +E GKE++Y R G  + SCA CHE   G  IR   L     +     +P YR+    + T + R  GC +       + G  DFK               ALELY+    NG  +E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gi|122992980|sp|Q1W3E4.1|SOXA_ALLVI</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A; AltName: Full=Cytochrome c550 subunit monoheme; AltName: Full=Protein SoxA; AltName: Full=Sulfur oxidizing protein A; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA; Short=TOMES protein SoxA; Flags: Precursor [Allochromatium vinosum]</Hit_def>
+  <Hit_accession>Q1W3E4</Hit_accession>
+  <Hit_len>281</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>71.2478</Hsp_bit-score>
+      <Hsp_score>173</Hsp_score>
+      <Hsp_evalue>2.32832e-13</Hsp_evalue>
+      <Hsp_query-from>38</Hsp_query-from>
+      <Hsp_query-to>264</Hsp_query-to>
+      <Hsp_hit-from>74</Hsp_hit-from>
+      <Hsp_hit-to>278</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>61</Hsp_identity>
+      <Hsp_positive>97</Hsp_positive>
+      <Hsp_gaps>30</Hsp_gaps>
+      <Hsp_align-len>231</Hsp_align-len>
+      <Hsp_qseq>PADVIVEEGRDYYHNLKGKTGKTCASCHGQDGANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIVPLAGYVATLSNGMPINVELKHPEEKRL--YELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFF--LFDPEKGKFDFKKNWVKKPPFYIEEVVALELYMKKAANGAKIEVPG</Hsp_qseq>
+      <Hsp_hseq>PYENAISQGETLW-NTPFADGQGYADCF-PDGPAIMNHY---PRWDRERGQVMTLPLALNACRTAHGETPLKYKKGP--IADLLAYIAFESRGQITRVEIPQDDPRALAAYEQGKRFYFARRGQLNFACAHCHLATSGTKLRTETL-SPAYGHT-THWPVYRSEWGEMGTLHRRFAGCNEQVRAKAFEPQG-----------------EEYRNLEYFLTYMNNGLELNGPG</Hsp_hseq>
+      <Hsp_midline>P +  + +G   + N     G+  A C   DG  ++  Y   PR+  +  +V  + + + AC   +     K KKG   I  L  Y+A  S G    VE+   + + L  YE GK  ++ R G  +F+CA CH    G ++R + L +P       HWP YR    ++ T+  R  GC +      F+P+                  EE   LE ++    NG ++  PG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gi|75402221|sp|Q8RLX0.1|SOXA_CHLTI</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A; AltName: Full=Cytochrome c551 subunit monoheme; AltName: Full=Protein SoxA; AltName: Full=Sulfur oxidizing protein A; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA; Short=TOMES protein SoxA; Flags: Precursor [Chlorobaculum thiosulfatiphilum]</Hit_def>
+  <Hit_accession>Q8RLX0</Hit_accession>
+  <Hit_len>286</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>64.6994</Hsp_bit-score>
+      <Hsp_score>156</Hsp_score>
+      <Hsp_evalue>5.86944e-11</Hsp_evalue>
+      <Hsp_query-from>38</Hsp_query-from>
+      <Hsp_query-to>263</Hsp_query-to>
+      <Hsp_hit-from>81</Hsp_hit-from>
+      <Hsp_hit-to>282</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>96</Hsp_positive>
+      <Hsp_gaps>26</Hsp_gaps>
+      <Hsp_align-len>227</Hsp_align-len>
+      <Hsp_qseq>PADVIVEEGRDYYHNLKGKTGKTCASCHGQDGANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIVPLAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKP-PFYIEEVVALELYMKKAANGAKIEVP</Hsp_qseq>
+      <Hsp_hseq>PYELDVEAGKALF-NKPFANGKSLGSCFSNGGA-VRGMY---PYFDEKRKEVITLEMAINECRVANGEKPYAPKKGD--IARVSAYIASISRGQKIDVKVKSKAAYDAYMKGKEMFYAKRGQLNMSCSGCHMEYSGRHLRAEIISPALGHT--THFPVFRSKWGEIGTLHRRYAGC----------------NENIGAKPFPAQSKEYRDLEFFQTVMSNGLKFNGP</Hsp_hseq>
+      <Hsp_midline>P ++ VE G+  + N     GK+  SC    GA + G Y   P +    K V  +++ I  C           KKG   I  ++ Y+A++S G  I+V++K       Y  GKE++Y + G  + SC+ CH    G+ +R + +   +      H+P +R    ++ T+  R  GC                 +N   KP P   +E   LE +    +NG K   P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>gi|81791339|sp|Q8KDM7.1|SOXA_CHLTE</Hit_id>
+  <Hit_def>RecName: Full=SoxAX cytochrome complex subunit A; AltName: Full=Cytochrome c551 subunit monoheme; AltName: Full=Protein SoxA; AltName: Full=Sulfur oxidizing protein A; AltName: Full=Thiosulfate-oxidizing multienzyme system protein SoxA; Short=TOMES protein SoxA; Flags: Precursor [Chlorobium tepidum TLS]</Hit_def>
+  <Hit_accession>Q8KDM7</Hit_accession>
+  <Hit_len>286</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>60.4622</Hsp_bit-score>
+      <Hsp_score>145</Hsp_score>
+      <Hsp_evalue>1.77582e-09</Hsp_evalue>
+      <Hsp_query-from>38</Hsp_query-from>
+      <Hsp_query-to>263</Hsp_query-to>
+      <Hsp_hit-from>81</Hsp_hit-from>
+      <Hsp_hit-to>282</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>58</Hsp_identity>
+      <Hsp_positive>97</Hsp_positive>
+      <Hsp_gaps>36</Hsp_gaps>
+      <Hsp_align-len>232</Hsp_align-len>
+      <Hsp_qseq>PADVIVEEGRDYYHNLKGKTGKTCASCHGQDGANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKY----IVPLAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKPPF--YIEEVVALELYMKKAANGAKIEVP</Hsp_qseq>
+      <Hsp_hseq>PYELDVEAGKALF-NKPFANGKSLASCFPNGGA-VRGMY---PYFDEKRKEVVTLEMAINECRV------ANGEKPYAWEKGDIARVSAYIASISRGQKVDVKVKSKAAYDAYMKGKKFFYAKRGQLNMSCSGCHMEYAGRHLRAEIISPALGHT--THFPVFRSKWGEIGTLHRRYAGC-----------------SNNIGAKPFAPQSEEYRDLEFFQTVMSNGLKYNGP</Hsp_hseq>
+      <Hsp_midline>P ++ VE G+  + N     GK+ ASC    GA + G Y   P +    K V  +++ I  C        A G+K   +    I  ++ Y+A++S G  ++V++K       Y  GK+ +Y + G  + SC+ CH    G+ +R + +   +      H+P +R    ++ T+  R  GC                  N +   PF    EE   LE +    +NG K   P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>gi|205412973|sp|A9L9D9.1|YCF2_LEMMI</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Lemna minor]</Hit_def>
+  <Hit_accession>A9L9D9</Hit_accession>
+  <Hit_len>2311</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>44.2838</Hsp_bit-score>
+      <Hsp_score>103</Hsp_score>
+      <Hsp_evalue>0.000816053</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>168</Hsp_hit-from>
+      <Hsp_hit-to>244</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>26</Hsp_identity>
+      <Hsp_positive>39</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPINQKCIMPESNR----GSRWWSNRIGKKRDSSCKISNETVAGIEISFKEKDSKYLEFLFLSYTDDRIRKDPDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PIN +   PE  R    G   W  R+G  RD SC I +E + G  I  ++  +   + L+  +   RI KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>gi|205412894|sp|A6MMQ1.1|YCF2_DIOEL</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Dioscorea elephantipes]</Hit_def>
+  <Hit_accession>A6MMQ1</Hit_accession>
+  <Hit_len>2260</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>41.5874</Hsp_bit-score>
+      <Hsp_score>96</Hsp_score>
+      <Hsp_evalue>0.00603481</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>25</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGAR-DFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPINKKCIMPESNR----GSRWWRNRIGKRRDSSCKISNETVAGIEISFKEKDSKYLEFLFLSYTDNPIHKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PIN +   PE  R    G   W  R+G R D SC I +E + G  I  ++  +   + L+  +    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>gi|678019100|sp|D5WYQ5.1|TSDA_THIK1</Hit_id>
+  <Hit_def>RecName: Full=Thiosulfate dehydrogenase; AltName: Full=Tetrathionate synthase; Flags: Precursor [Thiomonas intermedia K12]</Hit_def>
+  <Hit_accession>D5WYQ5</Hit_accession>
+  <Hit_len>314</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>40.4318</Hsp_bit-score>
+      <Hsp_score>93</Hsp_score>
+      <Hsp_evalue>0.00741036</Hsp_evalue>
+      <Hsp_query-from>42</Hsp_query-from>
+      <Hsp_query-to>195</Hsp_query-to>
+      <Hsp_hit-from>65</Hsp_hit-from>
+      <Hsp_hit-to>230</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>42</Hsp_identity>
+      <Hsp_positive>71</Hsp_positive>
+      <Hsp_gaps>30</Hsp_gaps>
+      <Hsp_align-len>175</Hsp_align-len>
+      <Hsp_qseq>IVEEGRD-------YYHNLKGKTGKTCASCHGQDG-----ANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIVPLAGYVATLSNGMPIN--------VELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVL-DGKRIRLQKLGAPVRDKLYAHWPA</Hsp_qseq>
+      <Hsp_hseq>MVKLGRDIMLDTPKYAKDYVGNT-LSCVNCHTDAGRMAGSAPLWAAYVSYPAYRGKNKKVNTFEERLQGCF-KFSQNGKAPPLGSKTLVALESYSYWLSKGLPVDEKVAGRGYPNLPEPQQAPDYVRGQKVYEAK-------CILCHAANGEGQYVNGETVFPPLWGPKSFNWGA</Hsp_hseq>
+      <Hsp_midline>+V+ GRD       Y  +  G T  +C +CH   G     A L  AY   P Y    K+V   + R++ C  K+         G K +V L  Y   LS G+P++          L  P++   Y  G++++  +       C +CH    +G+ +  + +  P+      +W A</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>38.891</Hsp_bit-score>
+      <Hsp_score>89</Hsp_score>
+      <Hsp_evalue>0.0287008</Hsp_evalue>
+      <Hsp_query-from>162</Hsp_query-from>
+      <Hsp_query-to>250</Hsp_query-to>
+      <Hsp_hit-from>88</Hsp_hit-from>
+      <Hsp_hit-to>156</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>40</Hsp_positive>
+      <Hsp_gaps>20</Hsp_gaps>
+      <Hsp_align-len>89</Hsp_align-len>
+      <Hsp_qseq>FSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFDFKKNWVKKPPFYIEEVVALELY</Hsp_qseq>
+      <Hsp_hseq>LSCVNCH--TDAGRM----AGSAPLWAAYVSYPAYRGKNKKVNTFEERLQGCFK-------------FSQN-GKAPPLGSKTLVALESY</Hsp_hseq>
+      <Hsp_midline> SC  CH   D  R+     G+      Y  +PAYR    K+ T E+R++GC+K             F +N  K PP   + +VALE Y</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>gi|109896304|sp|Q3BAH3.1|YCF2_PHAAO</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Phalaenopsis aphrodite subsp. formosana]</Hit_def>
+  <Hit_accession>Q3BAH3</Hit_accession>
+  <Hit_len>2290</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>38.1206</Hsp_bit-score>
+      <Hsp_score>87</Hsp_score>
+      <Hsp_evalue>0.065504</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>37</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>IPIKKKRIMPESNR----GSRWWRNRIGKKRDSSCQISNETIAGIEISFKEKDSKYLEFLFLSYTDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE  R    G   W  R+G  RD SC I +E + G  I  ++  +   + L+  +    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>gi|68053014|sp|Q589A6.1|YCF2_SILLA</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Silene latifolia]</Hit_def>
+  <Hit_accession>Q589A6</Hit_accession>
+  <Hit_len>2223</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>38.1206</Hsp_bit-score>
+      <Hsp_score>87</Hsp_score>
+      <Hsp_evalue>0.071404</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>161</Hsp_hit-from>
+      <Hsp_hit-to>237</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCIMPESNR----GSQWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVYYMDDPISKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE  R    G + W   +G  RD SC I +E + G  I  ++      + L+ ++    ISKD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>gi|109896299|sp|Q2L949.1|YCF2_GOSHI</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Gossypium hirsutum]</Hit_def>
+  <Hit_accession>Q2L949</Hit_accession>
+  <Hit_len>2298</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>38.1206</Hsp_bit-score>
+      <Hsp_score>87</Hsp_score>
+      <Hsp_evalue>0.0787906</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>261</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>293</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>32</Hsp_identity>
+      <Hsp_positive>57</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>135</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFD-FKKNWVKKPPFYIEEVVALEL--YMKKAANGAKIE</Hsp_qseq>
+      <Hsp_hseq>LPITKKCIMPESNR----GSRWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVYYMDDSIRKDHDWELFDRLSPSKRRNIINLNSGQLFEILVKDWICYLMFAFREKIPIEVEGFFKQQGAGSTIQ</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE  R    G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+    +   +       F+   K+W+    F   E + +E+  + K+   G+ I+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>gi|678019085|sp|A4VND8.1|TSDA_PSEU5</Hit_id>
+  <Hit_def>RecName: Full=Thiosulfate dehydrogenase; AltName: Full=Tetrathionate synthase; Flags: Precursor [Pseudomonas stutzeri A1501]</Hit_def>
+  <Hit_accession>A4VND8</Hit_accession>
+  <Hit_len>307</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>36.1946</Hsp_bit-score>
+      <Hsp_score>82</Hsp_score>
+      <Hsp_evalue>0.170217</Hsp_evalue>
+      <Hsp_query-from>57</Hsp_query-from>
+      <Hsp_query-to>168</Hsp_query-to>
+      <Hsp_hit-from>81</Hsp_hit-from>
+      <Hsp_hit-to>197</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>52</Hsp_positive>
+      <Hsp_gaps>23</Hsp_gaps>
+      <Hsp_align-len>126</Hsp_align-len>
+      <Hsp_qseq>TGKTCASCHGQDG-----ANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIV-PLAGYVATLSNGMPINVELKH------PEEKRLYEL--GKELWYKRVGARDFSCAICH</Hsp_qseq>
+      <Hsp_hseq>NGMNCTNCHLEQGRKANSAPLWGAYPMYPAYRKKNDKVNSYAERVQGCFQ--FSMNGTPPAADSHVINALTAYSYWLSTGAPTGQELPGRAYPEVPQPQGGFDIAKGKQIYAEQ-------CAVCH</Hsp_hseq>
+      <Hsp_midline> G  C +CH + G     A L GAY   P Y     +V     R++ C +    ++        +++  L  Y   LS G P   EL        P+ +  +++  GK+++ ++       CA+CH</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>gi|678019081|sp|D3RVD4.1|TSDA_ALLVD</Hit_id>
+  <Hit_def>RecName: Full=Thiosulfate dehydrogenase; AltName: Full=Tetrathionate synthase; Flags: Precursor [Allochromatium vinosum DSM 180]</Hit_def>
+  <Hit_accession>D3RVD4</Hit_accession>
+  <Hit_len>270</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>34.6538</Hsp_bit-score>
+      <Hsp_score>78</Hsp_score>
+      <Hsp_evalue>0.545134</Hsp_evalue>
+      <Hsp_query-from>57</Hsp_query-from>
+      <Hsp_query-to>135</Hsp_query-to>
+      <Hsp_hit-from>72</Hsp_hit-from>
+      <Hsp_hit-to>158</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>23</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>10</Hsp_gaps>
+      <Hsp_align-len>88</Hsp_align-len>
+      <Hsp_qseq>TGKTCASCH-GQDG--------ANLVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIVPLAGYVATLSNGMPINV</Hsp_qseq>
+      <Hsp_hseq>NGLACRHCHPGRDGEVGTEANAAPFVGVVGRFPQYSARHGRLITLEQRIGDCFERSLNGRALALD-HPALIDMLAYMSWLSQGVPVGA</Hsp_hseq>
+      <Hsp_midline> G  C  CH G+DG        A  VG   + P+Y     R+  ++ RI  C E+ +   A        ++ +  Y++ LS G+P+  </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>gi|125991251|sp|A0ZZ78.1|YCF2_GOSBA</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Gossypium barbadense]</Hit_def>
+  <Hit_accession>A0ZZ78</Hit_accession>
+  <Hit_len>2298</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>35.039</Hsp_bit-score>
+      <Hsp_score>79</Hsp_score>
+      <Hsp_evalue>0.647289</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>261</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>293</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>56</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>135</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFD-FKKNWVKKPPFYIEEVVALEL--YMKKAANGAKIE</Hsp_qseq>
+      <Hsp_hseq>LPITKKCIMPESNR----DSRWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVYYMDDSIRKDHDWELFDRLSPSKRRNIINLNSGQLFEILVKDWICYLMFAFREKIPIEVEGFFKQQGAGSTIQ</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE  R        W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+    +   +       F+   K+W+    F   E + +E+  + K+   G+ I+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>gi|205412859|sp|A8SEE7.1|YCF2_CERDE</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Ceratophyllum demersum]</Hit_def>
+  <Hit_accession>A8SEE7</Hit_accession>
+  <Hit_len>2290</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>35.039</Hsp_bit-score>
+      <Hsp_score>79</Hsp_score>
+      <Hsp_evalue>0.738099</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>23</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKRIMPESN----WGSRWWRNRIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVSYTDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W  R+G  RD SC I +E + G  I  ++      + L+  +    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>gi|122165906|sp|Q09FP8.1|YCF2_NANDO</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Nandina domestica]</Hit_def>
+  <Hit_accession>Q09FP8</Hit_accession>
+  <Hit_len>2299</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>34.2686</Hsp_bit-score>
+      <Hsp_score>77</Hsp_score>
+      <Hsp_evalue>1.25967</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>168</Hsp_hit-from>
+      <Hsp_hit-to>244</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>23</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCIMPESN----WGSRWWRNRVGKKRDSSCKISNETVAGIEISFKEKDIKYLESPFVSYTDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W  RVG  RD SC I +E + G  I  ++      +  +  +    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>gi|122166130|sp|Q09MB4.1|YCF2_CITSI</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Citrus sinensis]</Hit_def>
+  <Hit_accession>Q09MB4</Hit_accession>
+  <Hit_len>2282</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.8834</Hsp_bit-score>
+      <Hsp_score>76</Hsp_score>
+      <Hsp_evalue>1.43597</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>261</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>293</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>31</Hsp_identity>
+      <Hsp_positive>56</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>135</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGKFD-FKKNWVKKPPFYIEEVVALEL--YMKKAANGAKIE</Hsp_qseq>
+      <Hsp_hseq>LPITKRCIMPESN----WGSRWWRNWLGKKRDSSCKISNETVAGIEISFKEKDLKYLEFLFVYYMDDPIRKDHDWELFDRLSPSKRRNIINLNSGHLFEILVKDWICYLMFAFREKIPIEVGGFLKQQGAGSTIQ</Hsp_hseq>
+      <Hsp_midline>+PI      PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+    +   +       F+   K+W+    F   E + +E+  ++K+   G+ I+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>gi|122247651|sp|Q14F97.1|YCF2_POPAL</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Populus alba]</Hit_def>
+  <Hit_accession>Q14F97</Hit_accession>
+  <Hit_len>2282</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.4982</Hsp_bit-score>
+      <Hsp_score>75</Hsp_score>
+      <Hsp_evalue>1.80297</Hsp_evalue>
+      <Hsp_query-from>149</Hsp_query-from>
+      <Hsp_query-to>261</Hsp_query-to>
+      <Hsp_hit-from>177</Hsp_hit-from>
+      <Hsp_hit-to>293</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>52</Hsp_positive>
+      <Hsp_gaps>24</Hsp_gaps>
+      <Hsp_align-len>127</Hsp_align-len>
+      <Hsp_qseq>GKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGK----------FD-FKKNWVKKPPFYIEEVVALEL--YMKKAANGAKIE</Hsp_qseq>
+      <Hsp_hseq>GSRWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVYYMDDPIRKDHDWELFDRL----------SPRKGRNIINLNSGQLFEILVKDWICYLMFAFREKIPIEVEGFFKQQGAGSTIQ</Hsp_hseq>
+      <Hsp_midline>G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+           P KG+          F+   K+W+    F   E + +E+  + K+   G+ I+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>gi|205413355|sp|A4GYV4.1|YCF2_POPTR</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Populus trichocarpa]</Hit_def>
+  <Hit_accession>A4GYV4</Hit_accession>
+  <Hit_len>2285</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.4982</Hsp_bit-score>
+      <Hsp_score>75</Hsp_score>
+      <Hsp_evalue>1.80308</Hsp_evalue>
+      <Hsp_query-from>149</Hsp_query-from>
+      <Hsp_query-to>261</Hsp_query-to>
+      <Hsp_hit-from>177</Hsp_hit-from>
+      <Hsp_hit-to>293</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>52</Hsp_positive>
+      <Hsp_gaps>24</Hsp_gaps>
+      <Hsp_align-len>127</Hsp_align-len>
+      <Hsp_qseq>GKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGK----------FD-FKKNWVKKPPFYIEEVVALEL--YMKKAANGAKIE</Hsp_qseq>
+      <Hsp_hseq>GSRWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVYYMDDPIRKDHDWELFDRL----------SPRKGRNIINLNSGQLFEILVKDWICYLMFAFREKIPIEVEGFFKQQGAGSTIQ</Hsp_hseq>
+      <Hsp_midline>G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+           P KG+          F+   K+W+    F   E + +E+  + K+   G+ I+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>gi|205413003|sp|B1NWJ3.1|YCF2_MANES</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Manihot esculenta]</Hit_def>
+  <Hit_accession>B1NWJ3</Hit_accession>
+  <Hit_len>2312</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.4982</Hsp_bit-score>
+      <Hsp_score>75</Hsp_score>
+      <Hsp_evalue>1.80405</Hsp_evalue>
+      <Hsp_query-from>149</Hsp_query-from>
+      <Hsp_query-to>261</Hsp_query-to>
+      <Hsp_hit-from>164</Hsp_hit-from>
+      <Hsp_hit-to>280</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>52</Hsp_positive>
+      <Hsp_gaps>24</Hsp_gaps>
+      <Hsp_align-len>127</Hsp_align-len>
+      <Hsp_qseq>GKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGK----------FD-FKKNWVKKPPFYIEEVVALEL--YMKKAANGAKIE</Hsp_qseq>
+      <Hsp_hseq>GSRWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVYYMDDPIRKDHDWELFDRL----------SPRKGRNIINLNSGQLFEILVKDWICYLMFAFREKIPIEVEGFFKQQGAGSTIQ</Hsp_hseq>
+      <Hsp_midline>G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+           P KG+          F+   K+W+    F   E + +E+  + K+   G+ I+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>gi|231442|sp|P30072.1|YCF2_EPIVI</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 [Epifagus virginiana]</Hit_def>
+  <Hit_accession>P30072</Hit_accession>
+  <Hit_len>2216</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.4982</Hsp_bit-score>
+      <Hsp_score>75</Hsp_score>
+      <Hsp_evalue>1.98244</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>161</Hsp_hit-from>
+      <Hsp_hit-to>237</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>21</Hsp_identity>
+      <Hsp_positive>36</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCSMPESN----WGSRWWRNWTGKNRDYSCKISNETVAGIEILFKEKDKKYLEFIFFYYMDDPIRKDRDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W    G  RD+SC I +E + G  I  ++      + ++ ++    I KD+ W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>gi|205412818|sp|A6MM80.1|YCF2_BUXMI</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Buxus microphylla]</Hit_def>
+  <Hit_accession>A6MM80</Hit_accession>
+  <Hit_len>2281</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.15608</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>165</Hsp_hit-from>
+      <Hsp_hit-to>241</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCIMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVYYTDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>gi|313104040|sp|P53804.2|TTC3_HUMAN</Hit_id>
+  <Hit_def>RecName: Full=E3 ubiquitin-protein ligase TTC3; AltName: Full=Protein DCRR1; AltName: Full=RING finger protein 105; AltName: Full=TPR repeat protein D; AltName: Full=Tetratricopeptide repeat protein 3; Short=TPR repeat protein 3 [Homo sapiens]</Hit_def>
+  <Hit_accession>P53804</Hit_accession>
+  <Hit_len>2025</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.30723</Hsp_evalue>
+      <Hsp_query-from>110</Hsp_query-from>
+      <Hsp_query-to>193</Hsp_query-to>
+      <Hsp_hit-from>1906</Hsp_hit-from>
+      <Hsp_hit-to>1986</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>26</Hsp_identity>
+      <Hsp_positive>31</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>84</Hsp_align-len>
+      <Hsp_qseq>GKKGRKYIVPLAGYVATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHW</Hsp_qseq>
+      <Hsp_hseq>GKDKRTYEPSSATPVTRSSQGSPSVVVAPSPKTK---GQKAEDVPVRIALGASSCEICHEVFKSKNVRVLKCGHKYHKGCFKQW</Hsp_hseq>
+      <Hsp_midline>GK  R Y    A  V   S G P  V    P+ K       E    R+     SC ICHEV   K +R+ K G       +  W</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>gi|130598|sp|P19028.1|POL_FIVSD</Hit_id>
+  <Hit_def>RecName: Full=Pol polyprotein; Contains: RecName: Full=Protease; AltName: Full=Retropepsin; Contains: RecName: Full=Reverse transcriptase/ribonuclease H; Short=RT; AltName: Full=Exoribonuclease H; Contains: RecName: Full=Deoxyuridine 5&apos;-triphosphate nucleotidohydrolase; Short=dUTPase; Contains: RecName: Full=Integrase; Short=IN [Feline immunodeficiency virus (isolate San Diego)]</Hit_def>
+  <Hit_accession>P19028</Hit_accession>
+  <Hit_len>1124</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.46319</Hsp_evalue>
+      <Hsp_query-from>174</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>1049</Hsp_hit-from>
+      <Hsp_hit-to>1114</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>32</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>66</Hsp_align-len>
+      <Hsp_qseq>KRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYK-SFFLFDPEKGKFDFKKNWVKKPP</Hsp_qseq>
+      <Hsp_hseq>ESLRIQDYFSAIPQKLQAQWIYYKDQKDKKWKGPMRVEYWGQGSVLLKDEEKGYFLIPRRHVKRVP</Hsp_hseq>
+      <Hsp_midline>+ +R+Q   + +  KL A W  Y+  KDK W    R+    + S  L D EKG F   +  VK+ P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>gi|25452917|sp|Q8KAS5.1|CYSD_CHLTE</Hit_id>
+  <Hit_def>RecName: Full=Cytochrome subunit of sulfide dehydrogenase; AltName: Full=FCSD; Short=FC; AltName: Full=Flavocytochrome c cytochrome subunit; Flags: Precursor [Chlorobium tepidum TLS]</Hit_def>
+  <Hit_accession>Q8KAS5</Hit_accession>
+  <Hit_len>110</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>30.8018</Hsp_bit-score>
+      <Hsp_score>68</Hsp_score>
+      <Hsp_evalue>3.48457</Hsp_evalue>
+      <Hsp_query-from>60</Hsp_query-from>
+      <Hsp_query-to>128</Hsp_query-to>
+      <Hsp_hit-from>40</Hsp_hit-from>
+      <Hsp_hit-to>106</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>24</Hsp_identity>
+      <Hsp_positive>32</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>72</Hsp_align-len>
+      <Hsp_qseq>TCASCHGQDGAN---LVGAYAKMPRYYTDIKRVADIDVRIKACLEKYVGVDAKGKKGRKYIVPLAGYVATLS</Hsp_qseq>
+      <Hsp_hseq>SCAGCHGTDGNSSSVIPSIYGKSPEYI----ETALIDFKNGSRTSTVMGRHAKGYTGEE-IHLIAEYFGNLS</Hsp_hseq>
+      <Hsp_midline>+CA CHG DG +   +   Y K P Y       A ID +  +     +G  AKG  G + I  +A Y   LS</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>gi|93140419|sp|P61242.2|YCF2_SOLLC</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Solanum lycopersicum]</Hit_def>
+  <Hit_accession>P61242</Hit_accession>
+  <Hit_len>2278</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.59821</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCSMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEILFKEKDLKYLEFLFVYYMDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>gi|109896305|sp|Q2MIC5.1|YCF2_SOLBU</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Solanum bulbocastanum]</Hit_def>
+  <Hit_accession>Q2MIC5</Hit_accession>
+  <Hit_len>2278</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.59821</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCSMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEILFKEKDLKYLEFLFVYYMDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>gi|109896306|sp|Q27RY7.1|YCF2_SOLTU</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Solanum tuberosum]</Hit_def>
+  <Hit_accession>Q27RY7</Hit_accession>
+  <Hit_len>2278</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.59821</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCSMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEILFKEKDLKYLEFLFVYYMDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>gi|3915961|sp|P09976.2|YCF2_TOBAC</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Nicotiana tabacum] &gt;gi|109896302|sp|Q3C1N4.1|YCF2_NICSY RecName: Full=Protein Ycf2 (chloroplast) [Nicotiana sylvestris]</Hit_def>
+  <Hit_accession>P09976</Hit_accession>
+  <Hit_len>2280</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.59835</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCSMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEILFKEKDLKYLEFLFVYYMDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>gi|109896303|sp|Q33BV3.1|YCF2_NICTO</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Nicotiana tomentosiformis]</Hit_def>
+  <Hit_accession>Q33BV3</Hit_accession>
+  <Hit_len>2280</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.59835</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCSMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEILFKEKDLKYLEFLFVYYMDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>gi|47117596|sp|Q8S8U1.1|YCF2B_ATRBE</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 B (chloroplast) [Atropa belladonna]</Hit_def>
+  <Hit_accession>Q8S8U1</Hit_accession>
+  <Hit_len>2291</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.59912</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCSMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEILFKEKDLKYLEFLFVYYMDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>gi|47117597|sp|Q8S8V2.1|YCF2A_ATRBE</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 A (chloroplast) [Atropa belladonna]</Hit_def>
+  <Hit_accession>Q8S8V2</Hit_accession>
+  <Hit_len>2291</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>3.59912</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCSMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEILFKEKDLKYLEFLFVYYMDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>gi|122246606|sp|Q0ZIV6.1|YCF2_VITVI</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Vitis vinifera]</Hit_def>
+  <Hit_accession>Q0ZIV6</Hit_accession>
+  <Hit_len>2300</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.3426</Hsp_bit-score>
+      <Hsp_score>72</Hsp_score>
+      <Hsp_evalue>4.97431</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>35</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCIMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVYYMDDPIHKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>gi|317412165|sp|D4A666.1|UBN2_RAT</Hit_id>
+  <Hit_def>RecName: Full=Ubinuclein-2 [Rattus norvegicus]</Hit_def>
+  <Hit_accession>D4A666</Hit_accession>
+  <Hit_len>1330</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.9574</Hsp_bit-score>
+      <Hsp_score>71</Hsp_score>
+      <Hsp_evalue>5.49243</Hsp_evalue>
+      <Hsp_query-from>124</Hsp_query-from>
+      <Hsp_query-to>211</Hsp_query-to>
+      <Hsp_hit-from>431</Hsp_hit-from>
+      <Hsp_hit-to>523</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>25</Hsp_identity>
+      <Hsp_positive>47</Hsp_positive>
+      <Hsp_gaps>15</Hsp_gaps>
+      <Hsp_align-len>98</Hsp_align-len>
+      <Hsp_qseq>VATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAY----------RISKDKLWTMEDRIR</Hsp_qseq>
+      <Hsp_hseq>VPTLPDGLPVLLEKRIEDLRVAAKLFDEEGRKKFFTQDMN-----NILLDIELQLQELGPVIRSGVYSHLEAFVPCNKETLVKRLKKLHLNVQDDRLR</Hsp_hseq>
+      <Hsp_midline>V TL +G+P+ +E +  + +   +L  E   K+   +D +      +L    ++LQ+LG  +R  +Y+H  A+          R+ K  L   +DR+R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>gi|122166751|sp|Q09WV7.1|YCF2_MORIN</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Morus indica]</Hit_def>
+  <Hit_accession>Q09WV7</Hit_accession>
+  <Hit_len>2292</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.9574</Hsp_bit-score>
+      <Hsp_score>71</Hsp_score>
+      <Hsp_evalue>5.52341</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>261</Hsp_query-to>
+      <Hsp_hit-from>165</Hsp_hit-from>
+      <Hsp_hit-to>295</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>33</Hsp_identity>
+      <Hsp_positive>58</Hsp_positive>
+      <Hsp_gaps>10</Hsp_gaps>
+      <Hsp_align-len>136</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYKSFFLFDPEKGK-FD-FKKNWVKKPPFYIEEVVALEL--YMKKAANGAKIE</Hsp_qseq>
+      <Hsp_hseq>LPITKKCIMPESN----WGSRWWRNWLGKKRDSSCKISNETVTGIEISFKEKDIKYLEFLFVYYMDDPIRKDHDWELFDRLSP-RKRRNIINLNSGQLFEILVKDWICYLMFAFREKIPIEAEGFFKQQGAGSTIQ</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+ ++    I KD  W + DR+    K   + +   G+ F+   K+W+    F   E + +E   + K+   G+ I+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>gi|161789042|sp|Q7RX73.2|KU80_NEUCR</Hit_id>
+  <Hit_def>RecName: Full=ATP-dependent DNA helicase II subunit 2; AltName: Full=ATP-dependent DNA helicase II subunit Ku80; AltName: Full=Protein mus-52 [Neurospora crassa OR74A]</Hit_def>
+  <Hit_accession>Q7RX73</Hit_accession>
+  <Hit_len>725</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.9574</Hsp_bit-score>
+      <Hsp_score>71</Hsp_score>
+      <Hsp_evalue>6.23526</Hsp_evalue>
+      <Hsp_query-from>90</Hsp_query-from>
+      <Hsp_query-to>173</Hsp_query-to>
+      <Hsp_hit-from>547</Hsp_hit-from>
+      <Hsp_hit-to>640</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>42</Hsp_positive>
+      <Hsp_gaps>10</Hsp_gaps>
+      <Hsp_align-len>94</Hsp_align-len>
+      <Hsp_qseq>ADIDVRIKACLEKYVGVDAKGKKGRKYIV-PLAGY--VATLSNGMP-------INVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDG</Hsp_qseq>
+      <Hsp_hseq>TEIDGLIQAAEVKKVPPKVQGKRGRKDTVKPLSGLDIDALLSETRPRTKKTPIISTENAIPEFKQILETAEDDETIEIAAKQMGNIICKLVSDS</Hsp_hseq>
+      <Hsp_midline> +ID  I+A   K V    +GK+GRK  V PL+G    A LS   P       I+ E   PE K++ E  ++     + A+     IC  V D </Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>gi|68053155|sp|Q6EVY7.1|YCF2_NYMAL</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Nymphaea alba]</Hit_def>
+  <Hit_accession>Q6EVY7</Hit_accession>
+  <Hit_len>2253</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.5722</Hsp_bit-score>
+      <Hsp_score>70</Hsp_score>
+      <Hsp_evalue>7.62532</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITQKCIMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVSYMDDPIRKDHGWELFDRV</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+  +    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>gi|205413105|sp|A1XFZ9.1|YCF2_NUPAD</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Nuphar advena]</Hit_def>
+  <Hit_accession>A1XFZ9</Hit_accession>
+  <Hit_len>2262</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.5722</Hsp_bit-score>
+      <Hsp_score>70</Hsp_score>
+      <Hsp_evalue>7.76103</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCIMPESN----WGSRWWRNWIGKKRDSSCKISNETVAGIEISFKEKDIKYLEFLFVSYMDDPIRKDHGWELFDRV</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W   +G  RD SC I +E + G  I  ++      + L+  +    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>gi|156630841|sp|Q6ZU65.2|UBN2_HUMAN</Hit_id>
+  <Hit_def>RecName: Full=Ubinuclein-2 [Homo sapiens]</Hit_def>
+  <Hit_accession>Q6ZU65</Hit_accession>
+  <Hit_len>1347</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.5722</Hsp_bit-score>
+      <Hsp_score>70</Hsp_score>
+      <Hsp_evalue>7.93966</Hsp_evalue>
+      <Hsp_query-from>124</Hsp_query-from>
+      <Hsp_query-to>211</Hsp_query-to>
+      <Hsp_hit-from>445</Hsp_hit-from>
+      <Hsp_hit-to>537</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>26</Hsp_identity>
+      <Hsp_positive>45</Hsp_positive>
+      <Hsp_gaps>15</Hsp_gaps>
+      <Hsp_align-len>98</Hsp_align-len>
+      <Hsp_qseq>VATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAY----------RISKDKLWTMEDRIR</Hsp_qseq>
+      <Hsp_hseq>VPTLPEGLPVLLE-KRIEDLRV----AAKLFDEEGRKKFFTQDMNNILLDIELQLQELGPVIRSGVYSHLEAFVPCNKETLVKRLKKLHLNVQDDRLR</Hsp_hseq>
+      <Hsp_midline>V TL  G+P+ +E K  E+ R+        +   G + F     + +L    ++LQ+LG  +R  +Y+H  A+          R+ K  L   +DR+R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>gi|156630842|sp|Q80WC1.2|UBN2_MOUSE</Hit_id>
+  <Hit_def>RecName: Full=Ubinuclein-2 [Mus musculus]</Hit_def>
+  <Hit_accession>Q80WC1</Hit_accession>
+  <Hit_len>1314</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.5722</Hsp_bit-score>
+      <Hsp_score>70</Hsp_score>
+      <Hsp_evalue>8.57404</Hsp_evalue>
+      <Hsp_query-from>124</Hsp_query-from>
+      <Hsp_query-to>211</Hsp_query-to>
+      <Hsp_hit-from>431</Hsp_hit-from>
+      <Hsp_hit-to>523</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>26</Hsp_identity>
+      <Hsp_positive>45</Hsp_positive>
+      <Hsp_gaps>15</Hsp_gaps>
+      <Hsp_align-len>98</Hsp_align-len>
+      <Hsp_qseq>VATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAY----------RISKDKLWTMEDRIR</Hsp_qseq>
+      <Hsp_hseq>VPTLPEGLPVLLE-KRIEDLRV----AAKLFDEEGRKKFFTQDMNNILLDIELQLQELGPVIRSGVYSHLEAFVPCNKETLVKRLKKLHLNVQDDRLR</Hsp_hseq>
+      <Hsp_midline>V TL  G+P+ +E K  E+ R+        +   G + F     + +L    ++LQ+LG  +R  +Y+H  A+          R+ K  L   +DR+R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>gi|317412164|sp|E1B7L7.1|UBN2_BOVIN</Hit_id>
+  <Hit_def>RecName: Full=Ubinuclein-2 [Bos taurus]</Hit_def>
+  <Hit_accession>E1B7L7</Hit_accession>
+  <Hit_len>1330</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.5722</Hsp_bit-score>
+      <Hsp_score>70</Hsp_score>
+      <Hsp_evalue>8.58188</Hsp_evalue>
+      <Hsp_query-from>124</Hsp_query-from>
+      <Hsp_query-to>211</Hsp_query-to>
+      <Hsp_hit-from>446</Hsp_hit-from>
+      <Hsp_hit-to>538</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>25</Hsp_identity>
+      <Hsp_positive>46</Hsp_positive>
+      <Hsp_gaps>15</Hsp_gaps>
+      <Hsp_align-len>98</Hsp_align-len>
+      <Hsp_qseq>VATLSNGMPINVELKHPEEKRLYELGKELWYKRVGARDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAY----------RISKDKLWTMEDRIR</Hsp_qseq>
+      <Hsp_hseq>VPTLPEGLPVLLEKRIEDLRVAAKLFDEEGRKKFFTQDMN-----NILLDIELQLQELGPVIRSGVYSHLEAFVPCNKETLVKRLKKLHLNVQDDRLR</Hsp_hseq>
+      <Hsp_midline>V TL  G+P+ +E +  + +   +L  E   K+   +D +      +L    ++LQ+LG  +R  +Y+H  A+          R+ K  L   +DR+R</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>gi|130597|sp|P16088.1|POL_FIVPE</Hit_id>
+  <Hit_def>RecName: Full=Pol polyprotein; Contains: RecName: Full=Protease; AltName: Full=Retropepsin; Contains: RecName: Full=Reverse transcriptase/ribonuclease H; Short=RT; AltName: Full=Exoribonuclease H; Contains: RecName: Full=Deoxyuridine 5&apos;-triphosphate nucleotidohydrolase; Short=dUTPase; Contains: RecName: Full=Integrase; Short=IN [Feline immunodeficiency virus (isolate Petaluma)]</Hit_def>
+  <Hit_accession>P16088</Hit_accession>
+  <Hit_len>1124</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.5722</Hsp_bit-score>
+      <Hsp_score>70</Hsp_score>
+      <Hsp_evalue>8.61336</Hsp_evalue>
+      <Hsp_query-from>174</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>1049</Hsp_hit-from>
+      <Hsp_hit-to>1114</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>20</Hsp_identity>
+      <Hsp_positive>32</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>66</Hsp_align-len>
+      <Hsp_qseq>KRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYK-SFFLFDPEKGKFDFKKNWVKKPP</Hsp_qseq>
+      <Hsp_hseq>ESLRIQDYFSAIPQKLQAQWIYYKDQKDKKWKGPMRVEYWGQGSVLLKDEEKGYFLIPRRHIRRVP</Hsp_hseq>
+      <Hsp_midline>+ +R+Q   + +  KL A W  Y+  KDK W    R+    + S  L D EKG F   +  +++ P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>gi|400822|sp|P31822.1|POL_FIVT2</Hit_id>
+  <Hit_def>RecName: Full=Pol polyprotein; Contains: RecName: Full=Protease; AltName: Full=Retropepsin; Contains: RecName: Full=Reverse transcriptase/ribonuclease H; Short=RT; AltName: Full=Exoribonuclease H; Contains: RecName: Full=Deoxyuridine 5&apos;-triphosphate nucleotidohydrolase; Short=dUTPase; Contains: RecName: Full=Integrase; Short=IN [Feline immunodeficiency virus (isolate TM2)]</Hit_def>
+  <Hit_accession>P31822</Hit_accession>
+  <Hit_len>1124</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.5722</Hsp_bit-score>
+      <Hsp_score>70</Hsp_score>
+      <Hsp_evalue>8.84258</Hsp_evalue>
+      <Hsp_query-from>176</Hsp_query-from>
+      <Hsp_query-to>238</Hsp_query-to>
+      <Hsp_hit-from>1051</Hsp_hit-from>
+      <Hsp_hit-to>1114</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>19</Hsp_identity>
+      <Hsp_positive>30</Hsp_positive>
+      <Hsp_gaps>1</Hsp_gaps>
+      <Hsp_align-len>64</Hsp_align-len>
+      <Hsp_qseq>IRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRIRGCYK-SFFLFDPEKGKFDFKKNWVKKPP</Hsp_qseq>
+      <Hsp_hseq>LRIQDYFSAIPQKLMMQWLYYKDQKDKKWKGPMRVEYWGQGSVLLKDEEKGIFLVPRRHIRRVP</Hsp_hseq>
+      <Hsp_midline>+R+Q   + +  KL   W  Y+  KDK W    R+    + S  L D EKG F   +  +++ P</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>gi|122165984|sp|Q09FY5.1|YCF2_PLAOC</Hit_id>
+  <Hit_def>RecName: Full=Protein Ycf2 (chloroplast) [Platanus occidentalis]</Hit_def>
+  <Hit_accession>Q09FY5</Hit_accession>
+  <Hit_len>2293</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.187</Hsp_bit-score>
+      <Hsp_score>69</Hsp_score>
+      <Hsp_evalue>9.83012</Hsp_evalue>
+      <Hsp_query-from>131</Hsp_query-from>
+      <Hsp_query-to>210</Hsp_query-to>
+      <Hsp_hit-from>163</Hsp_hit-from>
+      <Hsp_hit-to>239</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>21</Hsp_identity>
+      <Hsp_positive>34</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>81</Hsp_align-len>
+      <Hsp_qseq>MPINVELKHPEEKRLYELGKELWYKRVGA-RDFSCAICHEVLDGKRIRLQKLGAPVRDKLYAHWPAYRISKDKLWTMEDRI</Hsp_qseq>
+      <Hsp_hseq>LPITKKCIMPESN----WGSRWWRNRIGKKRDSSCKISNETVARIEVSFKEKDIKYLEFLFVSYTDDPIRKDHDWELFDRL</Hsp_hseq>
+      <Hsp_midline>+PI  +   PE       G   W  R+G  RD SC I +E +    +  ++      + L+  +    I KD  W + DR+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>461263</Statistics_db-num>
+      <Statistics_db-len>172526934</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>
+

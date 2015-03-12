@@ -4,7 +4,8 @@
 ##################### MODULES NEEDED FOR EXECUTING 'mirrortree.py' ##########################
 #############################################################################################
 
-path_clustal = "/usr/bin/clustalw"
+# path_clustal = "/usr/bin/clustalw"
+path_clustal = "/Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2"
 
 import sys, re, numpy, os, argparse, math, os.path
 

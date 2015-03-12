@@ -1,0 +1,1097 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.2.31+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>swissprot</BlastOutput_db>
+  <BlastOutput_query-ID>Query_225567</BlastOutput_query-ID>
+  <BlastOutput_query-def>unnamed protein product</BlastOutput_query-def>
+  <BlastOutput_query-len>592</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_225567</Iteration_query-ID>
+  <Iteration_query-def>unnamed protein product</Iteration_query-def>
+  <Iteration_query-len>592</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>gi|81342290|sp|O34313.1|NTPES_BACSU</Hit_id>
+  <Hit_def>RecName: Full=Trifunctional nucleotide phosphoesterase protein YfkN; Includes: RecName: Full=2&apos;,3&apos;-cyclic-nucleotide 2&apos;-phosphodiesterase/3&apos;-nucleotidase; Includes: RecName: Full=5&apos;-nucleotidase; Flags: Precursor [Bacillus subtilis subsp. subtilis str. 168]</Hit_def>
+  <Hit_accession>O34313</Hit_accession>
+  <Hit_len>1462</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>85.5001</Hsp_bit-score>
+      <Hsp_score>210</Hsp_score>
+      <Hsp_evalue>5.28671e-16</Hsp_evalue>
+      <Hsp_query-from>119</Hsp_query-from>
+      <Hsp_query-to>517</Hsp_query-to>
+      <Hsp_hit-from>684</Hsp_hit-from>
+      <Hsp_hit-to>1104</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>113</Hsp_identity>
+      <Hsp_positive>190</Hsp_positive>
+      <Hsp_gaps>70</Hsp_gaps>
+      <Hsp_align-len>445</Hsp_align-len>
+      <Hsp_qseq>AAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLMV-GHWEFTFGKDIVLKRIK------------ELEEAGCEFISQNIREVDE--------------FGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTPI-ANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVVPKAYKVPGTN-TIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPVASNL--IPADK------EAEKLVEKYYREVDKKLGLSKEIGTAEVMLYKRDTFFSTWDWLVGEAIND--------YYGGDLDVVTSPGYRWGTVVLPGQKITVDHVYAFTAITYPN-VYVLKRTGEQLKAVWEDVADNVFNPNPFYQQGGDMSRIWNVEYEIEVNGPQYNRIKRVWI</Hsp_qseq>
+      <Hsp_hseq>AARRMTKINEVRSETNHN--ILLDAGDVFSGDLYFTKWNGLADLKMMNMMGYDAMTFGNHEFDKGPTVLSDFLSGNSATVDPANRYHFEAPEFPIVSANVDVSNEPKLKSFVKKPQTFTAGEKKEAGIHPYILLDVDGEKVAVFGLTTEDTATTSSPGKSI---VFNDAFETAQNTVKAIQEEEKVNKIIALTHIGHNRDLELAKKVKGIDLIIGGHTHTLVDKMEVVNNEEPTIVAQAKEYGQFLGRVDVAFDEKGVVQTD------KSNLSVLPIDEHTEENPEAKQELDQFKNELEDV--KNEKVGYTDVALDGQREHVRTKETNLGNFIADGMLAKAKEAAGARIAITNGGGIRAG---IDKGDITLGEV--LNVMPFGNTLYVADLTGKQIKEALEQGLSNVEN------GGGAFPQVAGIEYTFTLNNKPGHRVLEVKI</Hsp_hseq>
+      <Hsp_midline>AA     I  V +E   +  ++LD GD +      T  +G + +  M + GYD M  G+ EF  G  ++   +               E      +S N+   +E               G + +    PY + +V G K+ + G +   T   ++P + +    F    +T Q  V  ++E+ KV+ +I L+H G   D+ LAKKVKGID+II GHTH +V K   V     TIV  A  +G+F+GR+D+      ++          SNL  +P D+      EA++ ++++  E++     ++++G  +V L  +     T +  +G  I D          G  + +    G R G   +    IT+  V     + + N +YV   TG+Q+K   E    NV N       GG   ++  +EY   +N    +R+  V I</Hsp_midline>
+    </Hsp>
+    <Hsp>
+      <Hsp_num>2</Hsp_num>
+      <Hsp_bit-score>56.9954</Hsp_bit-score>
+      <Hsp_score>136</Hsp_score>
+      <Hsp_evalue>3.90832e-07</Hsp_evalue>
+      <Hsp_query-from>161</Hsp_query-from>
+      <Hsp_query-to>573</Hsp_query-to>
+      <Hsp_hit-from>125</Hsp_hit-from>
+      <Hsp_hit-to>606</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>123</Hsp_identity>
+      <Hsp_positive>212</Hsp_positive>
+      <Hsp_gaps>125</Hsp_gaps>
+      <Hsp_align-len>510</Hsp_align-len>
+      <Hsp_qseq>VVDWMKLTGYDL-MVGHWEFTFGKDIVLKRIKELEEAGCEF--ISQNIREVDEFGFEGDLVFKPYAIKEV---------GGAKLGIIGNSFPFTP---IANPRQFVEGWSFGVREDTLQEYVNELREKHKV---DAVILLSHDGLLLDIA----------LAKKVKGIDVIISGHTHDVVPKA-------YKVP-GT-NTI-VVIAGSHGKFVGRLDLDIRNG----KIMDFSYKLYPVASNLIPADKEAEKLVEKYYREVDKKLGLSKEIGTAEVMLYKRDTFFS-------------TWDWLVGEAINDYYGGDLDVVTS-----PGYRWGT---VVLPGQKITVDHVYAFTAITYPN-VYVLKRTGEQLKAVWEDVADNVFNP-NPFYQQGGDMS------RIWN------VEYEIEVNGP-QYN-----------RIKRVWIGGKELKPKKEYLV------AVYGG--PPPPPEAVEPGYKPVPVYEILINYIKKKGSINVRTKPN</Hsp_qseq>
+      <Hsp_hseq>IISVMNALKYDAGTLGNHEFNYGLDFLDGTIK-----GADFPIVNANVKTT-----SGENRYTPYVINEKTLIDENGNEQKVKVGYIG----FVPPQIMTWDKKNLEGQ---VQVQDIVESANETIPKMKAEGADVIIALAHTGIEKQAQSSGAENAVFDLATKTKGIDAIISGHQHGLFPSAEYAGVAQFNVEKGTINGIPVVMPSSWGKYLGVIDLKLEKADGSWKVADSKGSIESIAGNVTSRNETVTNTIQQTHQNTLEY--VRKPVGKTEADI---NSFFAQVKDDPSIQIVTDAQKWYAEKEMKDTEYKNLPILSAGAPFKAGGRNGANYYTNIPAGDLAIKNVGDL--YLYDNTVQIVKLTGSEVKD-WLEMSAGQFNQIDP--AKGGDQALLNENFRSYNFDVIDGVTYQVDVTKPAKYNENGKVINADSSRIINLSYEGKPISPSQEFLVVTNNYRASGGGGFPHLTSDKIVHG-SAVENRQVLMDYIIEQKTVNPKADNN</Hsp_hseq>
+      <Hsp_midline>++  M    YD   +G+ EF +G D +   IK     G +F  ++ N++        G+  + PY I E             K+G IG    F P   +   ++ +EG    V+   + E  NE   K K    D +I L+H G+               LA K KGID IISGH H + P A       + V  GT N I VV+  S GK++G +DL +       K+ D    +  +A N+   ++     +++ ++   +   + K +G  E  +   ++FF+                W   + + D    +L ++++      G R G      +P   + + +V       Y N V ++K TG ++K  W +++   FN  +P   +GGD +      R +N      V Y+++V  P +YN           RI  +   GK + P +E+LV      A  GG  P    + +  G   V   ++L++YI ++ ++N +   N</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>gi|745998022|sp|A9BJC1.1|MGGB_PETMO</Hit_id>
+  <Hit_def>RecName: Full=Mannosylglucosyl-3-phosphoglycerate phosphatase; Short=MGPG phosphatase; Flags: Precursor [Petrotoga mobilis SJ95]</Hit_def>
+  <Hit_accession>A9BJC1</Hit_accession>
+  <Hit_len>503</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>81.2629</Hsp_bit-score>
+      <Hsp_score>199</Hsp_score>
+      <Hsp_evalue>5.71262e-15</Hsp_evalue>
+      <Hsp_query-from>117</Hsp_query-from>
+      <Hsp_query-to>471</Hsp_query-to>
+      <Hsp_hit-from>43</Hsp_hit-from>
+      <Hsp_hit-to>398</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>100</Hsp_identity>
+      <Hsp_positive>174</Hsp_positive>
+      <Hsp_gaps>49</Hsp_gaps>
+      <Hsp_align-len>380</Hsp_align-len>
+      <Hsp_qseq>GGAAHITWLIKHVIAERGRD--KVLVLDGGDTWITTAVGTFTDGKSVVDWMKL--TGYDLM-VGHWEFTFGKDIVLKR--IKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIA-------------LAKKVKGIDVIISGHTHDVVPKAYKVPGTNTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPVASNLIPADKEAEKLVEKYYR----EVDKKLGLSKEIGTAEVMLYKRDTFFSTWDWLVGEAINDYYGGDLDVVTSPGYRWGTVVLPGQKITVDHVYAFTAITYPN-VYVLKRTGEQLKAV</Hsp_qseq>
+      <Hsp_hseq>GGFARAATLINQAREEVAKEGGAVLFLHAGD--VNTGIPESDQLDAVPDFLALHYMGLDAMSLGNHEFDKPFEVLEKQYEVAQFPFLGANFVNEK---------RGGPVFEPYIIKDYGDFSVGIIGLVTEQTKVLEPIYLGENTIVDA-EETLNMYLPIVQEK--ADVVIVLAHLGYHADGGRPNLSVEFTTSDELAENVSGVDIIIDGHSHTLLETPVVI--NNVIVAQAGDNAENIGRIDLWIDDGRIVDWRGEVIPLTSD-IPEDPFIKMFTDAFYQLGSEALNEVVGVTKVYLDGERAHVRSDE--TNLSNLIADGMIWKTGADVALMNGGGIR---ASIEAGEITYRDI--LTVLPFGNTLYVLELTGKDIMDV</Hsp_hseq>
+      <Hsp_midline>GG A    LI     E  ++   VL L  GD  + T +       +V D++ L   G D M +G+ EF    +++ K+  + +    G  F+++           G  VF+PY IK+ G   +GIIG     T +  P    E       E+TL  Y+  ++EK   D VI+L+H G   D               LA+ V G+D+II GH+H ++     +   N IV  AG + + +GR+DL I +G+I+D+  ++ P+ S+ IP D   +   + +Y+     +++ +G++K     E    + D   +    L+ + +    G D+ ++   G R     +   +IT   +   T + + N +YVL+ TG+ +  V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>gi|14547900|sp|Q9KQ30.1|5NTD_VIBCH</Hit_id>
+  <Hit_def>RecName: Full=5&apos;-nucleotidase; Flags: Precursor [Vibrio cholerae O1 biovar El Tor str. N16961]</Hit_def>
+  <Hit_accession>Q9KQ30</Hit_accession>
+  <Hit_len>553</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>78.1814</Hsp_bit-score>
+      <Hsp_score>191</Hsp_score>
+      <Hsp_evalue>5.27332e-14</Hsp_evalue>
+      <Hsp_query-from>112</Hsp_query-from>
+      <Hsp_query-to>357</Hsp_query-to>
+      <Hsp_hit-from>54</Hsp_hit-from>
+      <Hsp_hit-to>321</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>131</Hsp_positive>
+      <Hsp_gaps>42</Hsp_gaps>
+      <Hsp_align-len>278</Hsp_align-len>
+      <Hsp_qseq>KFGKMGGAAHITWLIKHVIA--ERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLL----------DIALAKKVKG--IDVIISGHTHD--------VVPKAYKVPG--------TNTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPV</Hsp_qseq>
+      <Hsp_hseq>QYGEYGMAARKT-LIDQLRADIEAQGGSVLLLSGGDINTGVPESDLQDAEPDFKGMSKIGYDAMALGNHEFDNPLEVLFK---QKEWANFPMLSANIYD----KATGKRLFEPYHIFDKQGIKIAVIGLTTEDTAKIGNP-EYIGGIDFRDPKEEAKKVIAELKKKEKPDLIIAVTHMGHYQNGEHGVNAPGDVALARYLPAGELDMIVGGHSQEPVCMEGPNLVKKNFK-PGDECKPDIQNGTYIVQAYEWGKYVGRADYEFRNGELNMVSYNLIPV</Hsp_hseq>
+      <Hsp_midline>++G+ G AA  T LI  + A  E     VL+L GGD           D +     M   GYD M +G+ EF    +++ K   + E A    +S NI +       G  +F+PY I +  G K+ +IG +   T  I NP +++ G  F   ++  ++ + EL++K K D +I ++H G             D+ALA+ +    +D+I+ GH+ +        +V K +K PG          T +V A   GK+VGR D + RNG++   SY L PV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>gi|2506086|sp|P07024.2|USHA_ECOLI</Hit_id>
+  <Hit_def>RecName: Full=Protein UshA; Includes: RecName: Full=UDP-sugar hydrolase; AltName: Full=UDP-sugar diphosphatase; AltName: Full=UDP-sugar pyrophosphatase; Includes: RecName: Full=5&apos;-nucleotidase; Short=5&apos;-NT; Flags: Precursor [Escherichia coli K-12]</Hit_def>
+  <Hit_accession>P07024</Hit_accession>
+  <Hit_len>550</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>77.7962</Hsp_bit-score>
+      <Hsp_score>190</Hsp_score>
+      <Hsp_evalue>7.56796e-14</Hsp_evalue>
+      <Hsp_query-from>112</Hsp_query-from>
+      <Hsp_query-to>357</Hsp_query-to>
+      <Hsp_hit-from>50</Hsp_hit-from>
+      <Hsp_hit-to>317</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>84</Hsp_identity>
+      <Hsp_positive>128</Hsp_positive>
+      <Hsp_gaps>44</Hsp_gaps>
+      <Hsp_align-len>279</Hsp_align-len>
+      <Hsp_qseq>KFGKMGGAAHITW---LIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEE-AGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLL------------LDIALAKKVKGIDVIISGHTHDVVPKAYK-------VPGT-------NTI-VVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPV</Hsp_qseq>
+      <Hsp_hseq>EYGEYGLAAQKTLVDGIRKEVAAEGG--SVLLLSGGDINTGVPESDLQDAEPDFRGMNLVGYDAMAIGNHEF----DNPLTVLRQQEKWAKFPLLSANIYQKST----GERLFKPWALFKRQDLKIAVIGLTTDDTAKIGNPEYFTD-IEFRKPADEAKLVIQELQQTEKPDIIIAATHMGHYDNGEHGSNAPGDVEMARALPAGSLAMIVGGHSQDPVCMAAENKKQVDYVPGTPCKPDQQNGIWIVQAHEWGKYVGRADFEFRNGEMKMVNYQLIPV</Hsp_hseq>
+      <Hsp_midline>++G+ G AA  T    + K V AE G   VL+L GGD           D +     M L GYD M +G+ EF    D  L  +++ E+ A    +S NI +       G+ +FKP+A+ +    K+ +IG +   T  I NP  F +   F    D  +  + EL++  K D +I  +H G              +++A A     + +I+ GH+ D V  A +       VPGT       N I +V A   GK+VGR D + RNG++   +Y+L PV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>gi|38503002|sp|Q8DFG4.2|5NTD_VIBVU</Hit_id>
+  <Hit_def>RecName: Full=5&apos;-nucleotidase; Flags: Precursor [Vibrio vulnificus CMCP6]</Hit_def>
+  <Hit_accession>Q8DFG4</Hit_accession>
+  <Hit_len>553</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>76.2554</Hsp_bit-score>
+      <Hsp_score>186</Hsp_score>
+      <Hsp_evalue>2.10096e-13</Hsp_evalue>
+      <Hsp_query-from>112</Hsp_query-from>
+      <Hsp_query-to>357</Hsp_query-to>
+      <Hsp_hit-from>54</Hsp_hit-from>
+      <Hsp_hit-to>321</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>80</Hsp_identity>
+      <Hsp_positive>127</Hsp_positive>
+      <Hsp_gaps>42</Hsp_gaps>
+      <Hsp_align-len>278</Hsp_align-len>
+      <Hsp_qseq>KFGKMGGAAH---ITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLD----------IALAKKVK--GIDVIISGHTHD--------VVPKAYKVPG-------TNTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPV</Hsp_qseq>
+      <Hsp_hseq>KYGEYGMAARKTLIDELRAEIQAEGG--SVLLLSGGDINTGVPESDLQDAEPDFKGMSKIGYDAMALGNHEFDNPLDVLMK---QKEWANFPMLSANIYDKKT----GERMFQAYEMFDKQGIKIAVIGLTTEDTAKLGNP-EFIGAIDFRDPKEEAKKLIAELKETEKPDLIFAVTHMGHYEDGKRGINAPGDVALARYLNEGDLDMIVGGHSQEPVCMEAPNVVKKNFKPADECKPDQQNGTYIVQAHEWGKYVGRADYEFRNGELRMVSYDLIPV</Hsp_hseq>
+      <Hsp_midline>K+G+ G AA    I  L   + AE G   VL+L GGD           D +     M   GYD M +G+ EF    D+++K   + E A    +S NI +       G+ +F+ Y + +  G K+ +IG +   T  + NP +F+    F   ++  ++ + EL+E  K D +  ++H G   D          +ALA+ +    +D+I+ GH+ +        VV K +K            T +V A   GK+VGR D + RNG++   SY L PV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>gi|29611950|sp|P22848.2|5NTD_VIBPA</Hit_id>
+  <Hit_def>RecName: Full=5&apos;-nucleotidase; Flags: Precursor [Vibrio parahaemolyticus RIMD 2210633]</Hit_def>
+  <Hit_accession>P22848</Hit_accession>
+  <Hit_len>560</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>75.485</Hsp_bit-score>
+      <Hsp_score>184</Hsp_score>
+      <Hsp_evalue>3.96302e-13</Hsp_evalue>
+      <Hsp_query-from>112</Hsp_query-from>
+      <Hsp_query-to>568</Hsp_query-to>
+      <Hsp_hit-from>54</Hsp_hit-from>
+      <Hsp_hit-to>541</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>128</Hsp_identity>
+      <Hsp_positive>205</Hsp_positive>
+      <Hsp_gaps>91</Hsp_gaps>
+      <Hsp_align-len>518</Hsp_align-len>
+      <Hsp_qseq>KFGKMGGAAHITW---LIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLL----------DIALAKKVK--GIDVIISGHTH--------DVVPKAYKVPG--------TNTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPVA-SNLIPADKEAEKLVEKYYREVDKKLGLSKEIGTAEVMLYKRDTFFSTWDWLVGEAINDYYG---GDLDVVTSPGYRWGTVVLPGQKITVDHVYAFTA------------ITYPNVYVLKRTGEQLKAV---WEDVAD--NVFNPNPFYQQGGDMSRIWNVEYEIEVNGPQYNRIKRVWIGGKELKPKKEYLVAV-----YGGPPPPPEAVEPGYKPVPV--YEILINYIKKKGSINV</Hsp_qseq>
+      <Hsp_hseq>KHGEYGMAARKTLIDDLRDEIQAEGG--SVLLLSGGDINTGVPESDLQDAEPDFKGMSKIGYDAMALGNHEFDNPLDVLFK---QQDWANFPMLSANIYDKKT----GKRLFQPYAMFNKQGIKIAVIGLTTEDTAKLGNP-EFIGQVDFRDPKVEAKELIAELKKTENPDLIFAVTHMGHYENGNRGINAPGDVALARYLNEGDLDMIVGGHSQEPVCMEGPNVIKKNFK-PGDECQPDQQNGTYIVQAHEWGKYVGRADYEFRNGELSMVSYDLIPVNLKKKINVDGQSQRVF------------VQDEITQDKAMLDFLRPFQEKGQSQLNVKIAESNGKLEGDRDVVRFQQTNLGRLIATAHMERAKADFAVMNSGGVRDSIEAGDITYKDVLTVQPFGNMVSYVDMSGQEVLDYLNIVATKPV--DSGAYAQFAGISMRIE-----NDKVTNVFIGNKQLRLDGRYRFTVPSYNASGGDGYPKIDTHPGYVNTGFTDAEVLKDYLESHSPIDV</Hsp_hseq>
+      <Hsp_midline>K G+ G AA  T    L   + AE G   VL+L GGD           D +     M   GYD M +G+ EF    D++ K   + + A    +S NI +       G  +F+PYA+    G K+ +IG +   T  + NP +F+    F   +   +E + EL++    D +  ++H G             D+ALA+ +    +D+I+ GH+         +V+ K +K PG          T +V A   GK+VGR D + RNG++   SY L PV     I  D +++++             +  EI   + ML     F       +   I +  G   GD DVV       G ++           +A               ITY +V  ++  G  +  V    ++V D  N+    P     G  ++   +   IE      +++  V+IG K+L+    Y   V      GG   P     PGY        E+L +Y++    I+V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>gi|20141860|sp|P06196.2|USHA_SALTY</Hit_id>
+  <Hit_def>RecName: Full=Silent protein UshA(0); Flags: Precursor [Salmonella enterica subsp. enterica serovar Typhimurium str. LT2]</Hit_def>
+  <Hit_accession>P06196</Hit_accession>
+  <Hit_len>550</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>74.3294</Hsp_bit-score>
+      <Hsp_score>181</Hsp_score>
+      <Hsp_evalue>1.0619e-12</Hsp_evalue>
+      <Hsp_query-from>112</Hsp_query-from>
+      <Hsp_query-to>357</Hsp_query-to>
+      <Hsp_hit-from>50</Hsp_hit-from>
+      <Hsp_hit-to>317</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>127</Hsp_positive>
+      <Hsp_gaps>42</Hsp_gaps>
+      <Hsp_align-len>278</Hsp_align-len>
+      <Hsp_qseq>KFGKMGGAAHITWL--IKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEE-AGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLL----------DIALAKKVKG--IDVIISGHTHDVVPKAYK-------VPGT-------NTI-VVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPV</Hsp_qseq>
+      <Hsp_hseq>EYGEYGLAAQKTLVDSIRKEVAQEG-GSVLLLSGGDINTGVPESDLQDAEPDFRGMNLIGYDAMAVGNHEF----DNPLTVLRQQEKWAKFPFLYANIYQKST----GERLFKPWAIFTRQDIKIAVIGLTTDDTAKIGNPEYFTD-IEFRKPAEEAKVVIQELNMNEKPDVIIATTHMGHYDNGDHGSNAPGDVEMARSLPAGSLAMIVGGHSQDPVCMASENKKQVNYVPGTPCAPDKQNGIWIVQAHEWGKYVGRADFEFRNGEMKMVNYQLIPV</Hsp_hseq>
+      <Hsp_midline>++G+ G AA  T +  I+  +A+ G   VL+L GGD           D +     M L GYD M VG+ EF    D  L  +++ E+ A   F+  NI +       G+ +FKP+AI      K+ +IG +   T  I NP  F +   F    +  +  + EL    K D +I  +H G             D+ +A+ +    + +I+ GH+ D V  A +       VPGT       N I +V A   GK+VGR D + RNG++   +Y+L PV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>gi|134047945|sp|Q56878.3|USHA_YERE8</Hit_id>
+  <Hit_def>RecName: Full=Protein UshA; Includes: RecName: Full=UDP-sugar hydrolase; AltName: Full=UDP-sugar diphosphatase; AltName: Full=UDP-sugar pyrophosphatase; Includes: RecName: Full=5&apos;-nucleotidase; Short=5&apos;-NT; Flags: Precursor [Yersinia enterocolitica subsp. enterocolitica 8081]</Hit_def>
+  <Hit_accession>Q56878</Hit_accession>
+  <Hit_len>550</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>73.559</Hsp_bit-score>
+      <Hsp_score>179</Hsp_score>
+      <Hsp_evalue>1.71721e-12</Hsp_evalue>
+      <Hsp_query-from>165</Hsp_query-from>
+      <Hsp_query-to>376</Hsp_query-to>
+      <Hsp_hit-from>104</Hsp_hit-from>
+      <Hsp_hit-to>334</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>73</Hsp_identity>
+      <Hsp_positive>114</Hsp_positive>
+      <Hsp_gaps>41</Hsp_gaps>
+      <Hsp_align-len>242</Hsp_align-len>
+      <Hsp_qseq>MKLTGYDLM-VGHWEFTFGKDIVLKRIKELEE-AGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLL----------DIALAKKVKG--IDVIISGHTHDVVPKAYK-------VPGT--------NTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPVASNLIPADKEAEKLVEKYY</Hsp_qseq>
+      <Hsp_hseq>MNLVGYDAMAIGNHEF----DNPLSVLRQQEKWATFPLLSANIYQKST----QQRLFKPYALFDKQGVKIAVIGLTTDDTAKIGNPEYFTD-IEFRVPATEAKQVVEQLRKTEKPDIIIAATHMGHYDDGKHGSNAPGDVEMARSLPAGYLDMIVGGHSQDPVCMASENHKQADYVPGTPCAPDRQNGTWIVQAHEWGKYVGRADFKFRNGELKLVSYQLIPI--NLKKKVEKADGTSERIF</Hsp_hseq>
+      <Hsp_midline>M L GYD M +G+ EF    D  L  +++ E+ A    +S NI +          +FKPYA+ +  G K+ +IG +   T  I NP  F +   F V     ++ V +LR+  K D +I  +H G             D+ +A+ +    +D+I+ GH+ D V  A +       VPGT         T +V A   GK+VGR D   RNG++   SY+L P+  NL    ++A+   E+ +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>gi|395455152|sp|B6EWW8.1|V5NTD_GLOBR</Hit_id>
+  <Hit_def>RecName: Full=Snake venom 5&apos;-nucleotidase; Short=5&apos;-NT; AltName: Full=Ecto-5&apos;-nucleotidase; Flags: Precursor [Gloydius brevicaudus]</Hit_def>
+  <Hit_accession>B6EWW8</Hit_accession>
+  <Hit_len>588</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>68.1662</Hsp_bit-score>
+      <Hsp_score>165</Hsp_score>
+      <Hsp_evalue>9.90726e-11</Hsp_evalue>
+      <Hsp_query-from>85</Hsp_query-from>
+      <Hsp_query-to>340</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>306</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>128</Hsp_positive>
+      <Hsp_gaps>36</Hsp_gaps>
+      <Hsp_align-len>284</Hsp_align-len>
+      <Hsp_qseq>FLKMYKIAPGTLEAYFMSCVDFPVLAQKFGK----------MGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTPI-ANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVV----PKAYKVP------------GTNTIVVIAGSHGKFVGRLDL</Hsp_qseq>
+      <Hsp_hseq>FCAALSVAAGSFELTILHTNDVHARVEQTSRDSGKCTGQDCYGGVARRATKIRELRANH--SHVLLLDAGDQYQGTIWFSFFKGREVVKFMNSLGYDAMALGNHEFDNGLAGLLDPL--LKHANFPILSANIRPKGSIASNISGYILPYKIINVGSEKVGIIGYTTKETPVLSNPGPYLE---FRDEVEELQKHANKLTTL-GVNKIIALGHSGFFEDQRIARKVKGVDVVVGGHTNTFLYTGSPPSTEVAAGNYPFMVKSDDGRQVPVVQAYAFGKYLGYLNV</Hsp_hseq>
+      <Hsp_midline>F     +A G+ E   +   D     ++  +           GG A     I+ + A      VL+LD GD +  T   +F  G+ VV +M   GYD M +G+ EF  G   +L  +  L+ A    +S NIR              PY I  VG  K+GIIG +   TP+ +NP  ++E   F    + LQ++ N+L     V+ +I L H G   D  +A+KVKG+DV++ GHT+  +    P + +V             G    VV A + GK++G L++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>gi|30913421|sp|Q9RN37.1|USHA_SALPU</Hit_id>
+  <Hit_def>RecName: Full=Protein UshA; Includes: RecName: Full=UDP-sugar hydrolase; AltName: Full=UDP-sugar diphosphatase; AltName: Full=UDP-sugar pyrophosphatase; Includes: RecName: Full=5&apos;-nucleotidase; Short=5&apos;-NT; Flags: Precursor [Salmonella enterica subsp. enterica serovar Pullorum]</Hit_def>
+  <Hit_accession>Q9RN37</Hit_accession>
+  <Hit_len>550</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>65.855</Hsp_bit-score>
+      <Hsp_score>159</Hsp_score>
+      <Hsp_evalue>4.72339e-10</Hsp_evalue>
+      <Hsp_query-from>112</Hsp_query-from>
+      <Hsp_query-to>357</Hsp_query-to>
+      <Hsp_hit-from>50</Hsp_hit-from>
+      <Hsp_hit-to>317</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>82</Hsp_identity>
+      <Hsp_positive>125</Hsp_positive>
+      <Hsp_gaps>42</Hsp_gaps>
+      <Hsp_align-len>278</Hsp_align-len>
+      <Hsp_qseq>KFGKMGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAV--GTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEE-AGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLL----------DIALAKKVKG--IDVIISGHTHDVVPKAYK-------VPGT-------NTI-VVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPV</Hsp_qseq>
+      <Hsp_hseq>EYGEYGLAAQKT-LVDSIRKEVAQEGGGVLLLSGGDINTGVPESDLQDAEPDFRGMNLIGYDAMAVGNHEF----DNPLTVLRQQEKWAKFPFLSANIYQKST----GERLFKPWAIFTRQDIKIAVIGLTTDDTAKIGNPEYFTD-IEFRKPAEEAKVVIQELNMNEKPDVIIATTHMGHYDNGDHGSNAPGDVEMARSLPAGSLAMIVGGHSQDPVCMASENKKQVNYVPGTPCAPDKQNGIWIVQAHEWGKYVGRADFEFRNGEMKMVNYQLIPV</Hsp_hseq>
+      <Hsp_midline>++G+ G AA  T L+  +  E  ++   VL      I T V      D +     M L GYD M VG+ EF    D  L  +++ E+ A   F+S NI +       G+ +FKP+AI      K+ +IG +   T  I NP  F +   F    +  +  + EL    K D +I  +H G             D+ +A+ +    + +I+ GH+ D V  A +       VPGT       N I +V A   GK+VGR D + RNG++   +Y+L PV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>gi|597439567|sp|F8S0Z7.2|V5NTD_CROAD</Hit_id>
+  <Hit_def>RecName: Full=Snake venom 5&apos;-nucleotidase; Short=5&apos;-NT; AltName: Full=Ecto-5&apos;-nucleotidase; Flags: Precursor [Crotalus adamanteus]</Hit_def>
+  <Hit_accession>F8S0Z7</Hit_accession>
+  <Hit_len>588</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>63.5438</Hsp_bit-score>
+      <Hsp_score>153</Hsp_score>
+      <Hsp_evalue>2.29918e-09</Hsp_evalue>
+      <Hsp_query-from>85</Hsp_query-from>
+      <Hsp_query-to>335</Hsp_query-to>
+      <Hsp_hit-from>31</Hsp_hit-from>
+      <Hsp_hit-to>289</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>77</Hsp_identity>
+      <Hsp_positive>119</Hsp_positive>
+      <Hsp_gaps>24</Hsp_gaps>
+      <Hsp_align-len>267</Hsp_align-len>
+      <Hsp_qseq>FLKMYKIAPGTLEAYFMSCVDFPVLAQKFGK----------MGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTPI-ANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVV----PKAYKVPGTNTIVVIAGSHGKFV</Hsp_qseq>
+      <Hsp_hseq>FCAALSVAAGSFELTILHTNDVHARVEQTSRDSGKCTGQDCYGGVARRATKIRELRAKH--RHVLLLDAGDQYQGTVWFNFFKGREVVKFMNSLRYDAMALGNHEFDNGLAGLLDPL--LKHANFPILSANIRPKGSIASNISGYILPYKIINVGSEKVGIIGYTTKETPVLSNPGPYLE---FRDEVEELQNHANKLTTL-GVNKIIALGHSGFSEDQRIARKVKGVDVVVGGHTNTFLYTGSPPSTEVAAGNYPFMVQSDDGRQV</Hsp_hseq>
+      <Hsp_midline>F     +A G+ E   +   D     ++  +           GG A     I+ + A+     VL+LD GD +  T    F  G+ VV +M    YD M +G+ EF  G   +L  +  L+ A    +S NIR              PY I  VG  K+GIIG +   TP+ +NP  ++E   F    + LQ + N+L     V+ +I L H G   D  +A+KVKG+DV++ GHT+  +    P + +V   N   ++    G+ V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>gi|112825|sp|P21589.1|5NTD_HUMAN</Hit_id>
+  <Hit_def>RecName: Full=5&apos;-nucleotidase; Short=5&apos;-NT; AltName: Full=Ecto-5&apos;-nucleotidase; AltName: CD_antigen=CD73; Flags: Precursor [Homo sapiens]</Hit_def>
+  <Hit_accession>P21589</Hit_accession>
+  <Hit_len>574</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>63.1586</Hsp_bit-score>
+      <Hsp_score>152</Hsp_score>
+      <Hsp_evalue>3.06074e-09</Hsp_evalue>
+      <Hsp_query-from>116</Hsp_query-from>
+      <Hsp_query-to>396</Hsp_query-to>
+      <Hsp_hit-from>58</Hsp_hit-from>
+      <Hsp_hit-to>346</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>82</Hsp_identity>
+      <Hsp_positive>145</Hsp_positive>
+      <Hsp_gaps>34</Hsp_gaps>
+      <Hsp_align-len>302</Hsp_align-len>
+      <Hsp_qseq>MGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVRED---TLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVV----PKAYKVP------------GTNTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPVASNLIPADKEAEKLVEKYYREVDKKLGLSKEIGTAEVML</Hsp_qseq>
+      <Hsp_hseq>MGGVARLFTKVQQI--RRAEPNVLLLDAGDQYQGTIWFTVYKGAEVAHFMNALRYDAMALGNHEFDNGVEGLIEPL--LKEAKFPILSANIKAKGPLASQISGLYLPYKVLPVGDEVVGIVGYTSKETPFLSNPGTNL------VFEDEITALQPEVDKLKTLN-VNKIIALGHSGFEMDKLIAQKVRGVDVVVGGHSNTFLYTGNPPSKEVPAGKYPFIVTSDDGRKVPVVQAYAFGKYLGYLKIEFDERGNVISSHGNPILLNSSIPEDPSIKADINKWRIKLDNY--STQELGKTIVYL</Hsp_hseq>
+      <Hsp_midline>MGG A +   ++ +   R    VL+LD GD +  T   T   G  V  +M    YD M +G+ EF  G + +++ +  L+EA    +S NI+       +   ++ PY +  VG   +GI+G +   TP ++NP   +      V ED    LQ  V++L+  + V+ +I L H G  +D  +A+KV+G+DV++ GH++  +    P + +VP            G    VV A + GK++G L ++      +  S+    + ++ IP D   +  + K+  ++D     ++E+G   V L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>gi|81555939|sp|O32133.1|YUND_BACSU</Hit_id>
+  <Hit_def>RecName: Full=Uncharacterized metallophosphoesterase YunD [Bacillus subtilis subsp. subtilis str. 168]</Hit_def>
+  <Hit_accession>O32133</Hit_accession>
+  <Hit_len>462</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>62.7734</Hsp_bit-score>
+      <Hsp_score>151</Hsp_score>
+      <Hsp_evalue>3.16036e-09</Hsp_evalue>
+      <Hsp_query-from>221</Hsp_query-from>
+      <Hsp_query-to>532</Hsp_query-to>
+      <Hsp_hit-from>121</Hsp_hit-from>
+      <Hsp_hit-to>425</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>74</Hsp_identity>
+      <Hsp_positive>146</Hsp_positive>
+      <Hsp_gaps>27</Hsp_gaps>
+      <Hsp_align-len>322</Hsp_align-len>
+      <Hsp_qseq>PYAIKEV-GGAKLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVVPKAYKVPGTNTIVVIAGSHGKFVGRLDLDIRN-GKIMDFSYKLYPVASNLIPADKEAEKLVEKYYREVDKKL--GLSKEIGTAEVMLYKRDTFFSTWDWLVGEAINDYYGGDLDVVTSPGYRWGTVVLPGQKITVDHVYAFTAITYP-NVYVLKRTGEQLKAVWEDVADNVFNP---NPFYQQGGDMSRI--WNVEYEIEVNGPQYNRIKRVWIGGKELKPKKEYLVAV</Hsp_qseq>
+      <Hsp_hseq>PYHIKSLKNGMSIAFLGVTVPYYPVYDKL----GWTVTDALESIKETILEV--KGQADIIVLLSHLGILDDQAVAEAVPEIDVILESHTHHLLEDGQVVNG--VLLASAEKYGHYVGCVEITVDSVQRSINSKTASVQNMAEWTGESAETKAFLNEKEREAEEKLSDAVAELAQDAEVKWFEE----SELPLLLAYALKEWCETDISMVNS-----GVILGPLKAGPVTKLDLHRICPHPINPVAVRLTGEELKETIVHAASEQMEQLRIKGLGFRGEVMGKMVYAGVEVETKRLDDGITHVTRITLNGEDIEKHKQYSVAV</Hsp_hseq>
+      <Hsp_midline>PY IK +  G  +  +G + P+ P+ +      GW+     ++++E + E+  K + D ++LLSH G+L D A+A+ V  IDVI+  HTH ++     V G   ++  A  +G +VG +++ + +  + ++         +       E +  + +  RE ++KL   +++    AEV  ++     S    L+  A+ ++   D+ +V S     G ++ P +   V  +       +P N   ++ TGE+LK      A              +G  M ++    VE E +        + R+ + G++++  K+Y VAV</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>gi|5902689|sp|O83142.1|5NTD_TREPA</Hit_id>
+  <Hit_def>RecName: Full=Probable 5&apos;-nucleotidase; Flags: Precursor [Treponema pallidum subsp. pallidum str. Nichols]</Hit_def>
+  <Hit_accession>O83142</Hit_accession>
+  <Hit_len>593</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>63.1586</Hsp_bit-score>
+      <Hsp_score>152</Hsp_score>
+      <Hsp_evalue>3.41774e-09</Hsp_evalue>
+      <Hsp_query-from>116</Hsp_query-from>
+      <Hsp_query-to>309</Hsp_query-to>
+      <Hsp_hit-from>64</Hsp_hit-from>
+      <Hsp_hit-to>249</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>59</Hsp_identity>
+      <Hsp_positive>93</Hsp_positive>
+      <Hsp_gaps>20</Hsp_gaps>
+      <Hsp_align-len>200</Hsp_align-len>
+      <Hsp_qseq>MGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELR-----EKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTH</Hsp_qseq>
+      <Hsp_hseq>VGGYAALVHEIQRLRAES--KNALVLHAGDALIGTLYSTLFRGRADAVLMNHAGFDFFTLGNHEFDNGNEGLKEFLHYLE---VPVLSANVVPNAASTLHG--LWKPSAIVERAGERIGVIG-------LDTVKKTVESSSPGKDINFIDEIEAVRRATVEMQQQGVNKIILLSHAGFEKNCEIAQNISGIDVIVSGDTH</Hsp_hseq>
+      <Hsp_midline>+GG A +   I+ + AE      LVL  GD  I T   T   G++    M   G+D   +G+ EF  G + + + +  LE      +S N+         G  ++KP AI E  G ++G+IG       +   ++ VE  S G   + + E     R     ++  V+ +ILLSH G   +  +A+ + GIDVI+SG TH</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>gi|13431280|sp|Q61503.2|5NTD_MOUSE</Hit_id>
+  <Hit_def>RecName: Full=5&apos;-nucleotidase; Short=5&apos;-NT; AltName: Full=Ecto-5&apos;-nucleotidase; AltName: CD_antigen=CD73; Flags: Precursor [Mus musculus]</Hit_def>
+  <Hit_accession>Q61503</Hit_accession>
+  <Hit_len>576</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>62.7734</Hsp_bit-score>
+      <Hsp_score>151</Hsp_score>
+      <Hsp_evalue>4.49592e-09</Hsp_evalue>
+      <Hsp_query-from>116</Hsp_query-from>
+      <Hsp_query-to>396</Hsp_query-to>
+      <Hsp_hit-from>60</Hsp_hit-from>
+      <Hsp_hit-to>348</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>78</Hsp_identity>
+      <Hsp_positive>140</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>299</Hsp_align-len>
+      <Hsp_qseq>MGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVV----PKAYKVP------------GTNTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPVASNLIPADKEAEKLVEKYYREVDKKLGLSKEIGTAEVML</Hsp_qseq>
+      <Hsp_hseq>VGGVARLFTKVQQIRKEE--PNVLFLDAGDQYQGTIWFTVYKGLEVAHFMNILGYDAMALGNHEFDNGVEGLIDPL--LRNVKFPILSANIKARGPLAHQISGLFLPSKVLSVGGEVVGIVGYTSKETPFLSNPGT---NLVFEDEISALQPEVDKLKTLN-VNKIIALGHSGFEMDKLIAQKVRGVDIVVGGHSNTFLYTGNPPSKEVPAGKYPFIVTADDGRQVPVVQAYAFGKYLGYLKVEFDDKGNVITSYGNPILLNSSIPEDATIKADINQWRIKLDNY--STQELGRTIVYL</Hsp_hseq>
+      <Hsp_midline>+GG A +   ++ +  E     VL LD GD +  T   T   G  V  +M + GYD M +G+ EF  G + ++  +  L       +S NI+       +   +F P  +  VGG  +GI+G +   TP ++NP        F      LQ  V++L+  + V+ +I L H G  +D  +A+KV+G+D+++ GH++  +    P + +VP            G    VV A + GK++G L ++  +   +  SY    + ++ IP D   +  + ++  ++D     ++E+G   V L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>gi|143811357|sp|Q05927.2|5NTD_BOVIN</Hit_id>
+  <Hit_def>RecName: Full=5&apos;-nucleotidase; Short=5&apos;-NT; AltName: Full=Ecto-5&apos;-nucleotidase; AltName: CD_antigen=CD73; Flags: Precursor [Bos taurus]</Hit_def>
+  <Hit_accession>Q05927</Hit_accession>
+  <Hit_len>574</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>60.8474</Hsp_bit-score>
+      <Hsp_score>146</Hsp_score>
+      <Hsp_evalue>1.75107e-08</Hsp_evalue>
+      <Hsp_query-from>116</Hsp_query-from>
+      <Hsp_query-to>396</Hsp_query-to>
+      <Hsp_hit-from>58</Hsp_hit-from>
+      <Hsp_hit-to>346</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>83</Hsp_identity>
+      <Hsp_positive>143</Hsp_positive>
+      <Hsp_gaps>34</Hsp_gaps>
+      <Hsp_align-len>302</Hsp_align-len>
+      <Hsp_qseq>MGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVRED---TLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVV----PKAYKVP------------GTNTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPVASNLIPADKEAEKLVEKYYREVDKKLGLSKEIGTAEVML</Hsp_qseq>
+      <Hsp_hseq>VGGVARLATKVHQI--RRAEPHVLLLDAGDQYQGTIWFTVYKGTEVAHFMNALGYDAMALGNHEFDNGVEGLIDPL--LKEVNFPILSANIKAKGPLASKISGLYSPYKILTVGDEVVGIVGYTSKETPFLSNPGTNL------VFEDEITALQPEVDKLKTLN-VNKIIALGHSGFEVDKLIAQKVKGVDVVVGGHSNTFLYTGNPPSKEVPAGQYPFIVTSDDGRKVPVVQAYAFGKYLGYLKVEFDEKGNVVTSHGNPILLNSSIPEDPNIKADINKWRVKLDNY--STQELGKTIVYL</Hsp_hseq>
+      <Hsp_midline>+GG A +   +  +   R    VL+LD GD +  T   T   G  V  +M   GYD M +G+ EF  G + ++  +  L+E     +S NI+       +   ++ PY I  VG   +GI+G +   TP ++NP   +      V ED    LQ  V++L+  + V+ +I L H G  +D  +A+KVKG+DV++ GH++  +    P + +VP            G    VV A + GK++G L ++      +  S+    + ++ IP D   +  + K+  ++D     ++E+G   V L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>gi|12229680|sp|Q9XZ43.1|5NTD_LUTLO</Hit_id>
+  <Hit_def>RecName: Full=Protein 5NUC; Includes: RecName: Full=UDP-sugar hydrolase; AltName: Full=UDP-sugar diphosphatase; AltName: Full=UDP-sugar pyrophosphatase; Includes: RecName: Full=5&apos;-nucleotidase; Short=5&apos;-NT; Flags: Precursor [Lutzomyia longipalpis]</Hit_def>
+  <Hit_accession>Q9XZ43</Hit_accession>
+  <Hit_len>572</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>59.6918</Hsp_bit-score>
+      <Hsp_score>143</Hsp_score>
+      <Hsp_evalue>4.01585e-08</Hsp_evalue>
+      <Hsp_query-from>117</Hsp_query-from>
+      <Hsp_query-to>418</Hsp_query-to>
+      <Hsp_hit-from>66</Hsp_hit-from>
+      <Hsp_hit-to>375</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>77</Hsp_identity>
+      <Hsp_positive>131</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>320</Hsp_align-len>
+      <Hsp_qseq>GGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVV----------------PKAYKVPGTNTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPV-ASNLIPADKEAEKLVEKYYREVDKKLGLSKEIGTAEVMLYKRDTFFSTWDWLVGEAINDYY</Hsp_qseq>
+      <Hsp_hseq>GGFARVSTMVKKFREENG-SSVLFLNAGDTYTGTPWFTLYKETIATEMMNILRPDAASLGNHEFDKG---VEGLVPFLNGVTFPILTANLDTSQEPTMTNAKNLKRSMIFTVSGHRVGVIGYLTPDTKFLSD---VGKVNFIPEVEAINTEAQRLKKEENAEIIIVVGHSGLIKDREIAEKCPLVDIIVGGHSHTFLYTGSQPDREVPVDVYPVVVTQSSGKKVPIVQAYCFTKYLGYFKVTI-NGKGNVVGWTGQPILLNNNIPQDQEVLTALEK-YRERVENYG-NRVIGVSRVILNGGHTECRFHECNMGNLITDAF</Hsp_hseq>
+      <Hsp_midline>GG A ++ ++K    E G   VL L+ GDT+  T   T        + M +   D   +G+ EF  G   V   +  L       ++ N+    E         K   I  V G ++G+IG   P T   +    V   +F    + +      L+++   + +I++ H GL+ D  +A+K   +D+I+ GH+H  +                    +  G    +V A    K++G   + I NGK     +   P+  +N IP D+E    +EK YRE  +  G ++ IG + V+L    T     +  +G  I D +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>gi|17865700|sp|P26265.2|CPDB_SALTY</Hit_id>
+  <Hit_def>RecName: Full=2&apos;,3&apos;-cyclic-nucleotide 2&apos;-phosphodiesterase/3&apos;-nucleotidase; Flags: Precursor [Salmonella enterica subsp. enterica serovar Typhimurium str. LT2]</Hit_def>
+  <Hit_accession>P26265</Hit_accession>
+  <Hit_len>647</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>54.299</Hsp_bit-score>
+      <Hsp_score>129</Hsp_score>
+      <Hsp_evalue>1.8028e-06</Hsp_evalue>
+      <Hsp_query-from>111</Hsp_query-from>
+      <Hsp_query-to>535</Hsp_query-to>
+      <Hsp_hit-from>48</Hsp_hit-from>
+      <Hsp_hit-to>549</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>128</Hsp_identity>
+      <Hsp_positive>197</Hsp_positive>
+      <Hsp_gaps>111</Hsp_gaps>
+      <Hsp_align-len>519</Hsp_align-len>
+      <Hsp_qseq>QKFGKMGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVD------WMKLTGYDLMVGHW---EFTFGKDIVLKRIKELEEAGCEF--ISQNIREVDEFGFEGDLVFKPYAIKEVG---------GAKLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLD---------IALAKKVKGIDVIISGHTHDVVP--------KAYKVPGT-NTI-VVIAGSHGKFVGRLDLDIRNG----KIMDFSYKLYPV--ASNLIPADKEAEKLV------EKYYRE-VDKKLGLSKEIGTAEVMLYKRDTFFSTWDWLVGEAINDYYGGDLDVVTSPGYRWGTVVLPG------------QKITVDHVYAFTAITYPN-VYVLKRTGEQLKAVWEDVADNVFNP------NPFYQQGGDMSRIWN------VEYEIEVN------------GPQYNRIKRVWIGGKELKPKKEYLVA-----VYGG</Hsp_qseq>
+      <Hsp_hseq>EKFGLVRTASLI-----HAARNEVKNSVLV-DNGDLIQGSPLGDYMAAKGLKDGDVHPVYKALNTLDYAVGNLGNHEFNYGLDYLHNAL-----AGAKFPYVNANIIDVKT----QKPLFTPYLIKETSVIDKDGNPQTLKIGYIGFVPPQIMIWDKANLSGKVTVNDITETARKYVPEMREK-GADIVVVIAHSGLSADPYHSMAENSVYYLSEVPGVDAIMFGHAHAVFPGKDFADIKGADIAKGTLNGIPAVMPGMWGDHLGVVDLVLNNDSGKWQVTQAKAEARPIYDAAAKKSLAAEDSKLVGILKADHDATREFVSKPIGKSADNMYSYLALVQDDPTVQVVNNAQKAYVEHFIQGDPDLAKLPVLSAAAPFKVGGRKNDPASFVEVEKGQLTFRNAADLYLYPNTLVVVKASGKEVKE-WLECSAGQFNQIDIHSNKPQSLINWDGFRTYNFDVIDGVNYQIDVSQPARYDGECQMVNPQAERIKNLTFNGKPVDPNATFLVATNNYRAYGG</Hsp_hseq>
+      <Hsp_midline>+KFG +  A+ I     H      ++ VLV D GD    + +G +   K + D      +  L   D  VG+    EF +G D +   +     AG +F  ++ NI +V         +F PY IKE             K+G IG   P   I +        +     +T ++YV E+REK   D V++++H GL  D         +    +V G+D I+ GH H V P         A    GT N I  V+ G  G  +G +DL + N     ++     +  P+  A+       E  KLV          RE V K +G S +   + + L + D      +      +  +  GD D+   P          G            +K  +    A     YPN + V+K +G+++K  W + +   FN        P      D  R +N      V Y+I+V+             PQ  RIK +   GK + P   +LVA      YGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>gi|374110471|sp|B3A0N5.1|APY_TABYA</Hit_id>
+  <Hit_def>RecName: Full=Apyrase; AltName: Full=ATP-diphosphatase; Short=ADPase; AltName: Full=ATP-diphosphohydrolase; AltName: Full=Adenosine diphosphatase; AltName: Allergen=Tab y 1; Flags: Precursor [Tabanus yao]</Hit_def>
+  <Hit_accession>B3A0N5</Hit_accession>
+  <Hit_len>554</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>53.1434</Hsp_bit-score>
+      <Hsp_score>126</Hsp_score>
+      <Hsp_evalue>4.41672e-06</Hsp_evalue>
+      <Hsp_query-from>116</Hsp_query-from>
+      <Hsp_query-to>340</Hsp_query-to>
+      <Hsp_hit-from>65</Hsp_hit-from>
+      <Hsp_hit-to>298</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>68</Hsp_identity>
+      <Hsp_positive>107</Hsp_positive>
+      <Hsp_gaps>31</Hsp_gaps>
+      <Hsp_align-len>245</Hsp_align-len>
+      <Hsp_qseq>MGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKG-IDVIISGHTH------------DVVPKAYKV-----PGTNTIVVIAGSHGKFVGRLDL</Hsp_qseq>
+      <Hsp_hseq>VGGYARLVTTVKK-LKEEGQNTIF-LNAADNYQGTLWYNLGKWNVTAYFMNLLPADAMTLGNHEF---DDKIEGIVPFLEVIKTPIVVANIDDSLEPTFKGK--YTKSVVLERGGRKIGIVGVIAQNTDNISSPGKL----RFLDEIQSVKNESKRLREEEKVDIVIVLSHIGLDHDYDLAEQAGDYIDAIIGGHSHSFLWTGDNPPGKEKVVDAYPVEIVQTSGKKVLIVQASAFARYVGNITL</Hsp_hseq>
+      <Hsp_midline>+GG A +   +K  + E G++ +  L+  D +  T             +M L   D M +G+ EF    D +   +  LE      +  NI +  E  F+G   +    + E GG K+GI+G     T  I++P +      F     +++     LRE+ KVD VI+LSH GL  D  LA++    ID II GH+H            + V  AY V      G   ++V A +  ++VG + L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>gi|12644305|sp|P52307.2|5NTD_RHIMP</Hit_id>
+  <Hit_def>RecName: Full=Protein 5NUC; Includes: RecName: Full=UDP-sugar hydrolase; AltName: Full=UDP-sugar diphosphatase; AltName: Full=UDP-sugar pyrophosphatase; Includes: RecName: Full=5&apos;-nucleotidase; Short=5&apos;-NT; Flags: Precursor, partial [Rhipicephalus microplus]</Hit_def>
+  <Hit_accession>P52307</Hit_accession>
+  <Hit_len>580</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>50.0618</Hsp_bit-score>
+      <Hsp_score>118</Hsp_score>
+      <Hsp_evalue>4.09752e-05</Hsp_evalue>
+      <Hsp_query-from>103</Hsp_query-from>
+      <Hsp_query-to>473</Hsp_query-to>
+      <Hsp_hit-from>41</Hsp_hit-from>
+      <Hsp_hit-to>434</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>85</Hsp_identity>
+      <Hsp_positive>162</Hsp_positive>
+      <Hsp_gaps>61</Hsp_gaps>
+      <Hsp_align-len>413</Hsp_align-len>
+      <Hsp_qseq>CVDFPVLAQKFGKMGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIG-NSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVVPKAYKVPGTN-----------------------TIVVIAGSHGKFVGRLDLD-IRNGKIMDFSYKLYPV-ASNLIPADKEAEKLVEKYYREVDKKLGLSKEIGTAEVMLYKRDTFFSTWDWLVGEAINDYYGGDLDVVTSPGYRWGTVV-----LPGQKITVDHVYAFTAITYPNV----------YVLKRTGEQLKAVWE</Hsp_qseq>
+      <Hsp_hseq>CTKQAAEAQQC--VGGIARQKTVVSQAAASGA--NVLFLNAGDYYQGSIWYYVLGAPIVAEAVNYLAHDAMALGNHEFDRGAEGL---VPLLTESRVPIVGCNVDFSEEPTLK-PLQPKPSVVVERAGIKIGLIGYTTMNTTYLSSPGKV----RFTDEAECIQREAQRLRREEGVQVIIAVGHSGVPRDLEICERVPEVSLVVGGHTHTFL---YSGPTENGRVSGDKPQGPYPIVVDRAADSRCLVVQDFYMGKYMGNISITWNQRGEVVRWSGQ--PVLLDRSIPEDPDGIALLDRYRDRVAQS--QASVVAESKVLLDGDKNRCRLDECNLGNLVMDAFLKKMASLPSPQASWTRVAAVIANAGGIRASIDEQSTGGRITFEDVVNVLPFGNTLVEMNVTGAQLKGLLE</Hsp_hseq>
+      <Hsp_midline>C      AQ+   +GG A    ++    A      VL L+ GD +  +          V + +    +D M +G+ EF  G + +   +  L E+    +  N+   +E   +  L  KP  + E  G K+G+IG  +   T +++P +      F    + +Q     LR +  V  +I + H G+  D+ + ++V  + +++ GHTH  +   Y  P  N                        +VV     GK++G + +   + G+++ +S +  PV     IP D +   L+++Y   V +    +  +  ++V+L          +  +G  + D +   +  + SP   W  V        G + ++D       IT+ +V            +  TG QLK + E</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>gi|729161|sp|P08331.2|CPDB_ECOLI</Hit_id>
+  <Hit_def>RecName: Full=2&apos;,3&apos;-cyclic-nucleotide 2&apos;-phosphodiesterase/3&apos;-nucleotidase; Flags: Precursor [Escherichia coli K-12]</Hit_def>
+  <Hit_accession>P08331</Hit_accession>
+  <Hit_len>647</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>49.2914</Hsp_bit-score>
+      <Hsp_score>116</Hsp_score>
+      <Hsp_evalue>7.65442e-05</Hsp_evalue>
+      <Hsp_query-from>174</Hsp_query-from>
+      <Hsp_query-to>535</Hsp_query-to>
+      <Hsp_hit-from>114</Hsp_hit-from>
+      <Hsp_hit-to>549</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>107</Hsp_identity>
+      <Hsp_positive>169</Hsp_positive>
+      <Hsp_gaps>92</Hsp_gaps>
+      <Hsp_align-len>445</Hsp_align-len>
+      <Hsp_qseq>VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEV---------GGAKLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLD---------IALAKKVKGIDVIISGHTHDVVPK--------AYKVPGTNTIV--VIAGSHGKFVGRLDLDIRNG----KIMDFSYKLYPV--ASNLIPADKEAEKLVEKYYRE-------VDKKLGLSKEIGTAEVMLYKRDTFFSTWDWLVGEAINDYYGGDLDVV-------TSPGYRWGTVVLPGQKITVDH-----VYAFTAITYPN-VYVLKRTGEQLKAVWEDVADNVFN---PNPFYQQG---GDMSRIWN------VEYEIEVNGP------------QYNRIKRVWIGGKELKPKKEYLVA-----VYGG</Hsp_qseq>
+      <Hsp_hseq>LGNHEFNYGLDYLKNAL-----AGAKFPYVNANVIDARTKQP--MFTPYLIKDTEVVDKDGKKQTLKIGYIGVVPPQIMGWDKANLSGKVTVNDITETVRKYVPEMREK-GADVVVVLAHSGLSADPYKVMAENSVYYLSEIPGVNAIMFGHAHAVFPGKDFADIEGADIAKGTLNGVPAVMPGMWGDHLGVVDLQLSNDSGKWQVTQAKAEARPIYDIANKKSLAAEDSKLVETLKADHDATRQFVSKPIGKSADNMYSYLALVQDDPTVQVVNNAQKAYVEHYIQGDPDLAKLPVLSAAAPFKVGGRKNDPASYVEVEKGQLTFRNAADLYLYPNTLIVVKASGKEVKE-WLECSAGQFNQIDPNSTKPQSLINWDGFRTYNFDVIDGVNYQIDVTQPARYDGECQMINANAERIKNLTFNGKPIDPNAMFLVATNNYRAYGG</Hsp_hseq>
+      <Hsp_midline>+G+ EF +G D +   +     AG +F   N   +D    +   +F PY IK+             K+G IG   P     +        +     +T+++YV E+REK   D V++L+H GL  D         +    ++ G++ I+ GH H V P         A    GT   V  V+ G  G  +G +DL + N     ++     +  P+   +N      E  KLVE    +       V K +G S +   + + L + D      +      +  Y  GD D+         +P    G    P   + V+        A     YPN + V+K +G+++K  W + +   FN   PN    Q     D  R +N      V Y+I+V  P               RIK +   GK + P   +LVA      YGG</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>gi|112824|sp|P29240.1|5NTD_DIPOM</Hit_id>
+  <Hit_def>RecName: Full=5&apos;-nucleotidase; AltName: Full=Ecto-nucleotidase; Flags: Precursor [Discopyge ommata]</Hit_def>
+  <Hit_accession>P29240</Hit_accession>
+  <Hit_len>577</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>48.9062</Hsp_bit-score>
+      <Hsp_score>115</Hsp_score>
+      <Hsp_evalue>0.000100299</Hsp_evalue>
+      <Hsp_query-from>133</Hsp_query-from>
+      <Hsp_query-to>348</Hsp_query-to>
+      <Hsp_hit-from>73</Hsp_hit-from>
+      <Hsp_hit-to>301</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>62</Hsp_identity>
+      <Hsp_positive>112</Hsp_positive>
+      <Hsp_gaps>29</Hsp_gaps>
+      <Hsp_align-len>237</Hsp_align-len>
+      <Hsp_qseq>RGRDK-VLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNE--LREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVV---------------PKAYKVPGTNTI-VVIAGSHGKFVGRLDLDIRNGKIM</Hsp_qseq>
+      <Hsp_hseq>RARDKNVLLLDAGDQYQGTIWFNYYKGAEAAHFIEAVGYNAMALGNHEFDNGAEGLLDPF--LLNVSFPVLSANLEQGEDQVPSLIGYYKPSTVLDVNGEKIGVVGYTSKETPTLSSPGPHL------IFKDEIQAVQHEVDILVSQGIDKIIALGHSGFETDKLIAQKVRGVDVVVGGHSNTFLYTGKAPSNDVPVGPYPFLVNSDDQRTIPVVQAYAYGKYLGYLKLTFDKGEVI</Hsp_hseq>
+      <Hsp_midline>R RDK VL+LD GD +  T    +  G     +++  GY+ M +G+ EF  G + +L     L       +S N+ + ++        +KP  + +V G K+G++G +   TP +++P   +      + +D +Q   +E  +     +D +I L H G   D  +A+KV+G+DV++ GH++  +               P         TI VV A ++GK++G L L    G+++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>gi|1168224|sp|P44569.1|5NTD_HAEIN</Hit_id>
+  <Hit_def>RecName: Full=NAD 5&apos;-nucleotidase; Short=NadN; Flags: Precursor [Haemophilus influenzae Rd KW20]</Hit_def>
+  <Hit_accession>P44569</Hit_accession>
+  <Hit_len>603</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>48.521</Hsp_bit-score>
+      <Hsp_score>114</Hsp_score>
+      <Hsp_evalue>0.00010678</Hsp_evalue>
+      <Hsp_query-from>139</Hsp_query-from>
+      <Hsp_query-to>309</Hsp_query-to>
+      <Hsp_hit-from>88</Hsp_hit-from>
+      <Hsp_hit-to>252</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>51</Hsp_identity>
+      <Hsp_positive>79</Hsp_positive>
+      <Hsp_gaps>10</Hsp_gaps>
+      <Hsp_align-len>173</Hsp_align-len>
+      <Hsp_qseq>LVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYD-LMVGHWEFTFGKDIVLKRIKELEEAGCEFISQN-IREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTH</Hsp_qseq>
+      <Hsp_hseq>LVLHAGDAITGTLYFTLFGGSADAAVMNAGNFHYFTLGNHEFDAGNEGLLKLLEPLK---IPVLSANVIPDKNSILYNK---WKPYDIFTVDGEKIAIIGLD-TVNKTVNSSSPGKDVKFYDEIATAQIMANALKQQ-GINKIILLSHAGSEKNIEIAQKVNDIDVIVTGDSH</Hsp_hseq>
+      <Hsp_midline>LVL  GD    T   T   G +    M    +    +G+ EF  G + +LK ++ L+      +S N I + +   +     +KPY I  V G K+ IIG         N     +   F     T Q   N L+++  ++ +ILLSH G   +I +A+KV  IDVI++G +H</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>gi|374110470|sp|E0D877.1|APY_AEDAL</Hit_id>
+  <Hit_def>RecName: Full=Apyrase; AltName: Full=ATP-diphosphatase; Short=ADPase; AltName: Full=ATP-diphosphohydrolase; AltName: Full=Adenosine diphosphatase; AltName: Allergen=Aed al 1; Flags: Precursor [Aedes albopictus]</Hit_def>
+  <Hit_accession>E0D877</Hit_accession>
+  <Hit_len>564</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>48.1358</Hsp_bit-score>
+      <Hsp_score>113</Hsp_score>
+      <Hsp_evalue>0.000148908</Hsp_evalue>
+      <Hsp_query-from>116</Hsp_query-from>
+      <Hsp_query-to>340</Hsp_query-to>
+      <Hsp_hit-from>70</Hsp_hit-from>
+      <Hsp_hit-to>311</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>62</Hsp_identity>
+      <Hsp_positive>105</Hsp_positive>
+      <Hsp_gaps>29</Hsp_gaps>
+      <Hsp_align-len>248</Hsp_align-len>
+      <Hsp_qseq>MGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWM-KLTGYDLMVGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFT-PIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKV-KGIDVIISGHTHDVV-----------------PKAYKVPGTNTI---VVIAGSHGKFVGRLDL</Hsp_qseq>
+      <Hsp_hseq>IAGIARVYQKIQDLLKEYKSKNAIYLNAGDNFQGTLWYNLLRWQVTADFITKLKPTAMTLGNHEFDHTPKGLAPYLAELDKAGIPTLVANLVMNDDPDLKSSKIQKSIKV-TVGGKTIGIIGVLYDKTHEIAQTGKV----TLSNAVETVKREAAALK-KDKVDIIVVLSHCSYDEDKKIAKEAGQDIDVIVGAHSHSFLYSKESNKPYDQKDKIEGPYPTIVESNNKRKIPIVQAKSFGKYVGRLTL</Hsp_hseq>
+      <Hsp_midline>+ G A +   I+ ++ E      + L+ GD +  T        +   D++ KL    + +G+ EF      +   + EL++AG   +  N+   D+   +   + K   +  VGG  +GIIG  +  T  IA   +     +     +T++     L+ K KVD +++LSH     D  +AK+  + IDVI+  H+H  +                 P    V   N     +V A S GK+VGRL L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>gi|112826|sp|P21588.1|5NTD_RAT</Hit_id>
+  <Hit_def>RecName: Full=5&apos;-nucleotidase; Short=5&apos;-NT; AltName: Full=Ecto-5&apos;-nucleotidase; AltName: CD_antigen=CD73; Flags: Precursor [Rattus norvegicus]</Hit_def>
+  <Hit_accession>P21588</Hit_accession>
+  <Hit_len>576</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>46.2098</Hsp_bit-score>
+      <Hsp_score>108</Hsp_score>
+      <Hsp_evalue>0.000640285</Hsp_evalue>
+      <Hsp_query-from>116</Hsp_query-from>
+      <Hsp_query-to>341</Hsp_query-to>
+      <Hsp_hit-from>60</Hsp_hit-from>
+      <Hsp_hit-to>295</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>71</Hsp_identity>
+      <Hsp_positive>118</Hsp_positive>
+      <Hsp_gaps>26</Hsp_gaps>
+      <Hsp_align-len>244</Hsp_align-len>
+      <Hsp_qseq>MGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDLM-VGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTP-IANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLDIALAKKVKGIDVIISGHTHDVV----PKAYKVP------------GTNTIVVIAGSHGKFVGRLDLD</Hsp_qseq>
+      <Hsp_hseq>VGGVARLFTKVQQIRKEE--PNVLLLDAGDQYQGTIWFTVYKGLEVAHFMNLLGYDAMALGNHEFDNGVEGLIDPL--LRNVKFPILSANIKARGPLAPQISGLYLPYKVLSVGGEVVGIVGYTSKETPFLSNPGT---NLVFEDEVTALQPEVDKLKTLN-VNKIIALGHSGFEMDKLIAQKVRGVDVVVGGHTNTFLYTGNPPSKEVPAGKYPFIVTSDDGRKVPVVQAYAFGKYLGYLKVE</Hsp_hseq>
+      <Hsp_midline>+GG A +   ++ +  E     VL+LD GD +  T   T   G  V  +M L GYD M +G+ EF  G + ++  +  L       +S NI+       +   ++ PY +  VGG  +GI+G +   TP ++NP        F      LQ  V++L+  + V+ +I L H G  +D  +A+KV+G+DV++ GHT+  +    P + +VP            G    VV A + GK++G L ++</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>gi|193806340|sp|P50635.2|APY_AEDAE</Hit_id>
+  <Hit_def>RecName: Full=Apyrase; AltName: Full=ATP-diphosphatase; Short=ADPase; AltName: Full=ATP-diphosphohydrolase; AltName: Full=Adenosine diphosphatase; AltName: Allergen=Aed a 1; Flags: Precursor [Aedes aegypti]</Hit_def>
+  <Hit_accession>P50635</Hit_accession>
+  <Hit_len>562</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>41.9726</Hsp_bit-score>
+      <Hsp_score>97</Hsp_score>
+      <Hsp_evalue>0.0113781</Hsp_evalue>
+      <Hsp_query-from>108</Hsp_query-from>
+      <Hsp_query-to>340</Hsp_query-to>
+      <Hsp_hit-from>61</Hsp_hit-from>
+      <Hsp_hit-to>310</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>68</Hsp_identity>
+      <Hsp_positive>105</Hsp_positive>
+      <Hsp_gaps>45</Hsp_gaps>
+      <Hsp_align-len>264</Hsp_align-len>
+      <Hsp_qseq>VLAQKFGKMGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMK-LTGYDLMVGHWEFTFGKDIVLKRIKELEEAGCEFISQNIREVDEFGFEGDLVFKPYAIK-EVGGAKLGIIGNSFPFT-PIANPRQFVEGWSFGVREDTLQEYVNELR------EKHKVDAVILLSHDGLLLDIALAKKV-KGIDVIISGHTHDVV----------PKAYKVPG-----------TNTIVVIAGSHGKFVGRLDL</Hsp_qseq>
+      <Hsp_hseq>VCTQKDQCIAGIARVYQKIKDLLKEYESKNPIYLNAGDNFQGTLWYNLLRWNVTADFIKKLKPAAMTLGNHEFDHTPKGLAPYLAELNKEGIPTIVANLVMNNDPDLKSSKI--PKSIKLTVGKRKIGIIGVLYDKTHEIAQTGKV-----------TLSNAVEAVRREAAALKKDNIDIIVVLSHCSYEEDKKIAAEAGDDIDVIVGAHSHSFLYSPDSKQPHDPKD-KVEGPYPTLVESKNKRKIPIVQAKSFGKYVGRLTL</Hsp_hseq>
+      <Hsp_midline>V  QK   + G A +   IK ++ E      + L+ GD +  T            D++K L    + +G+ EF      +   + EL + G   I  N+   ++   +   +  P +IK  VG  K+GIIG  +  T  IA   +            TL   V  +R      +K  +D +++LSH     D  +A +    IDVI+  H+H  +          PK  KV G               +V A S GK+VGRL L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>gi|1705941|sp|P53052.1|CPDB_YEREN</Hit_id>
+  <Hit_def>RecName: Full=2&apos;,3&apos;-cyclic-nucleotide 2&apos;-phosphodiesterase/3&apos;-nucleotidase; Flags: Precursor [Yersinia enterocolitica]</Hit_def>
+  <Hit_accession>P53052</Hit_accession>
+  <Hit_len>652</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>40.817</Hsp_bit-score>
+      <Hsp_score>94</Hsp_score>
+      <Hsp_evalue>0.0302264</Hsp_evalue>
+      <Hsp_query-from>111</Hsp_query-from>
+      <Hsp_query-to>530</Hsp_query-to>
+      <Hsp_hit-from>53</Hsp_hit-from>
+      <Hsp_hit-to>544</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>119</Hsp_identity>
+      <Hsp_positive>196</Hsp_positive>
+      <Hsp_gaps>116</Hsp_gaps>
+      <Hsp_align-len>514</Hsp_align-len>
+      <Hsp_qseq>QKFGKMGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKS--------VVDWMKLTGYDL-MVGHWEFTFGKDIVLKRIKELEEAGCEF--ISQNIREVDEFGFEGDLVFKPYAI-----KEVGGA----KLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSHDGLLLD---------IALAKKVKGIDVIISGHTHDVVPK--------AYKVPGT-NTI-VVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPVASNLIPA-DKEAEKLVEKYYREVDKKLG---------LSKEIGTAEVMLYKRDTFFSTWDWLVGEAIND--------YYGGDLDV-------VTSPGYRWGTVVLPGQKITVDH-----VYAFTAITYPN-VYVLKRTGEQLKAVWEDVADNVFN------PNPFYQQGGDMSRIWN------VEYEIEVNGP------------QYNRIKRVWIGGKELKPKKEYLV</Hsp_qseq>
+      <Hsp_hseq>EKFGLVRTASLI-----EAARQQATNSVLV-DNGDLIQGSPLGDYMAAKGLKAGEIHPVYKAMNTLDYAVGNIGNHEFNYGLDYLKKSL-----AGAKFPYVNANVIDVKT----GKPLFQPYLIVDTPVKDRDGKNHNLRIGYIGFGPPQVMIWDKANLTGKVTVDDITETAKKWVPEMR-KQGANLVVAIPHSGLSSDPYKTMAENSVYYLSQVPGIDAIMFGHAHAVFPSKDFATIKGADIAQGTLNGIPAVMPGQWGDHLGVVDFVLNNDQ---GQWQVTQAKAEARPIFDKATQKSLAAENANLMKVLAADHQGTRDFVSQPIGTASDNMYSYLSLIQ--DDPTVQIVNNAQRAYTEHFIQGDPDLADLPVLSAAAPFKAGGRKNDPASFVEVEKGELTFRNAADLYLYPNTLVVVKASGADVKQ-WLECSAAQFNQIDVNSSKPQSLINWDSFRTYNFDVIDGVNYEIDVSQPARYDGECALINDKAERIKNLTFNGKPIDPQATFLI</Hsp_hseq>
+      <Hsp_midline>+KFG +  A+ I         ++  + VLV D GD    + +G +   K         V   M    Y +  +G+ EF +G D + K +     AG +F  ++ N+ +V      G  +F+PY I     K+  G     ++G IG   P   I +        +     +T +++V E+R K   + V+ + H GL  D         +    +V GID I+ GH H V P         A    GT N I  V+ G  G  +G +D  + N +     +++    +   P  DK  +K +      + K L          +S+ IGTA   +Y   +     D    + +N+        +  GD D+         +P    G    P   + V+        A     YPN + V+K +G  +K  W + +   FN        P      D  R +N      V YEI+V+ P            +  RIK +   GK + P+  +L+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>gi|1724012|sp|P54602.1|YHCR_BACSU</Hit_id>
+  <Hit_def>RecName: Full=Endonuclease YhcR; Flags: Precursor [Bacillus subtilis subsp. subtilis str. 168]</Hit_def>
+  <Hit_accession>P54602</Hit_accession>
+  <Hit_len>1217</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>37.7354</Hsp_bit-score>
+      <Hsp_score>86</Hsp_score>
+      <Hsp_evalue>0.286191</Hsp_evalue>
+      <Hsp_query-from>113</Hsp_query-from>
+      <Hsp_query-to>375</Hsp_query-to>
+      <Hsp_hit-from>620</Hsp_hit-from>
+      <Hsp_hit-to>890</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>69</Hsp_identity>
+      <Hsp_positive>121</Hsp_positive>
+      <Hsp_gaps>28</Hsp_gaps>
+      <Hsp_align-len>281</Hsp_align-len>
+      <Hsp_qseq>FGKMGGAAHITWLIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSVVDWMKLTGYDL-MVGHWEFTFGKDIVLKRIK--ELEEAGCEFISQNIREVD---EFGFEGDLVFKPYAIKEVGGAKLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNELREKHKVDAVILLSH----------DGLLLDIALAKKVKGIDVIISGHTHDVVPKAYKVPGTNTIVVIAGSHGKFVGRLDLDI--RNGKIMDFSYKLYPVASNLIPADKEAEKLVEKY</Hsp_qseq>
+      <Hsp_hseq>FGRMDYAA---AYLKEKKAEK-KNSLIVHAGDMIGGSSPVSSLLQDEPTVELMEDIGFDVGTVGNHEFDEGTDELLRILNGGDHPKGTSGYDGQNFPLVCANCKMKSTGEPFLPAYDIINVEGVPVAFIGVVTQSAAGMVMPEGIKNIEFTDEATAVNKAAEELKKKG-VKAIAVLAHMSAEQNGNAITGESADLA-NKTDSEIDVIFAAHNHQVVNG--EVNG--KLIVQAFEYGKAIGVVDVEIDKTTKDIVKKSAEIVYVDQSKIEPDVSASAILKKY</Hsp_hseq>
+      <Hsp_midline>FG+M  AA     +K   AE+ ++ ++V  G     ++ V +    +  V+ M+  G+D+  VG+ EF  G D +L+ +   +  +    +  QN   V    +    G+     Y I  V G  +  IG            + ++   F      + +   EL++K  V A+ +L+H           G   D+A  K    IDVI + H H VV    +V G   ++V A  +GK +G +D++I      I+  S ++  V  + I  D  A  +++KY</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>gi|172046703|sp|Q85WU2.2|TI214_PINKO</Hit_id>
+  <Hit_def>RecName: Full=Protein TIC 214; AltName: Full=Translocon at the inner envelope membrane of chloroplasts 214; Short=AtTIC214 (chloroplast) [Pinus koraiensis]</Hit_def>
+  <Hit_accession>Q85WU2</Hit_accession>
+  <Hit_len>2046</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>36.1946</Hsp_bit-score>
+      <Hsp_score>82</Hsp_score>
+      <Hsp_evalue>1.02116</Hsp_evalue>
+      <Hsp_query-from>343</Hsp_query-from>
+      <Hsp_query-to>384</Hsp_query-to>
+      <Hsp_hit-from>715</Hsp_hit-from>
+      <Hsp_hit-to>754</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>16</Hsp_identity>
+      <Hsp_positive>25</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>42</Hsp_align-len>
+      <Hsp_qseq>RNGKIMDFSYKLYPVASNLIPADKEAEKLVEKYYREVDKKLG</Hsp_qseq>
+      <Hsp_hseq>RRGKVEPISKRLYPLAERIIP--NKAKKIFEEYLSNIDSSFG</Hsp_hseq>
+      <Hsp_midline>R GK+   S +LYP+A  +IP   +A+K+ E+Y   +D   G</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>gi|121957827|sp|Q1GSU5.1|Y1564_SPHAL</Hit_id>
+  <Hit_def>RecName: Full=UPF0061 protein Sala_1564 [Sphingopyxis alaskensis RB2256]</Hit_def>
+  <Hit_accession>Q1GSU5</Hit_accession>
+  <Hit_len>487</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>34.2686</Hsp_bit-score>
+      <Hsp_score>77</Hsp_score>
+      <Hsp_evalue>2.7153</Hsp_evalue>
+      <Hsp_query-from>301</Hsp_query-from>
+      <Hsp_query-to>390</Hsp_query-to>
+      <Hsp_hit-from>249</Hsp_hit-from>
+      <Hsp_hit-to>348</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>28</Hsp_identity>
+      <Hsp_positive>43</Hsp_positive>
+      <Hsp_gaps>10</Hsp_gaps>
+      <Hsp_align-len>100</Hsp_align-len>
+      <Hsp_qseq>DVIISGHTHDVVPKAYKVP-GTNTIVVIAGSHGKFVGRLDLDIRNGKIMDFSYKLYPVASNLIPADKEAEKLV---------EKYYREVDKKLGLSKEIG</Hsp_qseq>
+      <Hsp_hseq>NVAISGETIDYGPCAFMDRFAANTVFSSIDATGRYAYGRQPQIMHWNMARFAEALLPAIHRVSPADVEAAKALVDAIPGRFRAAWHAQVREKLGLSTSAG</Hsp_hseq>
+      <Hsp_midline>+V ISG T D  P A+      NT+     + G++       I +  +  F+  L P    + PAD EA K +           ++ +V +KLGLS   G</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>gi|61214397|sp|Q96QI5.2|HS3S6_HUMAN</Hit_id>
+  <Hit_def>RecName: Full=Heparan sulfate glucosamine 3-O-sulfotransferase 6; AltName: Full=Heparan sulfate D-glucosaminyl 3-O-sulfotransferase 6; Short=3-OST-6; Short=Heparan sulfate 3-O-sulfotransferase 6; Short=h3-OST-6 [Homo sapiens]</Hit_def>
+  <Hit_accession>Q96QI5</Hit_accession>
+  <Hit_len>342</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.8834</Hsp_bit-score>
+      <Hsp_score>76</Hsp_score>
+      <Hsp_evalue>3.58341</Hsp_evalue>
+      <Hsp_query-from>535</Hsp_query-from>
+      <Hsp_query-to>591</Hsp_query-to>
+      <Hsp_hit-from>75</Hsp_hit-from>
+      <Hsp_hit-to>133</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>22</Hsp_identity>
+      <Hsp_positive>31</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>61</Hsp_align-len>
+      <Hsp_qseq>GPPPPPEAVEPGYKPVPVYEILINYIKKKGSINV----RTKPNVKVLDAEYHTYDECYGGG</Hsp_qseq>
+      <Hsp_hseq>GAPGLPLASGPGRRRFP--QALIVGVKKGGTRALLEFLRLHPDVRALGSEPHFFDRCYERG</Hsp_hseq>
+      <Hsp_midline>G P  P A  PG +  P  + LI  +KK G+  +    R  P+V+ L +E H +D CY  G</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>gi|238054454|sp|B2UKT9.1|ISPG_AKKM8</Hit_id>
+  <Hit_def>RecName: Full=4-hydroxy-3-methylbut-2-en-1-yl diphosphate synthase (flavodoxin); AltName: Full=1-hydroxy-2-methyl-2-(E)-butenyl 4-diphosphate synthase [Akkermansia muciniphila ATCC BAA-835]</Hit_def>
+  <Hit_accession>B2UKT9</Hit_accession>
+  <Hit_len>585</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.8834</Hsp_bit-score>
+      <Hsp_score>76</Hsp_score>
+      <Hsp_evalue>3.72754</Hsp_evalue>
+      <Hsp_query-from>180</Hsp_query-from>
+      <Hsp_query-to>285</Hsp_query-to>
+      <Hsp_hit-from>43</Hsp_hit-from>
+      <Hsp_hit-to>157</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>39</Hsp_identity>
+      <Hsp_positive>50</Hsp_positive>
+      <Hsp_gaps>31</Hsp_gaps>
+      <Hsp_align-len>126</Hsp_align-len>
+      <Hsp_qseq>TFGKDIVLKRIKELEEAGCEFIS------------QNI-REVDEFGFE----GDLVFKPYAIKEVGG--AKLGIIGNSFPFTPIANPRQFVEGWSFGVREDTLQEYVNEL-REKHKVDAVILLSHD</Hsp_qseq>
+      <Hsp_hseq>TRDTDACVKEALELAEAGCEIIRLTAQTKAYAANLENIARELRAAGCHVPLVADIHFKPDAAMEAAKWVEKIRI-----------NPGNFVDKKKFEVREYSDAEYREELDRLKEEFTPLVLFCRE</Hsp_hseq>
+      <Hsp_midline>T   D  +K   EL EAGCE I             +NI RE+   G       D+ FKP A  E      K+ I           NP  FV+   F VRE +  EY  EL R K +   ++L   +</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>gi|226706721|sp|B7J0H6.1|G6PI_BORBZ</Hit_id>
+  <Hit_def>RecName: Full=Glucose-6-phosphate isomerase; Short=GPI; AltName: Full=Phosphoglucose isomerase; Short=PGI; AltName: Full=Phosphohexose isomerase; Short=PHI [Borrelia burgdorferi ZS7] &gt;gi|384872374|sp|O51672.2|G6PI_BORBU RecName: Full=Glucose-6-phosphate isomerase; Short=GPI; AltName: Full=Phosphoglucose isomerase; Short=PGI; AltName: Full=Phosphohexose isomerase; Short=PHI [Borrelia burgdorferi B31]</Hit_def>
+  <Hit_accession>B7J0H6</Hit_accession>
+  <Hit_len>530</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.8834</Hsp_bit-score>
+      <Hsp_score>76</Hsp_score>
+      <Hsp_evalue>4.46792</Hsp_evalue>
+      <Hsp_query-from>475</Hsp_query-from>
+      <Hsp_query-to>577</Hsp_query-to>
+      <Hsp_hit-from>106</Hsp_hit-from>
+      <Hsp_hit-to>224</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>30</Hsp_identity>
+      <Hsp_positive>53</Hsp_positive>
+      <Hsp_gaps>22</Hsp_gaps>
+      <Hsp_align-len>122</Hsp_align-len>
+      <Hsp_qseq>VADNVFNPNPFYQQGGDMSRIWNVEYEI------EVNGPQYNRIKRVWIGGKELKPK----------KEYLVAVYGG---PPPPPEAVEPGYKPVPVYEILINYIKKKGSINVRTKPNVKVL</Hsp_qseq>
+      <Hsp_hseq>IEDNKENMREFFQ--SELEKIYNFAKQIHSGNIKSSNGKKFKNVVQIGIGGSSLGPKALYSSIKNYAKKHNLALMNGYFISNIDPDESEEVLSSINVDETLFIIVSKSGNT-LETKANMQFL</Hsp_hseq>
+      <Hsp_midline>+ DN  N   F+Q   ++ +I+N   +I        NG ++  + ++ IGG  L PK          K++ +A+  G       P+  E     + V E L   + K G+  + TK N++ L</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>gi|61213887|sp|Q5GFD5.1|HS3S6_MOUSE</Hit_id>
+  <Hit_def>RecName: Full=Heparan sulfate glucosamine 3-O-sulfotransferase 6; AltName: Full=Heparan sulfate D-glucosaminyl 3-O-sulfotransferase 6; Short=3-OST-6; Short=Heparan sulfate 3-O-sulfotransferase 6 [Mus musculus]</Hit_def>
+  <Hit_accession>Q5GFD5</Hit_accession>
+  <Hit_len>342</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.4982</Hsp_bit-score>
+      <Hsp_score>75</Hsp_score>
+      <Hsp_evalue>5.25716</Hsp_evalue>
+      <Hsp_query-from>540</Hsp_query-from>
+      <Hsp_query-to>591</Hsp_query-to>
+      <Hsp_hit-from>80</Hsp_hit-from>
+      <Hsp_hit-to>133</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>20</Hsp_identity>
+      <Hsp_positive>29</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>56</Hsp_align-len>
+      <Hsp_qseq>PEAVEPGYKPVPVYEILINYIKKKGSINV----RTKPNVKVLDAEYHTYDECYGGG</Hsp_qseq>
+      <Hsp_hseq>PVASGPGRRRFP--QALIVGVKKGGTRALLEFLRLHPDVRALGSEPHFFDRCYDRG</Hsp_hseq>
+      <Hsp_midline>P A  PG +  P  + LI  +KK G+  +    R  P+V+ L +E H +D CY  G</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>gi|61215828|sp|Q5Z3P5.1|RRAAH_NOCFA</Hit_id>
+  <Hit_def>RecName: Full=Putative 4-hydroxy-4-methyl-2-oxoglutarate aldolase; Short=HMG aldolase; AltName: Full=Oxaloacetate decarboxylase; Short=OAA decarboxylase; AltName: Full=Regulator of ribonuclease activity homolog; AltName: Full=RraA-like protein [Nocardia farcinica IFM 10152]</Hit_def>
+  <Hit_accession>Q5Z3P5</Hit_accession>
+  <Hit_len>165</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>31.9574</Hsp_bit-score>
+      <Hsp_score>71</Hsp_score>
+      <Hsp_evalue>7.38098</Hsp_evalue>
+      <Hsp_query-from>125</Hsp_query-from>
+      <Hsp_query-to>161</Hsp_query-to>
+      <Hsp_hit-from>56</Hsp_hit-from>
+      <Hsp_hit-to>92</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>16</Hsp_identity>
+      <Hsp_positive>21</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>37</Hsp_align-len>
+      <Hsp_qseq>LIKHVIAERGRDKVLVLDGGDTWITTAVGTFTDGKSV</Hsp_qseq>
+      <Hsp_hseq>LVKQTLGEPGEGKVLVVDGGASVHTALVGDIIAGRGV</Hsp_hseq>
+      <Hsp_midline>L+K  + E G  KVLV+DGG +  T  VG    G+ V</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>gi|3122391|sp|O33465.1|METH_PSEPU</Hit_id>
+  <Hit_def>RecName: Full=Methionine synthase; AltName: Full=5-methyltetrahydrofolate--homocysteine methyltransferase; AltName: Full=Methionine synthase, vitamin-B12 dependent; Short=MS, partial [Pseudomonas putida]</Hit_def>
+  <Hit_accession>O33465</Hit_accession>
+  <Hit_len>607</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>33.113</Hsp_bit-score>
+      <Hsp_score>74</Hsp_score>
+      <Hsp_evalue>7.93273</Hsp_evalue>
+      <Hsp_query-from>478</Hsp_query-from>
+      <Hsp_query-to>561</Hsp_query-to>
+      <Hsp_hit-from>85</Hsp_hit-from>
+      <Hsp_hit-to>168</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>29</Hsp_identity>
+      <Hsp_positive>38</Hsp_positive>
+      <Hsp_gaps>12</Hsp_gaps>
+      <Hsp_align-len>90</Hsp_align-len>
+      <Hsp_qseq>NVFNPNPFYQQGGDMSRIWNVEYEIEVNGPQYNRIKRVWIGGKELK-PKKEYLVAVYGGPPP-----PPEAVEPGYKPVPVYEILINYIK</Hsp_qseq>
+      <Hsp_hseq>NTFNATQISQADYGMESLV---YELNVEGA---RIARQVADAKTLETPDKPRFVAGVLGPTSRTCSISPDVNDPGYRNVTFDELVENYIE</Hsp_hseq>
+      <Hsp_midline>N FN     Q    M  +    YE+ V G    RI R     K L+ P K   VA   GP        P+  +PGY+ V   E++ NYI+</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>gi|3912974|sp|O26952.1|ADEC_METTH</Hit_id>
+  <Hit_def>RecName: Full=Adenine deaminase; Short=Adenase; Short=Adenine aminase [Methanothermobacter thermautotrophicus str. Delta H]</Hit_def>
+  <Hit_accession>O26952</Hit_accession>
+  <Hit_len>538</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>32.7278</Hsp_bit-score>
+      <Hsp_score>73</Hsp_score>
+      <Hsp_evalue>9.00163</Hsp_evalue>
+      <Hsp_query-from>480</Hsp_query-from>
+      <Hsp_query-to>583</Hsp_query-to>
+      <Hsp_hit-from>272</Hsp_hit-from>
+      <Hsp_hit-to>368</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>27</Hsp_identity>
+      <Hsp_positive>49</Hsp_positive>
+      <Hsp_gaps>11</Hsp_gaps>
+      <Hsp_align-len>106</Hsp_align-len>
+      <Hsp_qseq>FNPNPFYQ-QGGDMSRIWNVEYEIEVNGPQYNRIKRVWIGGKELKPKKEYLVAVYGGPPPPPEAVE-PGYKPVPVYEILINYIKKKGSINVRTKPNVKVLDAEYHT</Hsp_qseq>
+      <Hsp_hseq>INPAEHYGLSTGAIAPGWDADFVVVDSLRDFN-VKRVYIDGRPVADRGRYLIRRSGGTRAPPRKLEVPDF---PVERLNIRAEGDEATVRV-----IDVLDGQLIT</Hsp_hseq>
+      <Hsp_midline> NP   Y    G ++  W+ ++ +  +   +N +KRV+I G+ +  +  YL+   GG   PP  +E P +   PV  + I     + ++ V     + VLD +  T</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>461263</Statistics_db-num>
+      <Statistics_db-len>172526934</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>
+
