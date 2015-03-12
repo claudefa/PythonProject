@@ -4,7 +4,7 @@
 ##################### MODULES NEEDED FOR EXECUTING 'mirrortree.py' ##########################
 #############################################################################################
 
-path_clustal = "/Volumes/clustalw-2.1-macosx/clustalw-2.1-macosx/clustalw2"
+path_clustal = "/usr/bin/clustalw"
 
 import sys, re, numpy, os, argparse, math, os.path
 
@@ -20,8 +20,8 @@ from Bio.Phylo.TreeConstruction import DistanceCalculator
 from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
 from Bio.Phylo.Consensus import *
 
-from pylab import show, title, savefig
-import matplotlib.pyplot as plt
+#from pylab import show, title, savefig
+#import matplotlib.pyplot as plt
 
 from numpy import corrcoef, arange
 
