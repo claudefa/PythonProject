@@ -172,14 +172,20 @@ if verbose:
 #GENERATING OUTPUT
 out_list = []
 if output:
+	if len(input_list) == 1:
+		queries = querySequence(input_list[0])
+	else:
+		queries = [(input_list[0],0),(input_list[1],1)]
 	out = open("mirrortree.dat", "w")
 	out.write("MirrorTree 1.0\n")
 	out.write("QUERY1\tQUERY2\tE-VALUE\tIDENTITY\tPEARSON_CORR\n")
-	out.write("%s\t%s\t%s\t%s\n\n\n"%(queries[0][0], queries[1][0], evalue, identity, compute_r(dm)))
+	out.write("%s\t%s\t%s\t%s\t%s\n\n\n"%(queries[0][0], queries[1][0], evalue, identity, compute_r(dm)))
 	out.write("Distance Matrix QUERY1\n")
-	out.write(dm[0]+"\n\n\n")
+	out.write(str(dm[0]))
+	out.write("\n\n\n")
 	out.write("Distance Matrix QUERY2\n")
-	out.write(dm[1]+"\n")
+	out.write(str(dm[1]))
+	out.write("\n")
 	out.close()
 	out_list.append("mirrortree.dat")
 	#falta guardar phylogenetic tree en png
@@ -191,7 +197,7 @@ else:
 	sys.stdout.write("The Pearson correlation coefficient is: %s\n" %(compute_r(dm)))
 
 if verbose:
-	sys.stderr.write("Plotting linear regression. Saved as 'plot.png' in ./output \n")
+	sys.stderr.write("Plotting linear regression. Saved as 'plot.png' in output \n")
 
 #PLOT LINEAR REGRESSION BETWEEN BOTH MATRIX
 out_list.append(plotData(dm))

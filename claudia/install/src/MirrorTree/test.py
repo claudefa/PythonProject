@@ -48,7 +48,7 @@ def selectProt(blastxml, evalue, identity):
 	for n in NCBIXML.parse(result):
 		for alignment in n.alignments:
 			for hsp in alignment.hsps:
-				if hsp.expect < evalue and hsp.identities >= identity:
+				if hsp.expect < evalue: #and hsp.identities >= identity:
 					out.write("#"*10 + "Alignment" + "#"*10 +"\n")
 					m = p.findall(alignment.hit_def)
 					out.write ("Hit_specie: %s \n" %m)
@@ -145,7 +145,7 @@ def species_selector(intersect, filename, outfile, query):
 				if protein.get_specie() not in sp_set:
 					out.write(">"+str(protein.get_id())+"\n"+str(protein.get_seq()).replace("-","")+"\n")
 					sp_set.add(protein.get_specie())
-	out.write(query[0]+"\n"+query[1]+"\n")
+	out.write(">"+str(query[0])+"\n"+str(query[1])+"\n")
 	out.close()
 	return()
 
@@ -158,20 +158,19 @@ def comparefiles (file_list, filename):
 
 	for protein in Protein_creator(file_list[0]):
 		set1.add(protein.get_specie())
-
 	for protein in Protein_creator(file_list[1]):
 		set2.add(protein.get_specie())
 
 	intersect = set1.intersection(set2) #Get species shared in both files
-	try:
-		if len(intersect) >= 11:
-			query = querySequence(filename)
-			species_selector(intersect, file_list[0], "multifasta1.fa",query[0])  
-			species_selector(intersect, file_list[1], "multifasta2.fa",query[1])
-			return ["multifasta1.fa","multifasta2.fa"]
+	
+	if len(intersect) >= 3:
+		query = querySequence(filename)
+		species_selector(intersect, file_list[0], "multifasta1.fa",query[0])  
+		species_selector(intersect, file_list[1], "multifasta2.fa",query[1])
+		return ["multifasta1.fa","multifasta2.fa"]
 
-	except NEHomologous as e:
-		sys.stderr.write(str(e))
+	else:
+		sys.stderr.write("Not enough homologous after blast results filtering. Sorry! :(\n")
 		return()
 		sys.exit()
 
