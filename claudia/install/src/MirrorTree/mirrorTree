@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
-from modules import *
-from test import *
+from MirrorTree.modules import *
+from MirrorTree.functions import *
 
 parser = argparse.ArgumentParser(description="This program manages user arguments")
 
@@ -42,7 +42,7 @@ parser.add_argument('-s', '--save',
             dest = "save",
             action = "store_true",
             default = False,
-            help = "Save clustalW alignment")	
+            help = "Save ClustalW alignment files when input is a FASTA file")	
 
 options = parser.parse_args()
 
@@ -116,19 +116,19 @@ if len(input_list) == 1:
 			sys.stderr.write("Extracting sequencies with e-value: '%s' from %s file after BLAST...\n" %(evalue, xml))
 
 		protfile_list.append(selectProt(xml, evalue, identity))
-		tmp_list.extend(protfile_list)
 
 		if verbose:
 			sys.stderr.write("Done!\n")
+	tmp_list.extend(protfile_list)
 	if verbose:
 		sys.stderr.write("Comparing both BLAST output files to extract hit sequences (BEWARE! They are the same species for both proteins)...\nPerforming ClustalW alignment...\n")
 
 	for element in comparefiles(protfile_list,input_list[0]):
-		tmp_list.extend(element)
+		tmp_list.append(element)
 		doClustalW(element, path_clustal) #PERFORMING CLUSTALW ALIGNMENT
-		tmp_list.extend("multifasta1.aln","multifasta2.aln","multifasta1.dnd","multifasta2.dnd")
 
 		aln.append(AlignIO.read("%s.aln" %(element[:-3]), 'clustal')) #BUILDING DISTANCE MATRIX
+	tmp_list.extend(["multifasta1.aln","multifasta2.aln","multifasta1.dnd","multifasta2.dnd"])
 
 	if verbose:
 		sys.stderr.write("Comparison and ClustalW for both files done!\n")
@@ -199,13 +199,25 @@ else:
 if verbose:
 	sys.stderr.write("Plotting linear regression. Saved as 'plot.png' in output \n")
 
+
 #PLOT LINEAR REGRESSION BETWEEN BOTH MATRIX
 out_list.append(plotData(dm))
 
 
-#ORGANIZING ...
-cleaningWorkspace("tmp",tmp_list,input_list)
+#ORGANIZING THE OUTPUT
+if len(input_list) == 1:
+	tmp_dir = cleaningWorkspace("tmp",tmp_list,input_list)
 cleaningWorkspace("output",out_list,input_list)
+
+#DEALING WITH TEMPORARY FILES
+
+if len(input_list) == 1:
+	if not save:
+		os.system("rm -r %s/tmp" %(tmp_dir))
+	else:
+		os.system("rm %s/tmp/*.xml" %(tmp_dir))
+		os.system("rm %s/tmp/*.dnd" %(tmp_dir))
+		os.system("rm %s/tmp/*.out.blast" %(tmp_dir))
 
 
 

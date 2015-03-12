@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 
+from MirrorTree.modules import *
+
 def doBlast (fastafile):
 	"""
 	This function performs a BLAST search using the QBLAST server at NCBI.
@@ -48,7 +50,7 @@ def selectProt(blastxml, evalue, identity):
 	for n in NCBIXML.parse(result):
 		for alignment in n.alignments:
 			for hsp in alignment.hsps:
-				if hsp.expect < evalue: #and hsp.identities >= identity:
+				if hsp.expect <= evalue and hsp.identities >= identity:
 					out.write("#"*10 + "Alignment" + "#"*10 +"\n")
 					m = p.findall(alignment.hit_def)
 					out.write ("Hit_specie: %s \n" %m)
@@ -163,7 +165,7 @@ def comparefiles (file_list, filename):
 
 	intersect = set1.intersection(set2) #Get species shared in both files
 	
-	if len(intersect) >= 3:
+	if len(intersect) >= 11:
 		query = querySequence(filename)
 		species_selector(intersect, file_list[0], "multifasta1.fa",query[0])  
 		species_selector(intersect, file_list[1], "multifasta2.fa",query[1])
@@ -230,11 +232,12 @@ def cleaningWorkspace(folder, files, input_list):
 	m = ""
 	for element in input_list:
 		m += p.search(element).group(1)+"_"
-	if not os.path.isdir(m[:-1]):
+	if not os.path.isdir("MirrorTree_%s" %(m[:-1])):
 		os.system("mkdir MirrorTree_%s" %(m[:-1]))
 	os.system("mkdir MirrorTree_%s/%s" %(m[:-1],folder))
 	for element in files:
 		os.system("mv %s ./MirrorTree_%s/%s" %(element, m[:-1], folder))
-	return()
+	folder_name = "MirrorTree_%s" %(m[:-1])
+	return folder_name
 
 
