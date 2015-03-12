@@ -55,7 +55,13 @@ output = options.output
 
 
 #CAPTURING THE INPUT FILE(S)
-sys.stderr.write("#"*10 + "\nStarting mirrorTree\n" + "#"*10 + "\n\n\n")
+sys.stderr.write("#"*80)
+sys.stderr.write("#"*10+"    ^     "+"#"*40+"    ^     "+"#"*10)
+sys.stderr.write("#"*10+"   /_\\    "+"#"*40+"   /_\\    "+"#"*10)
+sys.stderr.write("#"*10+"  /___\\   "+"#"*11+"  MirrorTree 1.0  "+"#"*11+"  /___\\   "+"#"*10)
+sys.stderr.write("#"*10+" /_____\\  "+"#"*40+" /_____\\  "+"#"*10)
+sys.stderr.write("#"*10+"   |_|    "+"#"*40+"   |_|    "+"#"*10)
+sys.stderr.write("#"*80)
 
 if len(input_list) < 3:
 	for input_file in input_list:

@@ -15,7 +15,7 @@ setup(
 	],
 	keywords='Mirror trees',
 	packages = ['MirrorTree'],
-	package_dir={'MirrorTree': 'src/MirrorTree'},
+	package_dir={'MirrorTree': 'MirrorTree'},
 	py_modules = ['MirrorTree/modules', 'MirrorTree/functions'],
 	scripts = ['MirrorTree/mirrorTree'],
 )

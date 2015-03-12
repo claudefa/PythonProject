@@ -174,7 +174,6 @@ def comparefiles (file_list, filename):
 
 	else:
 		sys.stderr.write("Not enough homologous after blast results filtering. Sorry! :(\n")
-		return()
 		sys.exit()
 
 
