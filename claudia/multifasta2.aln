@@ -1,44 +1,282 @@
 CLUSTAL 2.1 multiple sequence alignment
 
 
-gi|12585288|sp|O96013.1|PAK4_H      --SPQREPQRVSHEQFRAALQLVVDPGDPRSYLDNFIKIGEGSTGIVCIA
-gi|47117219|sp|Q8BTW9.1|PAK4_M      --SPQREPQRVSHEQFRAALQLVVDPGDPRSYLDNFIKIGEGSTGIVCIA
-gi|353678056|sp|D4A280.1|PAK7_      GSSSDQQPSRVSHEQFRAALQLVVSPGDPREYLDNFIKIGEGSTGIVCIA
-gi|2499647|sp|Q29502.1|PAK2_RA      SSDKQKKKTKMTDEEIMEKLRTIVSIGDPKKKYTRYEKIGQGASGTVFTA
-                                      . :::  :::.*::   *: :*. ***:.   .: ***:*::* *  *
+gi|6094322|sp|Q07889.1|SOS1_HU      MQAQQLPYEFFSEENAPKWRGLLVPALKKVQGQVHPTLESNDDALQYVEE
+sp|Q07889|SOS1_HUMAN                MQAQQLPYEFFSEENAPKWRGLLVPALKKVQGQVHPTLESNDDALQYVEE
+gi|6175037|sp|Q62245.2|SOS1_MO      MQAQQLPYEFFSEENAPKWRGLLVPALKKVQGQVHPTLESNDDALQYVEE
+gi|76800652|sp|P26675.2|SOS_DR      -------YDFTKCENAARWRGLFTPSLKKVLEQVHPRVTAKEDALLYVEK
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
 
-gi|12585288|sp|O96013.1|PAK4_H      TVRSSGKLVAVKKMDLRKQQRRELLFNEVVIMRDYQHENVVEMYNSYLVG
-gi|47117219|sp|Q8BTW9.1|PAK4_M      TVRSSGKLVAVKKMDLRKQQRRELLFNEVVIMRDYRHENVVEMYNSYLVG
-gi|353678056|sp|D4A280.1|PAK7_      TEKHTGKQVAVKKMDLRKQQRRELLFNEVVIMRDYHHDNVVDMYNSYLVG
-gi|2499647|sp|Q29502.1|PAK2_RA      TDVALGQEVAIKQINLQKQPKKELIINEILVMKELKNPNIVNFLDSYLVG
-                                    *    *: **:*:::*:** ::**::**:::*:: :: *:*:: :*****
+gi|6094322|sp|Q07889.1|SOS1_HU      LILQLLNMLCQAQ-PRSASDVEERVQKSFPHPIDKWAIADAQSAIEKRKR
+sp|Q07889|SOS1_HUMAN                LILQLLNMLCQAQ-PRSASDVEERVQKSFPHPIDKWAIADAQSAIEKRKR
+gi|6175037|sp|Q62245.2|SOS1_MO      LILQLLNMLCQAQ-PRSASDVEERVQKSFPHPIDKWAIADAQSAIEKRKR
+gi|76800652|sp|P26675.2|SOS_DR      LCLRLLAMLCAKPLPHSVQDVEEKVNKSFPAPIDQWALNEAKEVINSKKR
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
 
-gi|12585288|sp|O96013.1|PAK4_H      DELWVVMEFLEGGALTDIVTHTRMNEEQIAAVCLAVLQALSVLHAQGVIH
-gi|47117219|sp|Q8BTW9.1|PAK4_M      DELWVVMEFLEGGALTDIVTHTRMNEEQIAAVCLAVLQALAVLHAQGVIH
-gi|353678056|sp|D4A280.1|PAK7_      DELWVVMEFLEGGALTDIVTHTRMNEEQIATVCLSVLKALSYLHNQGVIH
-gi|2499647|sp|Q29502.1|PAK2_RA      DELFVVMEYLAGGSLTDVVTETCMDEAQIAAVCRECLQALEFLHANQVIH
-                                    ***:****:* **:***:**.* *:* ***:**   *:**  ** : ***
+gi|6094322|sp|Q07889.1|SOS1_HU      RNPLSLPVEKIHPLLK-EVLGYKIDHQVSVYIVAVLEYISADILKLVGNY
+sp|Q07889|SOS1_HUMAN                RNPLSLPVEKIHPLLK-EVLGYKIDHQVSVYIVAVLEYISADILKLVGNY
+gi|6175037|sp|Q62245.2|SOS1_MO      RNPLSLPAERIHHLLR-EVLGYKIDHQVSVYIVAVLEYISADILKLVGNY
+gi|76800652|sp|P26675.2|SOS_DR      KS--VLPTEKVHTLLQKDVLQYKIDSSVSAFLVAVLEYISADILKMAGDY
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
 
-gi|12585288|sp|O96013.1|PAK4_H      RDIKSDSILLTHDGRVKLSDFGFCAQVSKEVPRRKSLVGTPYWMAPELIS
-gi|47117219|sp|Q8BTW9.1|PAK4_M      RDIKSDSILLTHDGRVKLSDFGFCAQVSKEVPRRKSLVGTPYWMAPELIS
-gi|353678056|sp|D4A280.1|PAK7_      RDIKSDSILLTSDGRIKLSDFGFCAQVSKEVPKRKSLVGTPYWMAPEVIS
-gi|2499647|sp|Q29502.1|PAK2_RA      RDIKSDNVLLGMEGSVKLTDFGFCAQITPEQSKRSTMVGTPYWMAPEVVT
-                                    ******.:**  :* :**:*******:: * .:*.::**********:::
+gi|6094322|sp|Q07889.1|SOS1_HU      VRNIRHYEITKQDIKVAMCADKVLMDMFHQDVEDINILSLTDEEPSTSGE
+sp|Q07889|SOS1_HUMAN                VRNIRHYEITKQDIKVAMCADKVLMDMFHQDVEDINILSLTDEEPSTSGE
+gi|6175037|sp|Q62245.2|SOS1_MO      VRNIRHYEITKQDIKVAMCADKVLMDMFHQDVEDINILSLTDEEPSTSGE
+gi|76800652|sp|P26675.2|SOS_DR      VIKIAHCEITKEDIEVVMNADRVLMDMLNQ--SEAHILPSPLSLPAQRAS
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
 
-gi|12585288|sp|O96013.1|PAK4_H      RLPYGPEVDIWSLGIMVIEMVDGEPPYFNEPPLKAMKMIRDNLPPRLKNL
-gi|47117219|sp|Q8BTW9.1|PAK4_M      RLPYGPEVDIWSLGVMVIEMVDGEPPYFNEPPLKAMKMIRDNLPPRLKNL
-gi|353678056|sp|D4A280.1|PAK7_      RLPYGTEVDIWSLGIMVIEMIDGEPPYFNEPPLQAMRRIRDSLPPRVKDL
-gi|2499647|sp|Q29502.1|PAK2_RA      RKAYGPKVDIWSLGIMAIEMVEGEPPYLNENPLRALYLIATNGTPELQNP
-                                    * .**.:*******:*.***::*****:** **:*:  *  . .*.::: 
+gi|6094322|sp|Q07889.1|SOS1_HU      QTYYDLVKAFMAEIRQYIRELNLIIKVFREPFVSNSKLFSANDVENIFSR
+sp|Q07889|SOS1_HUMAN                QTYYDLVKAFMAEIRQYIRELNLIIKVFREPFVSNSKLFSANDVENIFSR
+gi|6175037|sp|Q62245.2|SOS1_MO      QTYYDLVKAFMAEIRQYIRELNLIIKVFREPFVSNSKLFSSNDVENIFSR
+gi|76800652|sp|P26675.2|SOS_DR      ATYEETVKELIHDEKQYQRDLHMIIRVFREELVK--IVSDPRELEPIFSN
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
 
-gi|12585288|sp|O96013.1|PAK4_H      HKVSPSLKGFLDRLLVRDPAQRATAAELLKHPFLAKAGPPASIVPLMRQN
-gi|47117219|sp|Q8BTW9.1|PAK4_M      HKASPSLKGFLDRLLVRDPAQRATAAELLKHPFLTKAGPPASIVPLMRQH
-gi|353678056|sp|D4A280.1|PAK7_      HKVSSMLRGFLDLMLVREPSQRATAQELLGHPFLKLAGPPSCIVPLMRQY
-gi|2499647|sp|Q29502.1|PAK2_RA      EKLSPIFRDFLNRCLEMDVEKRGSAKELLQHPFLKLAKPLSSLTPLIMAA
-                                    .* *. ::.**:  *  :  :*.:* *** ****  * * :.:.**:   
+gi|6094322|sp|Q07889.1|SOS1_HU      IVDIHELSVKLLGHIEDTVEMTDEGSPHPLVGSCFEDLAEELAFDPYESY
+sp|Q07889|SOS1_HUMAN                IVDIHELSVKLLGHIEDTVEMTDEGSPHPLVGSCFEDLAEELAFDPYESY
+gi|6175037|sp|Q62245.2|SOS1_MO      IVDIHELSVKLLGHIEDTVEMTDEGSPHPLVGSCFEDLAEELAFDPYESY
+gi|76800652|sp|P26675.2|SOS_DR      IMDIYEVTVTLLGSLEDVIEMSQEQS-APCVGSCFEELAEAEEFDVYKKY
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
 
-gi|12585288|sp|O96013.1|PAK4_H      RTR-----
-gi|47117219|sp|Q8BTW9.1|PAK4_M      RTR-----
-gi|353678056|sp|D4A280.1|PAK7_      R-------
-gi|2499647|sp|Q29502.1|PAK2_RA      KEAMKSNR
-                                    :       
+gi|6094322|sp|Q07889.1|SOS1_HU      ARDILRPGFHDRFLSQLSKPGAALYLQSIGEGFKEAVQYVLPRLLLAPVY
+sp|Q07889|SOS1_HUMAN                ARDILRPGFHDRFLSQLSKPGAALYLQSIGEGFKEAVQYVLPRLLLAPVY
+gi|6175037|sp|Q62245.2|SOS1_MO      ARDILRPGFHGHFLSQLSKPGAALYLQSIGEGFKEAVQYVLPRLLLAPVY
+gi|76800652|sp|P26675.2|SOS_DR      AYDVTSQASRDALNNLLSKPGASS-LTTAGHGFRDAVKYYLPKLLLVPIC
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      HCLHYFELLKQLEEKSEDQEDKECLKQAITALLNVQSGMEKICSKSLAKR
+sp|Q07889|SOS1_HUMAN                HCLHYFELLKQLEEKSEDQEDKECLKQAITALLNVQSGMEKICSKSLAKR
+gi|6175037|sp|Q62245.2|SOS1_MO      HCLHYFELLKQLEEKSEDQEDKECMKQAITALLNVQSGMEKICSKSLAKR
+gi|76800652|sp|P26675.2|SOS_DR      HAFVYFDYIKHLKDLSSSQDDIESFEQVQGLLHPLHCDLEKVMAS-LSKE
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      RLSESACRFYSQQMKGKQLAIKKMNEIQKNIDGWEGKDIGQCCNEFIMEG
+sp|Q07889|SOS1_HUMAN                RLSESACRFYSQQMKGKQLAIKKMNEIQKNIDGWEGKDIGQCCNEFIMEG
+gi|6175037|sp|Q62245.2|SOS1_MO      RLSESACRFYSQQMKGKQLAIKKMNEIQKNIDGWEGKDIGQCCNEFIMEG
+gi|76800652|sp|P26675.2|SOS_DR      RQVPVSGRVR------RQLAIERTRELQMKVEHWEDKDVGQNCNEFIRED
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      TLTRVGAKH----ERHIFLFDGLMICCKSN-HGQPRLPGASNAEYRLKEK
+sp|Q07889|SOS1_HUMAN                TLTRVGAKH----ERHIFLFDGLMICCKSN-HGQPRLPGASNAEYRLKEK
+gi|6175037|sp|Q62245.2|SOS1_MO      TLTRVGAKH----ERHIFLFDGLMICCKSN-HGQPRLPGASSAEYRLKEK
+gi|76800652|sp|P26675.2|SOS_DR      SLSKLGSGKRIWSERKVFLFDGLMVLCKANTKKQTPSAGATAYDYRLKEK
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      FFMRKVQINDKDDTNEYKHAFEIILKDENSVIFSAKSAEEKNNWMAALIS
+sp|Q07889|SOS1_HUMAN                FFMRKVQINDKDDTNEYKHAFEIILKDENSVIFSAKSAEEKNNWMAALIS
+gi|6175037|sp|Q62245.2|SOS1_MO      FFMRKVQINDKDDTSEYKHAFEIILKDGNSVIFSAKSAEEKNNWMAALIS
+gi|76800652|sp|P26675.2|SOS_DR      YFMRRVDINDRPDSDDLKNSFELAPRMQPPIVLTAKNAQHKHDWMADLLM
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      LQYRSTLERMLDVTMLQEEKEEQMRLPSADVYRFAEPDSEENIIFEENMQ
+sp|Q07889|SOS1_HUMAN                LQYRSTLERMLDVTMLQEEKEEQMRLPSADVYRFAEPDSEENIIFEENMQ
+gi|6175037|sp|Q62245.2|SOS1_MO      LQYRSTLERMLDVTVLQEEKEEQMRLPSAEVYRFAEPDSEENILFEENVQ
+gi|76800652|sp|P26675.2|SOS_DR      VITKSMLDRHLDSILQDIERKHPLRMPSPEIYKFAVPDSGDNIVLEE--R
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      PKAGIPIIKAGTVIKLIERLTYHMYADPNFVRTFLTTYRSFCKPQELLSL
+sp|Q07889|SOS1_HUMAN                PKAGIPIIKAGTVIKLIERLTYHMYADPNFVRTFLTTYRSFCKPQELLSL
+gi|6175037|sp|Q62245.2|SOS1_MO      PKAGIPIIKAGTVLKLIERLTYHMYADPNFVRTFLTTYRSFCRPQELLSL
+gi|76800652|sp|P26675.2|SOS_DR      ESAGVPMIKGATLCKLIERLTYHIYADPTFVRTFLTTYRYFCSPQQLLQL
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      IIERFEIPEPEPTEADR-------IAIENGDQ----PLSAELKRFRKEYI
+sp|Q07889|SOS1_HUMAN                IIERFEIPEPEPTEADR-------IAIENGDQ----PLSAELKRFRKEYI
+gi|6175037|sp|Q62245.2|SOS1_MO      LIERFEIPEPEPTEADR-------IAIENGDQ----PLSAELKRFRKEYI
+gi|76800652|sp|P26675.2|SOS_DR      LVERFNIPDPSLVYQDTGTAGAGGMGGVGGDKEHKNSHREDWKRYRKEYV
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------KEFIIR
+gi|121515|sp|P28818.1|RGRF1_RA      ------------------------------------SSDQRNIDKEFVIR
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      QPVQLRVLNVCRHWVEHHFYDFERDAYLLQRMEEFIGTVRGKAMKKWVES
+sp|Q07889|SOS1_HUMAN                QPVQLRVLNVCRHWVEHHFYDFERDAYLLQRMEEFIGTVRGKAMKKWVES
+gi|6175037|sp|Q62245.2|SOS1_MO      QPVQLRVLNVCRHWVEHHFYDFERDADLLQRMEEFIGTVRGKAMKKWVES
+gi|76800652|sp|P26675.2|SOS_DR      QPVQFRVLNVLRHWVDHHFYDFEKDPMLLEKLLNFLEHVNGKSMRKWVDS
+gi|162416039|sp|A2CEA7.1|RGRF2      RAATNRVLNVLRHWVSKHSQDFEMNGELKMGVICLLEEVLR-------DP
+gi|121515|sp|P28818.1|RGRF1_RA      RAATNRVLNVLRHWVTKHSQDFETDDLLKYKVICFLEEVMH-------DP
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      ITKIIQRKKIARDNGPGHNITFQSSPPTVEWHISRPGHIETFDLLTLHPI
+sp|Q07889|SOS1_HUMAN                ITKIIQRKKIARDNGPGHNITFQSSPPTVEWHISRPGHIETFDLLTLHPI
+gi|6175037|sp|Q62245.2|SOS1_MO      ITKIIQRKKIARDNGPGHNITFQSSPPTVEWHISRPGHIETFDLLTLHPI
+gi|76800652|sp|P26675.2|SOS_DR      VLKIVQRKNEQEKSNKKIVYAYGHDPPPIEHHLSVP--NDEITLLTLHPL
+gi|162416039|sp|A2CEA7.1|RGRF2      DLLPQERKATANILSALSQDDQDDAQLKIEDILQMAECPKAECFESLSAM
+gi|121515|sp|P28818.1|RGRF1_RA      DLLPQERKAAANIMRTLTQEEITENHSMLDELLLMTEGVKTEPFENHSAM
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      -----------------------------------------FDVLKVTPE
+gi|75076849|sp|Q4R7W3.1|RGPS2_      -----------------------------------------FDVLKVTPE
+                                                                               . .  . 
+
+gi|6094322|sp|Q07889.1|SOS1_HU      EIARQLTLLESDLYRAVQPSELVGSVWTKEDKEINSPNLLKMIRHTTNLT
+sp|Q07889|SOS1_HUMAN                EIARQLTLLESDLYRAVQPSELVGSVWTKEDKEINSPNLLKMIRHTTNLT
+gi|6175037|sp|Q62245.2|SOS1_MO      EIARQLTLLESDLYRAVQPSELVGSVWTKEDKEINSPNLLKMIRHTTNLT
+gi|76800652|sp|P26675.2|SOS_DR      ELARQLTLLEFEMYKNVKPSELVGSPWTKKDKEVKSPNLLKIMKHTTNVT
+gi|162416039|sp|A2CEA7.1|RGRF2      EIAEQITLLDHIVFRSIPYEEFLGQGWMKTDKTERTPYIMKTSQHFNDMS
+gi|121515|sp|P28818.1|RGRF1_RA      EIAEQLTLLDHLVFKSIPYEEFFGQGWMKADKNERTPYIMKTTRHFNHIS
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      EYAGQITLMDVPVFKAIQPEELASCGWNKKEKYSSAPNAVAFTRRFNHVS
+gi|75076849|sp|Q4R7W3.1|RGPS2_      EYAGQITLMDVPVFKAIQPDELSSCGWNKKEKYSSAPNAVAFTRRFNHVS
+                                    * * *:**::  ::: :  .*: .  * * :*   :*  :   :: ..::
+
+gi|6094322|sp|Q07889.1|SOS1_HU      LWFEKCIVETENLEERVAVVSRIIEILQVFQELNNFNGVLEVVSAMNSSP
+sp|Q07889|SOS1_HUMAN                LWFEKCIVETENLEERVAVVSRIIEILQVFQELNNFNGVLEVVSAMNSSP
+gi|6175037|sp|Q62245.2|SOS1_MO      LWFEKCIVETENLEERVAVVSRIIEILQVFQELNNFNGVLEVVSAMNSSP
+gi|76800652|sp|P26675.2|SOS_DR      RWIEKSITEAENYEERLAIMQRAIEVMMVMLELNNFNGILSIVAAMGTAS
+gi|162416039|sp|A2CEA7.1|RGRF2      NLVASQIMSHTDVGSRAGSIEKWVAVADICRCLNNYNGVLEITSALNRSA
+gi|121515|sp|P28818.1|RGRF1_RA      NLIASEILRNEEVSARASTIEKWVAVADICRCLHNYNAVLEITSSINRSA
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      FWVVREILHAQTLKIRAEVLSHYIKTAKKLYELNNLHALMAVVSGLQSAP
+gi|75076849|sp|Q4R7W3.1|RGPS2_      FWVVREILHAQTLKIRAEVLSHYIKTAKKLYELNNLHALMAVVSGLQSAP
+                                      .   *        *   :.: :        *:* :.:: :.:.:  :.
+
+gi|6094322|sp|Q07889.1|SOS1_HU      VYRLDHTFEQIPSRQKKILEEAHELS--EDHYKKYLAKLRSINP-PCVPF
+sp|Q07889|SOS1_HUMAN                VYRLDHTFEQIPSRQKKILEEAHELS--EDHYKKYLAKLRSINP-PCVPF
+gi|6175037|sp|Q62245.2|SOS1_MO      VYRLDHTFEQIPSRQKKILEEAHELS--EDHYKKYLAKLRSINP-PCVPF
+gi|76800652|sp|P26675.2|SOS_DR      VYRLRWTFQGLPERYRKFLEECRELS--DDHLKKYQERLRSINP-PCVPF
+gi|162416039|sp|A2CEA7.1|RGRF2      IYRLKKTWAKVCKQTKALMDKLQKTVSSEGRFKNLRETLKNCNP-PCVPY
+gi|121515|sp|P28818.1|RGRF1_RA      IFRLKKTWLKVSKQTKSLFDKLQKLVSSDGRFKNLRETLRNCDP-PCVPY
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      IFRLTKTWALLSRKDKATFEKLEYVMSKEDNYKRLRDYISSLKMTPCIPY
+gi|75076849|sp|Q4R7W3.1|RGPS2_      IFRLTKTWALLSRKDKTTFEKLEYVMSKEDNYKRLRDYISSLKMTPCIPY
+                                    ::**  *:  :  : :  ::: .     :.. *.    : . .  **:*:
+
+gi|6094322|sp|Q07889.1|SOS1_HU      FGIYLTNILKTEEGNPEVLKRHGKELINFSKRRKVAEITGEIQQYQNQ-P
+sp|Q07889|SOS1_HUMAN                FGIYLTNILKTEEGNPEVLKRHGKELINFSKRRKVAEITGEIQQYQNQ-P
+gi|6175037|sp|Q62245.2|SOS1_MO      FGIYLTNILKTEEGNPEVLRRHGKELINFSKRRRVAEITGEIQQYQNQ-P
+gi|76800652|sp|P26675.2|SOS_DR      FGRYLTNILHLEEGNPDLLANT--ELINFSKRRKVAEIIGEIQQYQNQ-P
+gi|162416039|sp|A2CEA7.1|RGRF2      LGMYLTDLAFIEEGTPNFTEEG---LVNFSKMRMISHIIREIRQFQQT-P
+gi|121515|sp|P28818.1|RGRF1_RA      LGMYLTDLAFLEEGTPNYTEDG---LVNFSKMRMISHIIREIRQFQQT-T
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      LGIYLSDLTYIDSAYP-STGSI---LESEQRTNLMNNILRIISDLQQSCE
+gi|75076849|sp|Q4R7W3.1|RGPS2_      LGIYLSDLTYIDSAYP-STGSI---LENEQRSNLMNNILRIISDLQQSCE
+                                    :* **:::   :.. *         * . .: . : .*   * : *:   
+
+gi|6094322|sp|Q07889.1|SOS1_HU      YCLRVESDIKRFFENLNPMGNSMEKEFTDYLFNKSLEIEPRNPKPLPRFP
+sp|Q07889|SOS1_HUMAN                YCLRVESDIKRFFENLNPMGNSMEKEFTDYLFNKSLEIEPRNPKPLPRFP
+gi|6175037|sp|Q62245.2|SOS1_MO      YCLRVEPDIKRFFENLNPMGNSMEKEFTDYLFNKSLEIEPRHPKPLPRFP
+gi|76800652|sp|P26675.2|SOS_DR      YCLNEESTIRQFFEQLDPFNGLSDKQMSDYLYNESLRIEPRGCKTVPKFP
+gi|162416039|sp|A2CEA7.1|RGRF2      YRIEHQPKVTQYL------LDKTLIMDEDTLYDLSLKIEPRLP-------
+gi|121515|sp|P28818.1|RGRF1_RA      YKIEPQPKVTQYL------VDETFVLDDESLYEASLRIEPKLP-------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      YDIPLLPHVQKYLNSV-QYIEELQKFVEDDNYKLSLKIEPGTSTP-----
+gi|75076849|sp|Q4R7W3.1|RGPS2_      YDIPMLPHVQKYLNSV-QYIEELQKFVEDDNYKLSLKIEPGTSTP-----
+                                    * :   . : :::               :  :. **.***          
+
+gi|6094322|sp|Q07889.1|SOS1_HU      KKYS-YPLKSPGVRPSNPRPGTMRHPTPLQQEPRKISYSRIPESETESTA
+sp|Q07889|SOS1_HUMAN                KKYS-YPLKSPGVRPSNPRPGTMRHPTPLQQEPRKISYSRIPESETESTA
+gi|6175037|sp|Q62245.2|SOS1_MO      KKYS-YPLKSPGVRPSNPRPGTMRHPTPLQQEPRKISYSRIPESETESTA
+gi|76800652|sp|P26675.2|SOS_DR      RKWPHIPLKSPGIKP-----------------------------------
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      SAPNSPRTPLTPPPASGASSTTDVCSVFDSDHSS-PFHSSNDTVFIQVTL
+sp|Q07889|SOS1_HUMAN                SAPNSPRTPLTPPPASGASSTTDVCSVFDSDHSS-PFHSSNDTVFIQVTL
+gi|6175037|sp|Q62245.2|SOS1_MO      SAPNSPRTPLTPPPASGTSSNTDVCSVFDSDHSASPFHS-----------
+gi|76800652|sp|P26675.2|SOS_DR      --------------------------------------------------
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      PHGPRSASVSSISLTKGTDEVPVPPPVPPRRRPESAPAESSPSKIMSKHL
+sp|Q07889|SOS1_HUMAN                PHGPRSASVSSISLTKGTDEVPVPPPVPPRRRPESAPAESSPSKIMSKHL
+gi|6175037|sp|Q62245.2|SOS1_MO      ----RSASVSSISLSKGTDEVPVPPPVPPRRRPESAPAESSPSKIMSKHL
+gi|76800652|sp|P26675.2|SOS_DR      --------------------------------------------------
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      DSPPAIPPRQPTSKAYSPRYSISDRTSISDPPESPPLLPPREPVRTPDVF
+sp|Q07889|SOS1_HUMAN                DSPPAIPPRQPTSKAYSPRYSISDRTSISDPPESPPLLPPREPVRTPDVF
+gi|6175037|sp|Q62245.2|SOS1_MO      DSPPAIPPRQPTSKAYSPRYSISDRTSISDPPESPPLLPPREPVRTPDVF
+gi|76800652|sp|P26675.2|SOS_DR      --------------------------------------------------
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      SSSPLHLQPPPLGKKSDHGNAFFPNSPSPFTPPPPQTPSPHGTRRHLPSP
+sp|Q07889|SOS1_HUMAN                SSSPLHLQPPPLGKKSDHGNAFFPNSPSPFTPPPPQTPSPHGTRRHLPSP
+gi|6175037|sp|Q62245.2|SOS1_MO      SSSPLHLQPPPLGKKSDHGNAFFPNSPSPFTPPPPQTPSPHGTRRHLPSP
+gi|76800652|sp|P26675.2|SOS_DR      --------------------------------------------------
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      PLTQEVDLHSIAGPPVPPRQSTSQHIPKLPPKTYKREHTHPSMHRDGPPL
+sp|Q07889|SOS1_HUMAN                PLTQEVDLHSIAGPPVPPRQSTSQHIPKLPPKTYKREHTHPSMHRDGPPL
+gi|6175037|sp|Q62245.2|SOS1_MO      PLTQEMDLHSIAGPPVPPRQSTSQLIPKLPPKTYKREHTHPSMHRDGPPL
+gi|76800652|sp|P26675.2|SOS_DR      --------------------------------------------------
+gi|162416039|sp|A2CEA7.1|RGRF2      --------------------------------------------------
+gi|121515|sp|P28818.1|RGRF1_RA      --------------------------------------------------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      --------------------------------------------------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      --------------------------------------------------
+                                                                                      
+
+gi|6094322|sp|Q07889.1|SOS1_HU      LENAHSS
+sp|Q07889|SOS1_HUMAN                LENAHSS
+gi|6175037|sp|Q62245.2|SOS1_MO      LENAHSS
+gi|76800652|sp|P26675.2|SOS_DR      -------
+gi|162416039|sp|A2CEA7.1|RGRF2      -------
+gi|121515|sp|P28818.1|RGRF1_RA      -------
+gi|82197787|sp|Q5ZJK0.1|RGPS1_      -------
+gi|75076849|sp|Q4R7W3.1|RGPS2_      -------
+                                           

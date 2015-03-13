@@ -38,7 +38,7 @@ def doBlast (fastafile):
 
 def selectProt(blastxml, evalue, identity):
 	"""
-	Function to extract sequencies with selected e-value form xml blast output. 
+	Function to extract sequencies with selected e-value and identity form xml blast output. 
 	"""
 	#Open blast file and open output file
 	result = open(blastxml, "r")
@@ -93,19 +93,9 @@ class Protein(object):
 		"""Get sequence."""
 		return self.seq
 
-class NEHomologous(ValueError):
-	"""
-	Raises error when Not Enough Homologous found in both files to perform an accurate mirror tree. 
-	"""
-	def __init__ (self, number):
-		self.number = number
-	
-	def __str__(self):
-		return "Not enough homologs after blast results filtering. Sorry! :(\n"
-
 def Protein_creator(filename):
 	"""
-	Function to create Protein Objectes from the selected proteins after blast. 
+	Function to create Protein Objects from the selected proteins after blast. 
 	"""
 	fd = open(filename, "r")
 	info = []
@@ -126,6 +116,9 @@ def Protein_creator(filename):
 	fd.close()
 
 def querySequence(galiza):
+	"""
+	This function (in spite of having weird galizian names) parses a fasta file to return id and seq. 
+	"""
 	percebe = []
 	percebeiro = open(galiza,"r")
 	for mejillon in SeqIO.parse(percebeiro, "fasta"):
@@ -137,7 +130,7 @@ def querySequence(galiza):
 def species_selector(intersect, filename, outfile, query):
 	"""
 	This function selects only the higher scoring protein of each specie.
-	Write a fasta file with selected proteins.
+	Write a fasta file with selected proteins with the query.
 	"""
 	sp_set = set()	
 	out = open(outfile, "w")
@@ -159,22 +152,24 @@ def comparefiles (file_list, filename):
 	"""
 	(set1,set2) = (set(),set())
 
+	#Get species shared in both files
 	for protein in Protein_creator(file_list[0]):
 		set1.add(protein.get_specie())
 	for protein in Protein_creator(file_list[1]):
 		set2.add(protein.get_specie())
 
-	intersect = set1.intersection(set2) #Get species shared in both files
+	intersect = set1.intersection(set2) #only the ones present in both files 
 	
-	if len(intersect) >= 11:
+	#This threshold is set to avoid small trees that would not have enough significance. 
+	if len(intersect) >= 3: #recordar canviar-ho a 11
 		query = querySequence(filename)
-		species_selector(intersect, file_list[0], "multifasta1.fa",query[0])  
-		species_selector(intersect, file_list[1], "multifasta2.fa",query[1])
+		species_selector(intersect, file_list[0], "multifasta1.fa", query[0])  
+		species_selector(intersect, file_list[1], "multifasta2.fa", query[1])
 		return ["multifasta1.fa","multifasta2.fa"]
 
 	else:
 		sys.stderr.write("Not enough homologous after blast results filtering. Sorry! :(\n")
-		sys.exit()
+		return ("none")
 
 
 def doClustalW (multifastafile, path_clustal):
@@ -223,8 +218,8 @@ def plotData(matrix_list):
 	title('Linear regression for distance matrices')
 	plt.xlabel('Distance Family 1') 
 	plt.ylabel('Distance Family 2')
-	savefig("plot.png")
-	return "plot.png" 
+	savefig("Regression_plot.png")
+	return "Regression_plot.png" 
 
 
 def cleaningWorkspace(folder, files, input_list):

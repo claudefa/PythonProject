@@ -16,7 +16,7 @@ parser.add_argument('-o', '--output',
                 dest = "output",
                 action = "store_true",
                 default = False,
-                help = "Save data in an output file")
+                help = "Save data in a default output file")
 
 parser.add_argument('-v', '--verbose',
             dest = "verbose",
@@ -28,7 +28,7 @@ parser.add_argument('-e', '--evalue',
             dest = "evalue",
             action = "store",
             default = 0.00001,
-            type = int,
+            type = float,
             help = "Specify e-value thereshold for selection of hits in BLAST output")	
 
 parser.add_argument('-id', '--identity',
@@ -55,14 +55,15 @@ output = options.output
 
 
 #CAPTURING THE INPUT FILE(S)
-sys.stderr.write("#"*80)
-sys.stderr.write("#"*10+"    ^     "+"#"*40+"    ^     "+"#"*10)
-sys.stderr.write("#"*10+"   /_\\    "+"#"*40+"   /_\\    "+"#"*10)
-sys.stderr.write("#"*10+"  /___\\   "+"#"*11+"  MirrorTree 1.0  "+"#"*11+"  /___\\   "+"#"*10)
-sys.stderr.write("#"*10+" /_____\\  "+"#"*40+" /_____\\  "+"#"*10)
-sys.stderr.write("#"*10+"   |_|    "+"#"*40+"   |_|    "+"#"*10)
-sys.stderr.write("#"*80)
+sys.stderr.write("#"*80+"\n")
+sys.stderr.write("#"*10+"    ^     "+"#"*40+"    ^     "+"#"*10 + "\n")
+sys.stderr.write("#"*10+"   /_\\    "+"#"*40+"   /_\\    "+"#"*10 + "\n")
+sys.stderr.write("#"*10+"  /___\\   "+"#"*11+"  mirrorTree 1.0  "+"#"*11+"  /___\\   "+"#"*10 + "\n")
+sys.stderr.write("#"*10+" /_____\\  "+"#"*40+" /_____\\  "+"#"*10 + "\n")
+sys.stderr.write("#"*10+"   |_|    "+"#"*40+"   |_|    "+"#"*10 + "\n")
+sys.stderr.write("#"*80+"\n\n\n\n")
 
+#managing input files (searching the starting point and checking if the files suit the requirements)
 if len(input_list) < 3:
 	for input_file in input_list:
 
@@ -100,7 +101,7 @@ else:
 
 #EXECUTE BLAST WITH INPUT FILE
 
-#IF INPUT IS ONE FASTA FILE
+#If input is one fasta file (with two proteins)
 tmp_list = []
 
 if len(input_list) == 1:
@@ -126,8 +127,13 @@ if len(input_list) == 1:
 		if verbose:
 			sys.stderr.write("Done!\n")
 	tmp_list.extend(protfile_list)
+	
 	if verbose:
 		sys.stderr.write("Comparing both BLAST output files to extract hit sequences (BEWARE! They are the same species for both proteins)...\nPerforming ClustalW alignment...\n")
+
+	if comparefiles(protfile_list,input_list[0]) == "none": #in case of not enough homologs
+		tmp_dir = cleaningWorkspace("tmp",tmp_list,input_list)
+		sys.exit()
 
 	for element in comparefiles(protfile_list,input_list[0]):
 		tmp_list.append(element)
@@ -141,7 +147,7 @@ if len(input_list) == 1:
 		sys.stderr.write("Obtaining distance matrices from the alignments...\n")
 
 
-# IF INPUT ARE TWO .aln FILES
+#If input arw two .aln files
 
 else:
 	aln = []
@@ -164,14 +170,14 @@ for element in aln:
 
 final_tree = []
 dm = []
-
+if verbose:
+	sys.stderr.write("Getting phylogenetic trees... \n")
 for element in trees:
 	boostrap = list(bootstrap_trees(element[2], 100, constructor))
 	support_tree = get_support(element[1], boostrap, len_trees=None)
 	final_tree.append(support_tree)
 	dm.append(element[0])
 
-#COMPUTE R CORRELATION 
 if verbose:
 	sys.stderr.write("Phylogenetic tree done!\n")
 
@@ -186,15 +192,29 @@ if output:
 	out.write("MirrorTree 1.0\n")
 	out.write("QUERY1\tQUERY2\tE-VALUE\tIDENTITY\tPEARSON_CORR\n")
 	out.write("%s\t%s\t%s\t%s\t%s\n\n\n"%(queries[0][0], queries[1][0], evalue, identity, compute_r(dm)))
-	out.write("Distance Matrix QUERY1\n")
+	out.write("Distance Matrix QUERY1\n\n")
 	out.write(str(dm[0]))
+	out.write("\n")
+
 	out.write("\n\n\n")
-	out.write("Distance Matrix QUERY2\n")
+	out.write("Distance Matrix QUERY2\n\n")
 	out.write(str(dm[1]))
 	out.write("\n")
 	out.close()
 	out_list.append("mirrortree.dat")
-	#falta guardar phylogenetic tree en png
+
+	Phylo.draw(final_tree[0], do_show=True, show_confidence=True, branch_labels=None)
+	#ni idea com guardar aixo!!!
+	# out_list.append('phylo1.png')
+	
+	Phylo.draw(final_tree[1], do_show=True, show_confidence=True, branch_labels=None)
+
+	# out_list.append('phylo2.png')
+	
+	if verbose:
+		sys.stderr.write("Data results saved in ./output/mirrortree.dat \n")
+		sys.stderr.write("Phylogenetic trees saved in ./output \n")
+
 else:
 	sys.stdout.write("Phylogenetic Tree for QUERY1\n")
 	Phylo.draw_ascii(final_tree[0])
@@ -203,12 +223,11 @@ else:
 	sys.stdout.write("The Pearson correlation coefficient is: %s\n" %(compute_r(dm)))
 
 if verbose:
-	sys.stderr.write("Plotting linear regression. Saved as 'plot.png' in output \n")
+	sys.stderr.write("Plotting linear regression. Saved as 'Regression_plot.png' in output \n")
 
 
 #PLOT LINEAR REGRESSION BETWEEN BOTH MATRIX
 out_list.append(plotData(dm))
-
 
 #ORGANIZING THE OUTPUT
 if len(input_list) == 1:
