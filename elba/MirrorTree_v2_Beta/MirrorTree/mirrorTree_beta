@@ -137,7 +137,7 @@ if len(input_list) == 1:
 
 	for xml in blastlist:
 		if verbose:
-			sys.stderr.write("Extracting sequencies with e-value: '%s' from %s file after BLAST...\n" %(evalue, xml))
+			sys.stderr.write("Extracting sequencies with e-value: '%s'; identity: '%s'; from %s file after BLAST...\n" %(evalue, identity, xml))
 
 		protfile_list.append(selectProt(xml, evalue, identity))
 
