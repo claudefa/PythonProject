@@ -232,7 +232,7 @@ if len(input_list) == 1:
 		sys.stderr.write("Moving temporary files into ./tmp/\n")
 cleaningWorkspace("output",out_list,input_list)
 if verbose:
-	sys.stderr.write("Moving output files into ./out/\n")
+	sys.stderr.write("Moving output files into ./output/\n")
 
 #DEALING WITH TEMPORARY FILES
 
