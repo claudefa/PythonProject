@@ -45,8 +45,8 @@ The **instructions** for the proper installation of mirrorTree 1.0 are the follo
  - Remember! Make sure your ClustalW path is modified in [modules.py](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/modules.py).
  - Root privileges are needed for installation.
  - The following commands should be called in the command line inside the directory /install/:
-`python3 setup.py build`
-`sudo python3 setup.py install`
+ * `python3 setup.py build`
+ * `sudo python3 setup.py install`
 
 ##Organization of the code
 mirrorTree 1.0 package contains:
@@ -82,7 +82,7 @@ There are other parameter:
 - -id: identity. Change threshold of Blast filtering. By default it is set in 30. 
 
 If any doubt:
-`mirrorTree -h`
+- `mirrorTree -h`
 This will show you how to execute the script.
 
 
