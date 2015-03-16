@@ -1,4 +1,4 @@
-# MIRRORTREE 1.0 
+# MIRRORTREE 1.0  a veure
 
 This is the PYT and SBI project by [**Elba Raimúndez**](https://github.com/elbaraim), [**Clàudia Fontserè**](https://github.com/claudefa) and **Lucas Michel**!
 
