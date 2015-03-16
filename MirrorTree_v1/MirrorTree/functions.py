@@ -161,7 +161,7 @@ def comparefiles (file_list, filename):
 	intersect = set1.intersection(set2) #only the ones present in both files 
 	
 	#This threshold is set to avoid small trees that would not have enough significance. 
-	if len(intersect) >= 3: #To be statistically significant change it to 11
+	if len(intersect) >= 11: #To be statistically significant
 		query = querySequence(filename)
 		species_selector(intersect, file_list[0], "multifasta1.fa", query[0])  
 		species_selector(intersect, file_list[1], "multifasta2.fa", query[1])

@@ -35,13 +35,13 @@ The **workflow** of mirrorTree is the following:
     * [**Numpy**](http://www.numpy.org/)
     * [**Scipy and PyLab**](http://www.scipy.org/)
     * [**matplotlib**](http://matplotlib.org/)
-- [**ClustalW**](http://www.clustal.org/) locally installed is required to run this script. Remember to change the clustalw path to your local path in [modules.py](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/modules.py).  
+- [**ClustalW**](http://www.clustal.org/) locally installed is required to run this script. Remember to change the clustalw path to your local path in [modules.py](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v1/MirrorTree/modules.py).  
 - Internet connection is needed to perform [**BLAST**](http://blast.ncbi.nlm.nih.gov/Blast.cgi). 
 
 ##Installation
 
 The **instructions** for the proper installation of mirrorTree 1.0 are the following:
- - Remember! Make sure your ClustalW path is modified in [modules.py](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/modules.py).
+ - Remember! Make sure your ClustalW path is modified in [modules.py](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v1/MirrorTree/modules.py).
  - Root privileges are needed for installation.
  - The following commands should be called in the command line inside the directory /install/:
     * `python3 setup.py build`
@@ -52,14 +52,14 @@ mirrorTree 1.0 package contains:
 
 This program is split in different modules and scripts. Here, you can find the reference of what is contained in each file.
 
-#####[mirrorTree](https://github.com/claudefa/PythonProject/tree/master/Mirror_Tree_v1/MirrorTree)
+#####[mirrorTree](https://github.com/claudefa/PythonProject/tree/master/MirrorTree_v1/MirrorTree)
 The main scripts are found in this directory. 
-- [**\_\_init\_\_.py**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/__init__.py): A python file required for a proper installation of the program.
-- [**mirrorTree**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/mirrorTree): The workflow of the program. In this script all functions needed are called. It also contains the argument parser. 
-- [**functions.py**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/functions.py): All the core, helper functions and classes are found here. The documentation of each function is available in this file. 
-- [**modules.py**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/modules.py): In this files you can find the ClustalW path and all modules that the program needs to run. From this file they are imported to the others. 
+- [**\_\_init\_\_.py**](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v1/MirrorTree/__init__.py): A python file required for a proper installation of the program.
+- [**mirrorTree**](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v1/MirrorTree/mirrorTree): The workflow of the program. In this script all functions needed are called. It also contains the argument parser. 
+- [**functions.py**](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v1/MirrorTree/functions.py): All the core, helper functions and classes are found here. The documentation of each function is available in this file. 
+- [**modules.py**](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v1/MirrorTree/modules.py): In this files you can find the ClustalW path and all modules that the program needs to run. From this file they are imported to the others. 
 
-#####[setup.py](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/setup.py)
+#####[setup.py](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v1/setup.py)
 The script needed to install the package. 
 
 
