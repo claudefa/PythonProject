@@ -1,19 +1,19 @@
 # MIRRORTREE 2.0 - Beta
 
-This is the PYT and SBI project by [**Elba Raimúndez**](https://github.com/elbaraim), [**Clàudia Fontserè**](https://github.com/claudefa) and **Lucas Michel**!
+This is the PYT and SBI project developed by [**Elba Raimúndez**](https://github.com/elbaraim), [**Clàudia Fontserè**](https://github.com/claudefa) and **Lucas Michel**.
 
-- [What is new in mirrorTree 2.0?](#description)
+- [What is new in mirrorTree 2.0](#description)
 - [Requirements before installing](#requirements)
 - [Installation](#installation)
 - [Organization of the code](#codeorganization)
     * [mirrorTree](#mirrortree)
     * [setup.py](#setup)
-- [How to execute mirrorTree 2.0?](#execute)
+- [How to execute mirrorTree 2.0](#execute)
 
-##What is new in mirrorTree 2.0?
-**mirrorTree 2.0** is a program to predict protein-protin interaction using similarity between two protein families (Pazos and Valencia, 2001).
+##What is new in mirrorTree 2.0
+**mirrorTree 2.0** is a program to predict protein-protein interactions using similarity between two protein families (Pazos and Valencia, 2001).
 
-It can be initiated from 2 protein sequences (in the same fasta file with fa/fasta extension) and from 2 multiple sequence alignments (two files with aln extension).
+It can be initiated from two protein sequences in the same fasta file (with .fa/.fasta extension) or two multiple sequence alignments (two files with .aln extension, containing the query sequences).
 
 The **workflow** of mirrorTree is the following:
    - Input a fasta file with two proteins (fasta format).
@@ -67,7 +67,7 @@ The main scripts are found in this directory.
 The script needed to install the package. 
 
 
-##How to execute mirrorTree 2.0?
+##How to execute mirrorTree 2.0
 
 This script is executed in the command line as following:
 

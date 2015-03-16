@@ -3,7 +3,7 @@
 This is the PYT and SBI project developed by [**Elba Raimúndez**](https://github.com/elbaraim), [**Clàudia Fontserè**](https://github.com/claudefa) and **Lucas Michel**. 
 
 ##What is mirrorTree
-**mirrorTree** is a program to predict protein-protein interaction using similarity between two protein families (Pazos and Valencia, 2001).
+**mirrorTree** is a program to predict protein-protein interactions using similarity between two protein families (Pazos and Valencia, 2001).
 
 ##Why two versions
 **mirrorTree** has two versions:
@@ -16,4 +16,8 @@ MirrorTree 2.0 is still in development but the user may want to try it as well.
 To properly install each package, enter the corresponding directory and read carefully the README. 
 
 Thanks for using mirrorTree! :)
+
+##Examples
+Some examples has been tested in order to determine the accuracy of our protein-protein interaction predictor.
+You can find them in [Example_output](...) folder.
 

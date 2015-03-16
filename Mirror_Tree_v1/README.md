@@ -1,19 +1,19 @@
 # MIRRORTREE 1.0
 
-This is the PYT and SBI project by [**Elba Raimúndez**](https://github.com/elbaraim), [**Clàudia Fontserè**](https://github.com/claudefa) and **Lucas Michel**!
+This is the PYT and SBI project developed by [**Elba Raimúndez**](https://github.com/elbaraim), [**Clàudia Fontserè**](https://github.com/claudefa) and **Lucas Michel**.
 
-- [What is mirrorTree 1.0?](#description)
+- [What is mirrorTree 1.0](#description)
 - [Requirements before installing](#requirements)
 - [Installation](#installation)
 - [Organization of the code](#codeorganization)
     * [mirrorTree](#mirrortree)
     * [setup.py](#setup)
-- [How to execute mirrorTree 1.0?](#execute)
+- [How to execute mirrorTree 1.0](#execute)
 
-##What is mirrorTree 1.0?
-**mirrorTree 1.0** is a program to predict protein-protin interaction using similarity between two protein families (Pazos and Valencia, 2001).
+##What is mirrorTree 1.0
+**mirrorTree 1.0** is a program to predict protein-protein interactions using similarity between two protein families (Pazos and Valencia, 2001).
 
-It can be initiated from 2 protein sequences (in the same fasta file with fa/fasta extension) and from 2 multiple sequence alignments (two files with aln extension).
+It can be initiated from two protein sequences in the same fasta file (with .fa/.fasta extension) or two multiple sequence alignments (two files with aln extension, containing the query sequence).
 
 The **workflow** of mirrorTree is the following:
    - Input a fasta file with two proteins (fasta format).
