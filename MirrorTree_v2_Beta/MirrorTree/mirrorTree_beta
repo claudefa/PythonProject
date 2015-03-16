@@ -204,7 +204,7 @@ if output:
 	else:
 		queries = [(input_list[0],0),(input_list[1],1)]
 	out = open("mirrortree.dat", "w")
-	out.write("MirrorTree 1.0\n")
+	out.write("MirrorTree 2.0 - Beta\n")
 	out.write("QUERY1\tQUERY2\tE-VALUE\tIDENTITY\tPEARSON_CORR\n")
 	out.write("%s\t%s\t%s\t%s\t%s\n\n\n"%(queries[0][0], queries[1][0], evalue, identity, compute_r(dm)))
 	out.write("Distance Matrix QUERY1\n\n")
