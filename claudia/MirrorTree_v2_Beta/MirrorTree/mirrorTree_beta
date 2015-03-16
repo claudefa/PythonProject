@@ -1,0 +1,270 @@
+#!/usr/bin/python3
+
+from MirrorTree.modules import *
+from MirrorTree.functions import *
+from MirrorTree.visual import *
+
+parser = argparse.ArgumentParser(description="This program manages user arguments")
+
+parser.add_argument('-i', '--input',
+	dest = "infile",
+	action = "store", 
+	default = None,
+	nargs = '+', # One or more files as input
+	help = "Input: Choose one FASTA file (.fa/.fasta) or two CLUSTALW alignment files (.aln)")
+
+parser.add_argument('-o', '--output',
+                dest = "output",
+                action = "store_true",
+                default = False,
+                help = "Save data in a default output file")
+
+parser.add_argument('-v', '--verbose',
+            dest = "verbose",
+            action = "store_true",
+            default = False,
+            help = "Print log in stderr")
+
+parser.add_argument('-e', '--evalue',
+            dest = "evalue",
+            action = "store",
+            default = 0.00001,
+            type = float,
+            help = "Specify e-value thereshold for selection of hits in BLAST output")	
+
+parser.add_argument('-id', '--identity',
+            dest = "identity",
+            action = "store",
+            default = 30,
+            type = int,
+            help = "Specify identity thereshold for selection of hits in BLAST output (integer)")	
+
+parser.add_argument('-s', '--save',
+            dest = "save",
+            action = "store_true",
+            default = False,
+            help = "Save ClustalW alignment files when input is a FASTA file")
+
+parser.add_argument('-vi', '--visual',
+            dest = "visual",
+            action = "store_true",
+            default = False,
+            help = "Show program in graphical interface")	
+	
+
+options = parser.parse_args()
+
+input_list = options.infile
+verbose = options.verbose
+evalue = options.evalue
+identity = options.identity
+save = options.save
+output = options.output
+
+#IF GRAPHICAL INTERFACE SELECTED
+
+if options.visual:
+	interface()
+	sys.exit()
+
+
+#CAPTURING THE INPUT FILE(S)
+sys.stderr.write("#"*80+"\n")
+sys.stderr.write("#"*10+"    ^     "+"#"*40+"    ^     "+"#"*10 + "\n")
+sys.stderr.write("#"*10+"   /_\\    "+"#"*40+"   /_\\    "+"#"*10 + "\n")
+sys.stderr.write("#"*10+"  /___\\   "+"#"*9+"  mirrorTree 2.0 Beta "+"#"*9+"  /___\\   "+"#"*10 + "\n")
+sys.stderr.write("#"*10+" /_____\\  "+"#"*40+" /_____\\  "+"#"*10 + "\n")
+sys.stderr.write("#"*10+"   |_|    "+"#"*40+"   |_|    "+"#"*10 + "\n")
+sys.stderr.write("#"*80+"\n\n\n\n")
+
+#managing input files (searching the starting point and checking if the files suit the requirements)
+if len(input_list) < 3:
+	sys.stderr.write("Checking input files...\n")
+	for input_file in input_list:
+
+		if os.path.isdir(input_file):
+			sys.stderr.write("This program cannot handle directories as input.\nPlease, use files.\nAborting...\n")
+			sys.exit()
+
+		elif os.path.isfile(input_file) and (".fa" or ".fasta") in input_file:
+			if len(input_list) is 1:
+				if verbose:
+					sys.stderr.write("You have selected '%s' file to execute this awesome MirrorTree script.\n" %(input_file))
+				queries = querySequence(input_file)
+				if len(queries) != 2:
+					sys.stderr.write("'%s' file does not fullfill the requirements for running MirrorTree.\nPlease, check the documentation.\nAborting...\n" %(input_file))
+					sys.exit()
+			else:
+				sys.stderr.write("Impossible to handle this input request. Please, check the documentation.\nAborting...\n")
+				sys.exit()
+
+		elif len(input_list) is 2:
+			if os.path.isfile(input_list[0]) and (".aln") in input_list[0] and os.path.isfile(input_list[1]) and (".aln") in input_list[1]:
+				if verbose:
+					sys.stderr.write ("You have selected '%s' and '%s' file. Starting from alignment directly. \n"
+					%(input_list[0], input_list[1],))
+				break
+			else:
+				sys.stderr.write("Impossible to handle this input request. Please, check the documentation.\nAborting...\n")
+				sys.exit()
+		else:
+			sys.stderr.write("Impossible to handle this input request. Please, check the documentation.\nAborting...\n")
+			sys.exit()
+else:
+	sys.stderr.write("Only able to handle one or two files!\nAborting...\n")
+	sys.exit()
+
+#EXECUTE BLAST WITH INPUT FILE
+
+#If input is one fasta file (with two proteins)
+tmp_list = []
+
+sys.stderr.write("Input files are right!\nExecuting program...\n\n")
+
+if len(input_list) == 1:
+	sys.stderr.write("Connecting to BLAST... \n\n")
+
+	blastlist = doBlast(input_list[0])
+	tmp_list.extend(blastlist)
+
+
+	sys.stderr.write("BLAST has finished.\n\n")
+
+
+	#EXTRACT BEST HITS FROM BLAST XML FILE 
+
+	(protfile_list, aln) = ([],[])
+
+	for xml in blastlist:
+		if verbose:
+			sys.stderr.write("Extracting sequencies with e-value: '%s'; identity: '%s'; from %s file after BLAST...\n" %(evalue, identity, xml))
+
+		protfile_list.append(selectProt(xml, evalue, identity))
+
+		if verbose:
+			sys.stderr.write("Done!\n")
+	tmp_list.extend(protfile_list)
+	
+	if verbose:
+		sys.stderr.write("Comparing both BLAST output files to extract hit sequences (BEWARE! They are the same species for both proteins)...\nPerforming ClustalW alignment...\n")
+
+	if comparefiles(protfile_list,input_list[0]) == "none": #in case of not enough homologs
+		tmp_dir = cleaningWorkspace("tmp",tmp_list,input_list)
+		sys.exit()
+
+	for element in comparefiles(protfile_list,input_list[0]):
+		tmp_list.append(element)
+		doClustalW(element, path_clustal) #PERFORMING CLUSTALW ALIGNMENT
+
+		aln.append(AlignIO.read("%s.aln" %(element[:-3]), 'clustal')) #BUILDING DISTANCE MATRIX
+	tmp_list.extend(["multifasta1.aln","multifasta2.aln","multifasta1.dnd","multifasta2.dnd"])
+
+	if verbose:
+		sys.stderr.write("Comparison and ClustalW for both files done!\n")
+		sys.stderr.write("Obtaining distance matrices from the alignments...\n")
+
+
+#If input arw two .aln files
+
+else:
+	aln = []
+	for element in input_list:
+		aln.append(AlignIO.read(element, 'clustal')) #BUILDING DISTANCE MATRIX
+sys.stderr.write("Obtaining distance matrices from the alignments...\n")
+
+#BUILDING FILOGENETIC TREE
+
+calculator = DistanceCalculator("blosum62") # You can use blosum62/identity
+constructor = DistanceTreeConstructor(calculator, 'nj') #Neighbour Joining = 'nj'
+
+trees = [] 
+for element in aln:
+	trees.append((calculator.get_distance(element), constructor.build_tree(element), element ))
+
+
+#BOOSTRAP
+
+final_tree = []
+dm = []
+if verbose:
+	sys.stderr.write("Getting phylogenetic trees... \n")
+for element in trees:
+	boostrap = list(bootstrap_trees(element[2], 100, constructor))
+	support_tree = get_support(element[1], boostrap, len_trees=None)
+	final_tree.append(support_tree)
+	dm.append(element[0])
+
+sys.stderr.write("Phylogenetic trees done!\n\n")
+
+#GENERATING OUTPUT
+out_list = []
+if output:
+	if len(input_list) == 1:
+		queries = querySequence(input_list[0])
+	else:
+		queries = [(input_list[0],0),(input_list[1],1)]
+	out = open("mirrortree.dat", "w")
+	out.write("MirrorTree 1.0\n")
+	out.write("QUERY1\tQUERY2\tE-VALUE\tIDENTITY\tPEARSON_CORR\n")
+	out.write("%s\t%s\t%s\t%s\t%s\n\n\n"%(queries[0][0], queries[1][0], evalue, identity, compute_r(dm)))
+	out.write("Distance Matrix QUERY1\n\n")
+	out.write(str(dm[0]))
+	out.write("\n")
+
+	out.write("\n\n\n")
+	out.write("Distance Matrix QUERY2\n\n")
+	out.write(str(dm[1]))
+	out.write("\n")
+	out.close()
+	out_list.append("mirrortree.dat")
+	out_list.extend(drawTree(final_tree))	
+
+	if verbose:
+		sys.stderr.write("Data results saved in ./output/mirrortree.dat \n")
+		sys.stderr.write("Phylogenetic trees saved in ./output as 'tree1.pdf' and 'tree2.pdf'\n")
+
+else:
+	sys.stdout.write("Phylogenetic Tree for QUERY1\n")
+	Phylo.draw_ascii(final_tree[0])
+	sys.stdout.write("\nPhylogenetic Tree for QUERY2\n")
+	Phylo.draw_ascii(final_tree[1])
+	sys.stdout.write("\nThe Pearson correlation coefficient is: %s\n\n\n" %(compute_r(dm)))
+
+if verbose:
+	sys.stderr.write("Plotting linear regression. Saved as 'regression_plot.pdf' in output \n")
+
+
+#PLOT LINEAR REGRESSION BETWEEN BOTH MATRIX
+out_list.append(plotData(dm))
+
+#ORGANIZING THE OUTPUT
+
+sys.stderr.write("Cleaning workspace...\n")
+if len(input_list) == 1:
+	tmp_dir = cleaningWorkspace("tmp",tmp_list,input_list)
+	if verbose:
+		sys.stderr.write("Moving temporary files into ./tmp/\n")
+cleaningWorkspace("output",out_list,input_list)
+if verbose:
+	sys.stderr.write("Moving output files into ./output/\n")
+
+#DEALING WITH TEMPORARY FILES
+
+if len(input_list) == 1:
+	if not save:
+		os.system("rm -r %s/tmp" %(tmp_dir))
+		if verbose:
+			sys.stderr.write("Temporary files removed!\n")
+
+	else:
+		os.system("rm %s/tmp/*.xml" %(tmp_dir))
+		os.system("rm %s/tmp/*.dnd" %(tmp_dir))
+		os.system("rm %s/tmp/*.out.blast" %(tmp_dir))
+		if verbose:
+			sys.stderr.write("Temporary files saved!\n")
+
+sys.stderr.write("\nThank you for using mirrorTree 2.0!\nHope to see you soon :)\n\n")
+
+
+
+
