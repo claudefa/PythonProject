@@ -13,7 +13,11 @@ This is the PYT and SBI project developed by [**Elba Raimúndez**](https://githu
 ##How to install
 We recommend to install and execute MirrorTree 1.0.
 MirrorTree 2.0 is still in development but the user may want to try it as well. 
-To properly install each package, enter the corresponding directory and read carefully the README. 
+To properly install each package, enter the corresponding directory and read carefully the README.
+
+You can find them also in the [wiki](https://github.com/claudefa/PythonProject/wiki) of this repository:
+- [**Mirror_Tree_v1**](https://github.com/claudefa/PythonProject/wiki/MirrorTree_v1.0) 
+- [**MirrorTree_v2_beta**](https://github.com/claudefa/PythonProject/wiki/MirrorTree_v2.0_Beta)
 
 Thanks for using mirrorTree! :)
 
