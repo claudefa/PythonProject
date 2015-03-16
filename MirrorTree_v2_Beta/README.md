@@ -8,9 +8,7 @@ This is the PYT and SBI project by [**Elba Raimúndez**](https://github.com/elba
 - [Organization of the code](#codeorganization)
     * [mirrorTree](#mirrortree)
     * [setup.py](#setup)
-    * [modules.py](#modules)
-    * [visual.py](#visual)
-- [How to execute mirrorTree 2.0](#execute)
+- [How to execute mirrorTree 2.0?](#execute)
 
 ##What is new in mirrorTree 2.0?
 **mirrorTree 2.0** is a program to predict protein-protin interaction using similarity between two protein families (Pazos and Valencia, 2001).
@@ -40,36 +38,36 @@ As a new feature, a graphical interface has been developed for mirrorTree 2.0, w
     * [**Scipy and PyLab**](http://www.scipy.org/)
     * [**matplotlib**](http://matplotlib.org/)
     * [**tkinter**](https://wiki.python.org/moin/TkInter)
-- [**ClustalW**](http://www.clustal.org/) locally installed is required to run this script. Remember to change the clustalw path to your local path in [modules.py](https://github.com/claudefa ... ).  
+- [**ClustalW**](http://www.clustal.org/) locally installed is required to run this script. Remember to change the clustalw path to your local path in [modules.py](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v2_Beta/MirrorTree/modules.py).  
 - Internet connection is needed to perform [**BLAST**](http://blast.ncbi.nlm.nih.gov/Blast.cgi). 
 
 ##Installation
 
 The **instructions** for the proper installation of mirrorTree 2.0 are the following:
- - Remember! Make sure your ClustalW path is modified in [modules.py](https://github.com/claudefa ... ).
+ - Remember! Make sure your ClustalW path is modified in [modules.py](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v2_Beta/MirrorTree/modules.py).
  - Root privileges are needed for installation.
  - The following commands should be called in the command line inside the directory /install/:
-`python3 setup.py build`
-`sudo python3 setup.py install`
+    * `python3 setup.py build`
+    * `sudo python3 setup.py install`
 
 ##Organization of the code
 mirrorTree 2.0 package contains:
 
 This program is split in different modules and scripts. Here, you can find the reference of what is contained in each file.
 
-#####[mirrorTree](https://github.com/claudefa ...)
+#####[mirrorTree](https://github.com/claudefa/PythonProject/tree/master/MirrorTree_v2_Beta/mirrorTree)
 The main scripts are found in this directory. 
-- [**__init__.py**](https://github.com/claudefa ..): A python file required for a proper installation of the program.
-- [**mirrorTree**](https://github.com/claudefa .. ): The workflow of the program. In this script all functions needed are called. It also contains the argument parser. 
-- [**functions.py**](https://github.com/claudefa ...): All the core, helper functions and classes are found here. The documentation of each function is available in this file. 
-- [**modules.py**](https://github.com/claudefa ...): In this files you can find the ClustalW path and all modules that the program needs to run. From this file they are imported to the others.
-- [**visual.py**](https://github.com/claudefa ...): In this program we have the graphical interface for mirrorTree 2.0!
+- [**\_\_init\_\_.py**](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v2_Beta/MirrorTree/__init__.py): A python file required for a proper installation of the program.
+- [**mirrorTree\_beta**](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v2_Beta/MirrorTree/mirrorTree_beta): The workflow of the program. In this script all functions needed are called. It also contains the argument parser. 
+- [**functions.py**](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v2_Beta/MirrorTree/functions.py): All the core, helper functions and classes are found here. The documentation of each function is available in this file. 
+- [**modules.py**](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v2_Beta/MirrorTree/modules.py): In this files you can find the ClustalW path and all modules that the program needs to run. From this file they are imported to the others.
+- [**visual.py**](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v2_Beta/MirrorTree/visual.py): In this program we have the graphical interface for mirrorTree 2.0!
 
-#####[setup.py](https://github.com/claudefa ...)
+#####[setup.py](https://github.com/claudefa/PythonProject/blob/master/MirrorTree_v2_Beta/setup.py)
 The script needed to install the package. 
 
 
-##How to execute mirrorTree
+##How to execute mirrorTree 2.0?
 
 This script is executed in the command line as following:
 
@@ -90,7 +88,7 @@ There are other parameter:
 - -id: identity. Change threshold of Blast filtering. By default it is set in 30.
 
 If any doubt:
-`mirrorTree_beta -h`
+- `mirrorTree_beta -h`
 This will show you how to execute the script.
 
 
