@@ -8,7 +8,6 @@ This is the PYT and SBI project by [**Elba Raimúndez**](https://github.com/elba
 - [Organization of the code](#codeorganization)
     * [mirrorTree](#mirrortree)
     * [setup.py](#setup)
-    * [modules.py](#modules)
 - [How to execute mirrorTree 1.0?](#execute)
 
 ##What is mirrorTree 1.0?
