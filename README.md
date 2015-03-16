@@ -19,5 +19,5 @@ Thanks for using mirrorTree! :)
 
 ##Examples
 Some examples has been tested in order to determine the accuracy of our protein-protein interaction predictor.
-You can find them in [Example_output](...) folder.
+You can find them in [Example_output](https://github.com/claudefa/PythonProject/tree/master/Example_output) folder.
 
