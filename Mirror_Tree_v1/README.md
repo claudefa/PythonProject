@@ -1,4 +1,4 @@
-# MIRRORTREE 1.0  a veure
+# MIRRORTREE 1.0
 
 This is the PYT and SBI project by [**Elba Raimúndez**](https://github.com/elbaraim), [**Clàudia Fontserè**](https://github.com/claudefa) and **Lucas Michel**!
 
@@ -55,10 +55,10 @@ This program is split in different modules and scripts. Here, you can find the r
 
 #####[mirrorTree](https://github.com/claudefa/PythonProject/tree/master/Mirror_Tree_v1/MirrorTree)
 The main scripts are found in this directory. 
-- [**__init__.py**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/__init__.py): A python file required for a proper installation of the program.
+- [**\_\_init\_\_.py**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/__init__.py): A python file required for a proper installation of the program.
 - [**mirrorTree**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/mirrorTree): The workflow of the program. In this script all functions needed are called. It also contains the argument parser. 
-- [**functions.py**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/functions.py: All the core, helper functions and classes are found here. The documentation of each function is available in this file. 
-- [**modules.py**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/modules.py)): In this files you can find the ClustalW path and all modules that the program needs to run. From this file they are imported to the others. 
+- [**functions.py**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/functions.py): All the core, helper functions and classes are found here. The documentation of each function is available in this file. 
+- [**modules.py**](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/MirrorTree/modules.py): In this files you can find the ClustalW path and all modules that the program needs to run. From this file they are imported to the others. 
 
 #####[setup.py](https://github.com/claudefa/PythonProject/blob/master/Mirror_Tree_v1/setup.py)
 The script needed to install the package. 
